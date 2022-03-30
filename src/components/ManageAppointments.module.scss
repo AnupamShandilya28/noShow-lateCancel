@@ -1,0 +1,23 @@
+.typeofclass{
+    display: flex;
+flex-direction: row;
+align-items: center;
+padding: 10px;
+
+position: static;
+width: 1323px;
+height: 34px;
+left: 16px;
+top: 8px;
+
+/* Neutral/Lightest */
+
+background: #0e3e6d;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 0px;
+}
