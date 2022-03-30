@@ -1,16 +1,10 @@
 import React, { useState } from 'react';
 import styles from './App.module.scss';
+import ManageAppointments from './components/ManageAppointments';
 
-export const App = () => {
-    const [count, setCount] = useState(0);
+export const App = () => {    
     return (
-        <>
-            <div className={styles.count} data-testid={'count'}>
-                {count}
-            </div>
-            <button onClick={() => setCount(count + 1)}>Add</button>
-            <button onClick={() => setCount(count - 1)}>Subtract</button>
-        </>
+        <ManageAppointments/>
     );
 };
 export default App;
