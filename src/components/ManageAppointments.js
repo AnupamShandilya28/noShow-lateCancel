@@ -4,6 +4,7 @@ import {useTable,useSortBy} from 'react-table'
 import { COLUMNS } from "./columns";
 import MOCK_DATA from '../MOCK_DATA.json'
 import SortIcon from '@mui/icons-material/Sort';
+import InfoIcon from '@material-ui/icons/Info';
 const ManageAppointments =() =>{
     const columns=useMemo(()=> COLUMNS,[])
     const data=useMemo(()=>MOCK_DATA,[])
@@ -21,7 +22,7 @@ const ManageAppointments =() =>{
   useSortBy
   )
     return (  
-      <div>
+    <div>
     <table {...getTableProps()}>
       <thead>
         {headerGroups.map(headerGroup => (
@@ -29,6 +30,9 @@ const ManageAppointments =() =>{
             {headerGroup.headers.map(column => (              
               <th {...column.getHeaderProps(column.getSortByToggleProps())}>
                 {column.render('Header')}
+                {(column.render('Header')==="TIME (PRIOR TO CLASS)" || column.render('Header')==="NO SHOW") && <span>
+                  <InfoIcon id={styles.infoicon}/>
+                  </span>}                
                 <span >
                   <SortIcon id={styles.sorticon}/>
                 </span>
