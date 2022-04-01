@@ -5,10 +5,10 @@ import { COLUMNS } from "./columns";
 import MOCK_DATA from '../MOCK_DATA.json'
 import SortIcon from '@mui/icons-material/Sort';
 import InfoIcon from '@material-ui/icons/Info';
+import Tablerow from "./Tablerow";
 const ManageAppointments =() =>{
     const columns=useMemo(()=> COLUMNS,[])
-    const data=useMemo(()=>MOCK_DATA,[])
-
+    const data=useMemo(()=>MOCK_DATA,[])    
     const {
         getTableProps,
         getTableBodyProps,
@@ -22,13 +22,13 @@ const ManageAppointments =() =>{
   useSortBy
   )
     return (  
-    <div>
+    <div id="scrolll">
     <table {...getTableProps()}>
       <thead>
         {headerGroups.map(headerGroup => (
           <tr {...headerGroup.getHeaderGroupProps()}>
             {headerGroup.headers.map(column => (              
-              <th {...column.getHeaderProps(column.getSortByToggleProps())}>
+              <th id={column.render('Header')} {...column.getHeaderProps(column.getSortByToggleProps())}>
                 {column.render('Header')}
                 {(column.render('Header')==="TIME (PRIOR TO CLASS)" || column.render('Header')==="NO SHOW") && <span>
                   <InfoIcon id={styles.infoicon}/>
@@ -45,10 +45,12 @@ const ManageAppointments =() =>{
         {rows.map((row, i) => {
           prepareRow(row)
           return (
-            <tr {...row.getRowProps()}>
+            <tr {...row.getRowProps()}>              
               {row.cells.map(cell => {
-                return <td {...cell.getCellProps()}>{cell.render('Cell')}</td>
+                //  console.log(cell.column.id);
+                return <Tablerow key={cell.row.id+cell.column.id} cell={cell}/>
               })}
+              {/* {console.log(row.cells[0].row.id)} */}
             </tr>
           )
         })}

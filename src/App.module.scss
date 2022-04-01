@@ -1,4 +1,17 @@
-.count {
-    font-size: 2rem;
-    color: red;
+#heading_outerdivstyle{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 16px;
+
+position: static;
+width: 1392px;
+height: 728px;
+left: 24px;
+top: 259px;
+
+/* Neutral/White */
+
+background: #FFFFFF;
+border-radius: 3px;
 }

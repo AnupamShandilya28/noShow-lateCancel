@@ -23,10 +23,13 @@
   font-size: 13px;
   
 }
+#scrolll{
+  overflow-y: scroll;
+}
 table  {  
-    
-    table-layout: fixed;
-    position: fixed;
+    padding: 8px 16px 16px;
+    // table-layout: fixed;
+    position: absolute;
     width: 1355px;
     height: 506px;
     top: 411px;

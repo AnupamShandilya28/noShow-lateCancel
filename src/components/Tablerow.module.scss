@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'Averta';
+    src: url(../AvertaDemo-Regular.otf);
+  }
+
+#rowstyle{      
+    box-shadow: inset 0px -1px 0px #EFF1F3; 
+    padding: 14px; 
+    font-family: 'Averta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+}
+
+#inputstyle{    
+    position: static;
+    width: 56px;
+    height: 28px;
+    left: 10px;
+    top: 10px;
+}
+
+
+#spanstyle{  
+    padding-top: 6px;
+    position:static;
+    width: 154px;
+    height: 16px;
+    left: 66px;
+    top: 28px;
+    font-family: 'Averta';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.divstyle{
+    display: grid;
+  grid: auto/56px 154px;
+  grid-gap: 10px;
+}
