@@ -3,6 +3,7 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import SortIcon from '@mui/icons-material/Sort';
 
 import styles from "./MemberTable.module.scss";
+import MemberList from "./MemberList";
 
 const MemberTable = () => {
   
@@ -46,6 +47,7 @@ const MemberTable = () => {
             <SettingsIcon id={styles.search_icon} style={{color: '#696C74'}}/>
         </div>
       </div>
+      <MemberList />
     </div>
   );
 };
