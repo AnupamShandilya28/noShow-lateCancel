@@ -5,7 +5,17 @@ import { Checkbox } from "@mbkit/checkbox";
 import { useState, useEffect } from "react";
 import CheckEnableContext from "../../store/check-enable-context";
 
-const MemberEntry = (props) => {
+const MemberEntry: React.FC<{
+  name: string;
+  class: string;
+  date: string;
+  price: string;
+  cancel: number;
+  waive: number;
+  charges: number;
+  apply: boolean;
+  type: string;
+}> = (props) => {
   const [isCheck, setIsCheck] = useState(props.apply);
   const enableCtx = useContext(CheckEnableContext);
   //setIsCheck(props.apply);
@@ -14,9 +24,9 @@ const MemberEntry = (props) => {
     setIsCheck(!isCheck);
   };
 
-  useEffect(() => {
-    setIsCheck(isCheck);
-  }, [isCheck]);
+  // useEffect(() => {
+  //   setIsCheck(isCheck);
+  // }, [isCheck]);
 
   return (
     <div>
@@ -61,7 +71,7 @@ const MemberEntry = (props) => {
             <Checkbox
               className={styles.type_checkbox}
               checked={isCheck}
-              onClick={isCheckHandler}
+              onChange={isCheckHandler}
               disabled={enableCtx.isCheckEnabled}
             />
             <label className={styles.type_label}>{props.type}</label>
