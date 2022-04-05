@@ -5,6 +5,13 @@
   "dependencies": {
     "@commitlint/cli": "^8.3.6",
     "@commitlint/config-conventional": "^8.3.6",
+    "@emotion/react": "^11.8.2",
+    "@emotion/styled": "^11.8.1",
+    "@mbkit/card": "^1.4.5",
+    "@mbkit/checkbox": "^1.4.5",
+    "@mbkit/icon": "^1.4.5",
+    "@mui/icons-material": "^5.5.1",
+    "@mui/material": "^5.5.3",
     "@storybook/addon-actions": "^6.5.0-alpha.51",
     "@storybook/addon-knobs": "^5.3.21",
     "@storybook/addon-links": "^6.5.0-alpha.51",
