@@ -21,7 +21,7 @@ const MemberDetails = () => {
     setIsApply(true);
   };
 
-  const confirmHandler = (status) => {
+  const confirmHandler = (status: boolean) => {
     setIsTouchedConfirm(true);
     setIsConfirmed(status);
     setIsApply(false);

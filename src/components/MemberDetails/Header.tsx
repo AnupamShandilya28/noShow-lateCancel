@@ -3,7 +3,7 @@ import classes from "./Header.module.scss";
 import { Select } from "@mbkit/select";
 import { Button } from "@mbkit/button";
 
-const Header = (props) => {
+const Header: React.FC<{onApply: () => void }> = (props) => {
   const applyButtonHandler = () => {
     console.log("Clicked...");
     props.onApply();

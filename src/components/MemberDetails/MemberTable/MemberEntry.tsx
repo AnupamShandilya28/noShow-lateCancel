@@ -4,7 +4,7 @@ import styles from "./MemberEntry.module.scss";
 import { Checkbox } from "@mbkit/checkbox";
 import { useState, useEffect } from "react";
 
-const MemberEntry = (props) => {
+const MemberEntry: React.FC<{name: string, class: string, date: string, price: string, cancel: number, waive:number, charges: number, apply: boolean, type: string }> = (props) => {
 
   const [isCheck, setIsCheck] = useState(props.apply);
   //setIsCheck(props.apply);
@@ -13,9 +13,9 @@ const MemberEntry = (props) => {
     setIsCheck(!isCheck);
   }
 
-  useEffect(()=>{
+  /*useEffect(()=>{
     setIsCheck(isCheck);
-  }, [isCheck])
+  }, [isCheck])*/
 
   return (<div>
     <div className={styles.entry_div}>
@@ -26,7 +26,7 @@ const MemberEntry = (props) => {
     <div className={styles.entry_cancel}><div className={styles.cancel_div}><label className={styles.cancel_label}>{props.cancel}</label></div></div>
     <div className={styles.entry_waive}><div className={styles.cancel_div}><label className={styles.cancel_label}>{props.waive}</label></div></div>
     <div className={styles.entry_charges}><div className={styles.charges_div}><label className={styles.charges_label}>${props.charges}</label></div></div>
-    <div className={styles.entry_type}><div className={styles.type_div}><Checkbox className={styles.type_checkbox} checked={isCheck} onClick={isCheckHandler}/><label className={styles.type_label}>{props.type}</label></div></div>
+    <div className={styles.entry_type}><div className={styles.type_div}><Checkbox className={styles.type_checkbox} checked={isCheck} onChange={isCheckHandler}/><label className={styles.type_label}>{props.type}</label></div></div>
     </div>
   </div>);
 };
