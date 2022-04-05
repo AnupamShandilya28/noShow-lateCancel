@@ -627,6 +627,10 @@ flex-grow: 0;
 margin: 0px 16px;
 }
 
+.type_checkbox:not(:checked) {
+    background: white;
+}
+
 .type_label{
     /* Label */
 

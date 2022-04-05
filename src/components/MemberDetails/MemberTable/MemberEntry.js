@@ -1,11 +1,13 @@
 //import { Checkbox } from "@mui/material";
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./MemberEntry.module.scss";
 import { Checkbox } from "@mbkit/checkbox";
 import { useState, useEffect } from "react";
+import CheckEnableContext from "../../store/check-enable-context";
 
 const MemberEntry = (props) => {
   const [isCheck, setIsCheck] = useState(props.apply);
+  const enableCtx = useContext(CheckEnableContext);
   //setIsCheck(props.apply);
 
   const isCheckHandler = () => {
@@ -60,6 +62,7 @@ const MemberEntry = (props) => {
               className={styles.type_checkbox}
               checked={isCheck}
               onClick={isCheckHandler}
+              disabled={enableCtx.isCheckEnabled}
             />
             <label className={styles.type_label}>{props.type}</label>
           </div>
