@@ -3,9 +3,14 @@ import { Button } from "@mbkit/button";
 //import { Dialog } from "@mbkit/dialog";
 
 import styles from "./ApplyChargesModal.module.css";
-import Modal from "../UI/Modal";
+import Modal from "./Modal";
 
-const ApplyChargesModal = (props) => {
+type Props = {
+  onClose: () => void,
+  onConfirm(arg: boolean): void
+}
+
+const ApplyChargesModal: React.FC<Props> = (props) => {
   return (
     <Modal onClose={props.onClose}>
           <div className={styles.modal_content}>
