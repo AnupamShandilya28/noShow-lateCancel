@@ -5,13 +5,14 @@ import styles from "./SearchMember.module.scss";
 
 //Don't forget to add useCallback to reference method called by props.onSearchMember
 
-const SearchMember = (props) => {
+const SearchMember = () => {
   const [enteredSearch, setEnteredSearch] = useState("");
-  const searchInputRef = useRef();
+  const searchInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      if(enteredSearch === searchInputRef.current.value) {
+      if(enteredSearch === searchInputRef.current?.value) {
+        console.log(enteredSearch);
         console.log("Sending http request...");
         //send http get request with query
         //call method from MembersList => props.onSearchMembers(response data array)
@@ -23,7 +24,7 @@ const SearchMember = (props) => {
     }
   }, [enteredSearch, searchInputRef]);
 
-  const searchHandler = (event) => {
+  const searchHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setEnteredSearch(event.target.value);
   };
 
@@ -32,6 +33,7 @@ const SearchMember = (props) => {
       <div className={styles.searchbox}>
         <Input
           ref={searchInputRef}
+          value={enteredSearch}
           onChange={searchHandler}
           placeholder="Search Client Name, Client ID"
           before={
