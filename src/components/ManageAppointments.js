@@ -1,4 +1,4 @@
-import { Fragment, useMemo } from "react";
+import { Fragment, useMemo, useState } from "react";
 import styles from "./ManageAppointments.module.scss"
 import {useTable,useSortBy} from 'react-table'
 import { COLUMNS } from "./columns";
@@ -7,6 +7,9 @@ import SortIcon from '@mui/icons-material/Sort';
 import InfoIcon from '@material-ui/icons/Info';
 import Tablerow from "./Tablerow";
 const ManageAppointments =() =>{
+  // const [checkedlatecancel,setcheckedlatecancel]=useState(false);
+  // const [checkednoshow,setcheckednoshow]=useState(false);        
+  // const [reload,setreload]=useState(false);
     const columns=useMemo(()=> COLUMNS,[])
     const data=useMemo(()=>MOCK_DATA,[])    
     const {
@@ -17,9 +20,11 @@ const ManageAppointments =() =>{
         prepareRow
     }=useTable({
       columns: columns,
-      data: data
+      data: data,
+      // initialRowStateAccessor: () => ({ nschecked: false }),
+      // initialRowStateAccessor: () => ({ lcchecked: false })
   },
-  useSortBy
+  useSortBy  
   )
     return (  
     <div id="scrolll">
@@ -43,16 +48,10 @@ const ManageAppointments =() =>{
       </thead>
       <tbody {...getTableBodyProps()}>
         {rows.map((row, i) => {
-          prepareRow(row)
+          prepareRow(row);          
           return (
-            <tr {...row.getRowProps()}>              
-              {row.cells.map(cell => {
-                //  console.log(cell.column.id);
-                return <Tablerow key={cell.row.id+cell.column.id} cell={cell}/>
-              })}
-              {/* {console.log(row.cells[0].row.id)} */}
-            </tr>
-          )
+            <Tablerow row={row} />
+          )          
         })}
       </tbody>
     </table>    

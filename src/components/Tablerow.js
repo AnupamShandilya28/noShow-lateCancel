@@ -1,28 +1,24 @@
-import { Checkbox } from "@mbkit/checkbox";
-import { Input } from "@mbkit/input";
-import styles from "./Tablerow.module.scss";
-const Tablerow = (props) =>{
-    const onChangeInputHandler =() =>{
-
-    }
-    const onChangecheckboxHandler =()=>{
-
-    }
-    // {...props.cell.getCellProps()}
+import Tablecell from "./Tablecell";
+import { useState } from "react";
+const Tablerow =(props)=>{
+    console.log(props.row);
+    const [checkedlatecancel,setcheckedlatecancel]=useState(false);
+    const [checkednoshow,setcheckednoshow]=useState(false);        
     return (
-        <td id={styles.rowstyle}>
-        {
-        props.cell.column.Header == "TIME (PRIOR TO CLASS)" ? (
-          <div className={styles.divstyle}>
-            <Input id={styles.inputstyle} value={props.cell.value} onChange={onChangeInputHandler} />
-            <span id={styles.spanstyle}>Minutes (Prior to class)</span>
-          </div>
-        ) : typeof props.cell.value == "boolean" ? (
-          <Checkbox checked={props.cell.value} onChange={onChangecheckboxHandler} />
-        ) : (
-          props.cell.column.Header=="CHARGES" ?(<Input id={styles.inputstyle} onChange={onChangeInputHandler} />):(props.cell.value)
-        )}
-      </td>
-    );
-};
+        <tr {...props.row.getRowProps()}>              
+          {props.row.cells.map(cell => {
+            return (
+              <Tablecell
+                key={cell.row.id + cell.column.id}
+                cell={cell}
+                checkednoshow={checkednoshow}
+                setcheckednoshow={setcheckednoshow}
+                checkedlatecancel={checkedlatecancel}
+                setcheckedlatecancel={setcheckedlatecancel}
+              />
+            );
+          })}          
+        </tr>
+      )
+}
 export default Tablerow;
