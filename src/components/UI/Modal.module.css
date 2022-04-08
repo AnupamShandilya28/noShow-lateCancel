@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Averta';
+  src: url(../../AvertaDemo-Regular.otf);
+}
+
 .backdrop {
   position: fixed;
   top: 0;
