@@ -12,7 +12,6 @@ const EntryCell = (props) =>{
   };
 
   const enableCtx = useContext(CheckEnableContext);
-    
    
     if(props.cell.column.id==="Name")
     {      

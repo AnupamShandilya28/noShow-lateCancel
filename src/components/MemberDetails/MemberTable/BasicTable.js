@@ -33,9 +33,9 @@ export const BasicTable = () => {
               <th  {...column.getHeaderProps()}>
                 <span >
                 <label >{column.render("Header")}</label>
-                {(column.render('Header') === "FEE TYPE") && <img className={styles.info_icon} src="https://img.icons8.com/ios-glyphs/30/000000/info--v1.png"/>}
+                {(column.render('Header') === "STATUS") && <img className={styles.info_icon} src="https://img.icons8.com/ios-glyphs/30/000000/info--v1.png"/>}
                 {(column.render('Header') !== "NO-SHOW/LATE") && (column.render('Header') !== "") && <SortIcon id={styles.sort_icon} style={{color: '#BDBDBD'}}/>}
-                {(column.render('Header') === "FEE TYPE") && <div className={styles.settings_div}><SettingsIcon id={styles.settings_icon} style={{color: '#696C74'}}/></div>}
+                {(column.render('Header') === "STATUS") && <div className={styles.settings_div}><SettingsIcon id={styles.settings_icon} style={{color: '#696C74'}}/></div>}
                 
                 </span>
                 

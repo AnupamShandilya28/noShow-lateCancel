@@ -7,7 +7,7 @@
 #main_table{
     
     position: static;
-    width: 1327px;
+    // width: 1327px;
     height: 594px;
     left: 24px;
     top: 136px;
@@ -200,6 +200,8 @@ box-shadow: inset 0px -1px 0px #EFF1F3;
     
 }
 
+
+
 thead span{
     display: flex;
 flex-direction: row;
@@ -207,6 +209,7 @@ align-items: flex-start;
 padding: 8px 0px;
 
 }
+
 
 #sort_icon{
     display: flex;
@@ -249,7 +252,10 @@ width: 16px;
 height: 16px;
 left: calc(50% - 16px / 2);
 top: calc(50% - 16px / 2);
-
+display: flex;
+transform: scale(calc(1/2.2));
+align-items: center;
+margin-left: 1px;
 /* Inside auto layout */
 
 flex: none;
@@ -260,6 +266,9 @@ flex-grow: 0;
 }
 
 .settings_div{
-    margin: 0px 35px;
+    position: relative;
+    margin-left: 50px;
+    margin-right: 10px;
     box-shadow: inset 1px 0px 0px rgba(0, 0, 0, 0.08);
+    transform: scale(2.2);
 }

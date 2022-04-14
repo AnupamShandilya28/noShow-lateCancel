@@ -212,7 +212,19 @@ mix-blend-mode: multiply;
 box-shadow: inset 0px -1px 0px #EFF1F3;
 }
 
+.waive_div{
+    padding: 0px 16px 0px 8px;
+
+position: static;
+width: 81px;
+height: 24px;
+left: 8px;
+top: 8px;
+}
+
 .entry_charges{
+    display: flex;
+    justify-content: center;
     align-items: center;
     padding: 8px 16px 8px 8px;
 
@@ -238,8 +250,8 @@ top: 8px;
 
 .charges_div{
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     padding: 0px 16px 0px 0px;
 
 position: static;
@@ -306,6 +318,10 @@ top: 8px;
 // top: 0%;
 // bottom: 0%;
 // }
+
+.type_checkbox:not(:checked) {
+    background: white;
+}
 
 .type_label{
     position: static;
