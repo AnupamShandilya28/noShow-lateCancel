@@ -1,7 +1,8 @@
 //import styles from "../Redundant/MemberEntry.module.scss";
 import styles from "./EntryCell.module.scss";
 import { Checkbox } from "@mbkit/checkbox";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import CheckEnableContext from "../../store/check-enable-context";
 
 const EntryCell = (props) =>{
 
@@ -10,6 +11,7 @@ const EntryCell = (props) =>{
     setIsCheck(!isCheck);
   };
     
+  const enableCtx = useContext(CheckEnableContext);
    
     if(props.cell.column.id==="Name")
     {      
@@ -49,7 +51,7 @@ const EntryCell = (props) =>{
     }
     else if(props.cell.column.id==="Waive"){
         return(<td {...props.cell.getCellProps()} className={styles.entry_waive}>
-            <div className={styles.charges_div}>
+            <div className={styles.waive_div}>
             <label className={styles.cancel_label}>{props.cell.render('Cell')}</label>
           </div>
           </td>)
@@ -70,6 +72,8 @@ const EntryCell = (props) =>{
             <Checkbox
               onChange={isCheckHandler}
               checked={isCheck}
+              disabled={enableCtx.isCheckEnabled}
+              className={styles.type_checkbox}
             />
             <label className={styles.type_label}>{props.cell.render('Cell')}</label>
           </div>

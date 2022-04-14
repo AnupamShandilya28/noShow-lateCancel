@@ -31,7 +31,7 @@ export const COLUMNS = [
     accessor: "Charges",
   },
   {
-    Header: "FEE TYPE",
+    Header: "STATUS",
     accessor: "Type",
 
     /*Cell: (row) => {

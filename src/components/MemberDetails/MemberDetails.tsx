@@ -39,7 +39,7 @@ const MemberDetails = () => {
       <div className={styles.member_details_page}>
         {isApply && <ApplyChargesModal onConfirm={confirmHandler} onClose={() => setIsApply(false)}/>}
         {isConfirmed && isTouchedConfirm && <Toaster className={styles.toaster} show={true}><label className={styles.t_text}>Charges applied successfully!</label></Toaster>}
-        {!isConfirmed && isTouchedConfirm && <Toaster className={styles.toaster} show={true}>The cancellation has been successfully executed.</Toaster>}
+       
         <SearchMember />
         <Header onApply={showApplyHandler} />
         <MemberTable />
