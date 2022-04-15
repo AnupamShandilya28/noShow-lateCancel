@@ -6,7 +6,7 @@ const array = [
     new Row(4, "Unlimited Membership"),
     new Row(5,"Classic Membership"),
     new Row(6,"Affiliate Membership"),
-    new Row(7,"Gold Membership"),
+    new Row(7,"Gold Membership")
 ]
 
 export default array;

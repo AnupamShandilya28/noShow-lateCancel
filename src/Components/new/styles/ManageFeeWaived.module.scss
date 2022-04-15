@@ -1,0 +1,157 @@
+@font-face {
+  font-family: "Averta";
+  src: url(../font/AvertaDemo-Regular.woff) format("woff");
+}
+table {
+  position: static;
+  width: 1364px;
+  height: 34px;
+  left: 0px;
+  top: 0px;
+  font-family: var(
+    --font-family,
+    "Averta",
+    "Helvetica Neue",
+    "Helvetica",
+    "Arial",
+    "sans-serif"
+  );
+}
+
+table thead {
+  padding: 0px;
+  position: static;
+  width: 1355px;
+  height: 34px;
+  left: 0px;
+  top: 0px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #696c74;
+  text-align: justify;
+  background: #f8f9fa;
+}
+thead th:nth-child(1) {
+  padding: 8px;
+  position: static;
+  width: 378px;
+  height: 34px;
+  left: calc(50% - 378px / 2 - 488.5px);
+  top: calc(50% - 34px / 2);
+  background: #f8f9fa;
+  box-shadow: inset 0px -1px 0px #eff1f3;
+}
+
+thead th:nth-child(2) {
+  padding: 8px;
+  position: static;
+  width: 220px;
+  height: 34px;
+  left: calc(50% - 220px / 2 - 189.5px);
+  top: calc(50% - 34px / 2);
+  background: #f8f9fa;
+  box-shadow: inset 0px -1px 0px #eff1f3;
+}
+
+thead th:nth-child(3) {
+  padding: 8px;
+  position: static;
+  width: 220px;
+  height: 34px;
+  left: calc(50% - 220px / 2 + 30.5px);
+  top: calc(50% - 34px / 2);
+  background: #f8f9fa;
+  box-shadow: inset 0px -1px 0px #eff1f3;
+}
+
+thead th:nth-child(4) {
+  padding: 8px;
+  position: static;
+  width: 220px;
+  height: 34px;
+  left: calc(50% - 220px / 2 + 250.5px);
+  top: calc(50% - 34px / 2);
+  background: #f8f9fa;
+  box-shadow: inset 0px -1px 0px #eff1f3;
+}
+thead th:nth-child(5) {
+  padding: 8px;
+  position: static;
+  width: 220px;
+  height: 34px;
+  left: calc(50% - 220px / 2 + 470.5px);
+  top: calc(50% - 34px / 2);
+  background: #f8f9fa;
+  box-shadow: inset 0px -1px 0px #eff1f3;
+}
+#sorticon {
+  position: relative;
+  left: 1.5%;
+  right: 12.5%;
+  top: 5%;
+  bottom: 25%;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+#infoicon {
+  padding-right: 8px;
+  position: relative;
+  left: 2.5%;
+  right: 12.25%;
+  top: 7.5%;
+  bottom: 6.25%;
+  font-size: 13px;
+  cursor: pointer;
+}
+tbody tr {
+  position: static;
+  width: 1323px;
+  height: 56px;
+  left: 0px;
+  top: 0px;
+  background: #ffffff;
+  box-shadow: inset 0px -1px 0px #eff1f3;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #2d2d2d;
+}
+tbody tr td {
+  padding: 8px;
+}
+input {
+  position: static;
+  width: 57px;
+  height: 28px;
+  left: 10px;
+  top: 10px;
+  background: #ffffff;
+  border: 1px solid #a0a5ab;
+  box-sizing: border-box;
+  border-radius: 3px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #000000;
+  text-align: center;
+}
+
+.tableCellSpan {
+  position: static;
+  width: 42px;
+  height: 24px;
+  left: 40px;
+  top: 0px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2d2d2d;
+  margin-left: 16px;
+}
