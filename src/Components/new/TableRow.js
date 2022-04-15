@@ -7,10 +7,16 @@ const TableRow = (props) => {
   const [lateCancel, setLateCancel] = useState(false);
   const [lateCancelInput, setLateCancelInput] = useState("");
   const changeNoShowCheckhandler = () => {
-    setNoShow((previous) => !previous);
+    setNoShow((previous) => {
+      if (previous) changeNoShowInputhandler("");
+      return !previous;
+    });
   };
   const changeLateCancelCheckhandler = () => {
-    setLateCancel((previous) => !previous);
+    setLateCancel((previous) => {
+      if (previous) changeLateCancelInputhandler("");
+      return !previous;
+    });
   };
   const changeNoShowInputhandler = (no_show_input) => {
     setNoShowInput(no_show_input);
