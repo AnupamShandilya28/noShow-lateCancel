@@ -1,7 +1,7 @@
 import { useTable } from "react-table";
 import MOCK_DATA from "./API/MOCK_DATA.json";
 import { COLUMNS } from "./API/columns";
-import styles from './styles/ManageFeeWaived.module.scss'
+import styles from "./styles/ManageFeeWaived.module.scss";
 import React, { useMemo } from "react";
 import SortIcon from "@mui/icons-material/Sort";
 import InfoIcon from "@mui/icons-material/Info";
@@ -22,12 +22,17 @@ const ManageFeeWaived = () => {
         {headerGroups.map((headerGroup) => (
           <tr {...headerGroup.getHeaderGroupProps()}>
             {headerGroup.headers.map((column) => (
-              <th {...column.getHeaderProps()}>{column.render("Header")}
-               {(column.render('Header')==="NO SHOW" || column.render('Header')==="LATE CANCEL") && <span>
-                  <InfoIcon id={styles.infoicon}/>
-                  </span>}                
-                <span >
-                  <SortIcon id={styles.sorticon}/>
+              <th {...column.getHeaderProps()}>
+                {column.render("Header")}
+                {(column.render("Header") === "NO SHOW" ||
+                  column.render("Header") === "LATE CANCEL" ||
+                  column.render("Header") === "FEE WAIVED") && (
+                  <span>
+                    <InfoIcon id={styles.infoicon} />
+                  </span>
+                )}
+                <span>
+                  <SortIcon id={styles.sorticon} />
                 </span>
               </th>
             ))}
@@ -37,8 +42,7 @@ const ManageFeeWaived = () => {
       <tbody {...getTableBodyProps()}>
         {rows.map((row) => {
           prepareRow(row);
-          return ( <TableRow row={row}/>)
-         
+          return <TableRow row={row} />;
         })}
       </tbody>
     </table>

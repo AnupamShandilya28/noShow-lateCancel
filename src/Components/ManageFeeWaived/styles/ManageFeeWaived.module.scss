@@ -131,15 +131,26 @@ input {
   left: 10px;
   top: 10px;
   background: #ffffff;
-  border: 1px solid #a0a5ab;
+  border: 1px solid #d5d9de;
   box-sizing: border-box;
   border-radius: 3px;
   font-style: normal;
+  font-family: var(
+    --font-family,
+    "Averta",
+    "Helvetica Neue",
+    "Helvetica",
+    "Arial",
+    "sans-serif"
+  );
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   color: #000000;
   text-align: center;
+}
+input[disabled]{
+  cursor: no-drop;
 }
 
 .tableCellSpan {

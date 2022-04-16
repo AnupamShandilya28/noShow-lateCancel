@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./App.module.scss";
-import ManageFeeWaived from "./Components/new/ManageFeeWaived";
+import ManageFeeWaived from "./Components/ManageFeeWaived/ManageFeeWaived";
 import { Card } from "@mbkit/card";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";

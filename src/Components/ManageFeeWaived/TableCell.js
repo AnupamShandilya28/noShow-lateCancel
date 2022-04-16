@@ -3,7 +3,7 @@ import { Checkbox } from "@mbkit/checkbox";
 import styles from "./styles/ManageFeeWaived.module.scss";
 
 const TableCell = (props) => {
-  console.log(props.currentState.noShow, props.cell.row.id);
+  //console.log(props.currentState.noShow, props.cell.row.id);
   if (props.cell.column.id === "no_show_checked") {
     return (
       <td>
