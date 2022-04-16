@@ -21,5 +21,4 @@ export const COLUMNS = [
   },
 ];
 
-// LC - Late Cancel
-// NS - No Show
+

@@ -8,12 +8,15 @@ import InfoIcon from "@mui/icons-material/Info";
 import TableRow from "./TableRow";
 
 const ManageFeeWaived = () => {
-  const columns = useMemo(() => COLUMNS, []);
+  //const columns = useMemo(() => COLUMNS, []);
+  //console.log("Hi")
   const data = useMemo(() => MOCK_DATA, []);
+  const columns = useMemo(() => processColumns(COLUMNS, data), [COLUMNS, data]);
   const tableInstance = useTable({
     columns,
     data,
   });
+
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
     tableInstance;
   return (
@@ -50,3 +53,18 @@ const ManageFeeWaived = () => {
 };
 
 export default ManageFeeWaived;
+
+function processColumns(
+  COLUMNS: { Header: string; accessor: string }[],
+  data: {
+    id: number;
+    membership: string;
+    no_show_checked: boolean;
+    no_show_input: number;
+    late_cancel_checked: boolean;
+    late_cancel_input: number;
+  }[]
+): any {
+  //throw new Error("Function not implemented.");
+  return COLUMNS;
+}

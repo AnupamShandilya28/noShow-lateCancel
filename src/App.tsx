@@ -6,7 +6,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 export const App = () => {
-
+  //console.log("Hi")
 
   return (
     <div className={styles.card}>

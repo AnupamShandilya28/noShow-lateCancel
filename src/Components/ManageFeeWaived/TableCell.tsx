@@ -2,13 +2,34 @@ import React, { useState } from "react";
 import { Checkbox } from "@mbkit/checkbox";
 import styles from "./styles/ManageFeeWaived.module.scss";
 
-const TableCell = (props) => {
+const TableCell = (props: {
+  cell: {
+    column: { id: string };
+    value:
+      | boolean
+      | React.ReactChild
+      | React.ReactFragment
+      | React.ReactPortal
+      | null
+      | undefined;
+  };
+  currentState: {
+    noShow: boolean;
+    changeNoShowCheckhandler: () => void;
+    lateCancel: boolean;
+    changeLateCancelCheckhandler: () => void;
+    noShowInput: string | number | readonly string[] | undefined;
+    changeNoShowInputhandler: (arg0: string) => void;
+    lateCancelInput: string | number | readonly string[] | undefined;
+    changeLateCancelInputhandler: (arg0: string) => void;
+  };
+}) => {
   //console.log(props.currentState.noShow, props.cell.row.id);
   if (props.cell.column.id === "no_show_checked") {
     return (
       <td>
         <Checkbox
-          checked={props.currentState.noShow}
+          checked ={props.currentState.noShow}
           onChange={() => props.currentState.changeNoShowCheckhandler()}
         />
         <span className={styles.tableCellSpan}>Enable</span>
