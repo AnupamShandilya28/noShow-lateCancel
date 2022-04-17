@@ -27,8 +27,8 @@
   overflow-y: scroll;
 }
 table  {  
-    padding: 8px 16px 16px;
     // table-layout: fixed;
+    padding: 8px 16px 16px;
     position: static;
     width: 1355px;
     height: 506px;
@@ -42,6 +42,7 @@ table  {
     height: 34px;
     left: 16px;
     top: 8px;
+
     background: #F8F9FA;
     box-shadow: inset 0px -1px 0px #EFF1F3;
     text-align:justify;

@@ -1,10 +1,11 @@
 import { Checkbox } from "@mbkit/checkbox";
 import { Input } from "@mbkit/input";
+import { useState } from "react";
 import styles from "./Tablerow.module.scss";
 const Tablecell = (props) =>{ 
-
-    
-    const onChangeInputHandler =() =>{
+    const [inputvalue,setinputvalue]=useState("");
+    const onChangeInputHandler =(event) =>{
+      setinputvalue(event.target.value);
     }
     const onChangeLateCancel =(event)=>{      
       props.setcheckedlatecancel(event.target.checked);
@@ -42,7 +43,7 @@ const Tablecell = (props) =>{
     {
       return (
         <td id={styles.rowstyle}>
-      <Checkbox checked={props.checkedlatecancel} onChange={onChangeLateCancel} disabled={props.checkednoshow}/>
+      <Checkbox checked={props.checkedlatecancel} onChange={onChangeLateCancel} />
       <span id={styles.spanenablestyle}>Enable</span>
       </td>
       )
@@ -51,7 +52,7 @@ const Tablecell = (props) =>{
     {
       return (
         <td id={styles.rowstyle}>
-      <Checkbox checked={props.checkednoshow} onChange={onChangeNoShow} disabled={props.checkedlatecancel}/>
+      <Checkbox checked={props.checkednoshow} onChange={onChangeNoShow} />
       <span id={styles.spanenablestyle}>Enable</span>
       </td>
       )
