@@ -1,9 +1,9 @@
-import { useState } from 'react';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import styles from "./ManageAppointmentHeading.module.scss"
+import React from 'react';
 
 const ManageAppointmentHeading = ()=>{
-    const [showscreen,setshowscreen]=useState(false);
+    // const [showscreen,setshowscreen]=useState(false);
     
     return <div id={styles.heading_outerdivstyle}>
         <div className={styles.heading_divstyle}>

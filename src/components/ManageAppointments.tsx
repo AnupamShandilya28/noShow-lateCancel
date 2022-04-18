@@ -6,12 +6,10 @@ import MOCK_DATA from '../MOCK_DATA.json'
 import SortIcon from '@mui/icons-material/Sort';
 import InfoIcon from '@material-ui/icons/Info';
 import Tablerow from "./Tablerow";
-const ManageAppointments =() =>{
-  // const [checkedlatecancel,setcheckedlatecancel]=useState(false);
-  // const [checkednoshow,setcheckednoshow]=useState(false);        
-  // const [reload,setreload]=useState(false);
-    const columns=useMemo(()=> COLUMNS,[])
+import React from "react";
+const ManageAppointments =() =>{  
     const data=useMemo(()=>MOCK_DATA,[])    
+    const columns = useMemo(() => processColumns(COLUMNS, data), [COLUMNS, data]);
     const {
         getTableProps,
         getTableBodyProps,
@@ -19,8 +17,8 @@ const ManageAppointments =() =>{
         rows,
         prepareRow
     }=useTable({
-      columns: columns,
-      data: data,
+       columns,
+       data,
       // initialRowStateAccessor: () => ({ nschecked: false }),
       // initialRowStateAccessor: () => ({ lcchecked: false })
   },
@@ -33,7 +31,7 @@ const ManageAppointments =() =>{
         {headerGroups.map(headerGroup => (
           <tr {...headerGroup.getHeaderGroupProps()}>
             {headerGroup.headers.map(column => (              
-              <th id={column.render('Header')} {...column.getHeaderProps(column.getSortByToggleProps())}>
+              <th {...column.getHeaderProps(column.getSortByToggleProps())}>
                 {column.render('Header')}
                 {(column.render('Header')==="TIME (PRIOR TO CLASS)" || column.render('Header')==="NO SHOW") && <span>
                   <InfoIcon id={styles.infoicon}/>
@@ -50,7 +48,7 @@ const ManageAppointments =() =>{
         {rows.map((row, i) => {
           prepareRow(row);          
           return (
-            <Tablerow row={row} />
+            <Tablerow key={i} row={row} />
           )          
         })}
       </tbody>
@@ -59,3 +57,18 @@ const ManageAppointments =() =>{
     )
 }
 export default ManageAppointments;
+
+function processColumns(
+  COLUMNS: { Header: string; accessor: string }[],
+  data: {
+    id: number;
+    TYPEOFCLASS: string;
+    TIME: number;
+    LATECANCEL: boolean;
+    CHARGES_LC: number;
+    NOSHOW: boolean;
+    CHARGES_NS:number;
+  }[]
+): any {  
+  return COLUMNS;
+}
