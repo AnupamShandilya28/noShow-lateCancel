@@ -1,7 +1,19 @@
-import styles from "./EntryCell.module.scss";
-import { Checkbox } from "@mbkit/checkbox";
 
-export const COLUMNS = [
+import { Column} from "react-table";
+
+interface TableColumns{
+  Name: string;
+    Class: string;
+    Date: string;
+    Pricing: string;
+    Cancel: number;
+    Waive: number;
+    Charges: number;
+    Apply: boolean;
+    Type: string;
+}
+
+export const COLUMNS: Column<TableColumns>[]= [
   {
     Header: "NAME",
     accessor: "Name",
@@ -33,16 +45,6 @@ export const COLUMNS = [
   {
     Header: "STATUS",
     accessor: "Type",
-
-    /*Cell: (row) => {
-      return (
-        <div className={styles.type_div}>
-          <Checkbox checked={true} />
-          <label className={styles.type_label}>{row.cell.render("")}</label>
-            
-        </div>
-      );
-    },*/
   },
 
 ];

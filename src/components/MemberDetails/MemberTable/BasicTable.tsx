@@ -1,4 +1,5 @@
-import { useTable } from "react-table";
+import React from "react";
+import { Column, useTable } from "react-table";
 import MOCK_DATA from "./MOCK_DATA.json";
 import { COLUMNS } from "./column";
 import { useMemo } from "react";
