@@ -2,7 +2,7 @@ import { Fragment, useMemo, useState } from "react";
 import styles from "./ManageAppointments.module.scss"
 import {useTable,useSortBy} from 'react-table'
 import { COLUMNS } from "./columns";
-import MOCK_DATA from '../MOCK_DATA.json'
+import MOCK_DATA from '../../MOCK_DATA.json'
 import SortIcon from '@mui/icons-material/Sort';
 import InfoIcon from '@material-ui/icons/Info';
 import Tablerow from "./Tablerow";
@@ -21,8 +21,7 @@ const ManageAppointments =() =>{
        data,
       // initialRowStateAccessor: () => ({ nschecked: false }),
       // initialRowStateAccessor: () => ({ lcchecked: false })
-  },
-  useSortBy  
+  }
   )
     return (  
     <div id="scrolll">
@@ -31,7 +30,7 @@ const ManageAppointments =() =>{
         {headerGroups.map(headerGroup => (
           <tr {...headerGroup.getHeaderGroupProps()}>
             {headerGroup.headers.map(column => (              
-              <th {...column.getHeaderProps(column.getSortByToggleProps())}>
+              <th {...column.getHeaderProps()}>
                 {column.render('Header')}
                 {(column.render('Header')==="TIME (PRIOR TO CLASS)" || column.render('Header')==="NO SHOW") && <span>
                   <InfoIcon id={styles.infoicon}/>

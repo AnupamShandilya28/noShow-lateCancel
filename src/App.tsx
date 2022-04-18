@@ -1,8 +1,8 @@
 import React, { Component, useState } from 'react';
 import styles from './App.module.scss';
-import ManageAppointmentHeading from './components/ManageAppointmentHeading';
+import ManageAppointmentHeading from './components/ManageAppointments/ManageAppointmentHeading';
 import { Accordion, AccordionHeader, AccordionItem, AccordionPane } from "@mbkit/accordion";
-import ManageAppointments from './components/ManageAppointments';
+import ManageAppointments from './components/ManageAppointments/ManageAppointments';
 
 export const App = () => {        
     return (   
