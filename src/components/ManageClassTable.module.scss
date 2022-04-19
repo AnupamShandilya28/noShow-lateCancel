@@ -1,0 +1,103 @@
+@font-face {
+  font-family: "Averta";
+  src: url(../assets/AvertaStd-Regular.ttf);
+}
+#tableouterdiv {
+  padding: 8px 16px 16px;
+  margin-right: 5px;
+  // background-color: aquamarine;
+}
+
+table {
+  // display: flex;
+  // flex-direction: column;
+  // align-items: flex-start;
+  // padding: 8px 16px 16px;
+
+  position: static;
+  width: 1323px;
+  height: 506px;
+  top: 3236px;
+  left: 9168px;
+
+  /* Neutral/White */
+
+  background: #ffffff; //#e51717;
+  font-family: "Averta";
+  border-collapse: collapse;
+  // width: 1323px;
+}
+// thead{
+
+// }
+
+#trstyle {
+  position: static;
+  width: 1323px;
+  max-height: 34px;
+  left: 16px;
+  top: 8px;
+
+  /* Neutral/Lightest */
+
+  background: #f8f9fa;
+}
+
+.thstyle {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 7px;
+  height: 18px; //****
+  color: #696c74;
+}
+.thstyle #titlestyle {
+  // position: static;
+  // width: 150px;
+  // height: 16px;
+  // left: 8px;
+  // top: 8px;
+
+  /* Text/Table Heading */
+
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  justify-content: start;
+  /* identical to box height, or 133% */
+
+  text-transform: uppercase;
+
+  /* Neutral/Darker */
+
+  color: #696c74;
+  margin-bottom: 2px;
+}
+#sorticon {
+  position: static;
+  width: 16px;
+  height: 16px;
+  left: 24px;
+  top: 1px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin-left: 8px;
+}
+
+#infoicon {
+  position: static;
+  width: 16px;
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin-left: 8px;
+}

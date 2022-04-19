@@ -1,0 +1,94 @@
+@font-face {
+  font-family: "Averta";
+  src: url(../assets/AvertaStd-Regular.ttf);
+}
+
+.manage_class_header {
+  /* Frame 7 */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 12px;
+
+  position: static;
+  width: 1336px;
+  height: 32px;
+  left: 16px;
+  top: 586px;
+
+  /* Neutral/Lighter */
+
+  background: #eff1f3;
+  border: none;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin-bottom: 10px;
+
+  cursor: pointer;
+}
+
+.manage_class_ui_title {
+  /* Manage Classes */
+
+  position: static;
+  width: 1294px;
+  height: 26px;
+  left: 54px;
+  top: 15px;
+
+  /* Display/Mobile/H4 */
+
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: start;
+  /* identical to box height, or 144% */
+
+  /* Neutral/Darkest */
+
+  color: #2d2d2d;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+// .edit_manage_class {
+//   /* Frame 812 */
+
+//   /* Auto layout */
+
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-start;
+//   padding: 8px 16px 16px;
+
+//   position: absolute;
+//   width: 1355px;
+//   height: 506px;
+
+//   /* Neutral/White */
+
+//   background: #FFFFFF;//#e8f388;
+// }
+
+.icons {
+  color: #696c74;
+  height: 32px;
+  width: 32px;
+}
+
+// <HomeIcon style={{ color: green[500] }} />
