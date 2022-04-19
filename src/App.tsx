@@ -1,16 +1,15 @@
-import React, { useState } from 'react';
+import React, { Component, useState } from 'react';
 import styles from './App.module.scss';
+import ManageAppointmentHeading from './components/ManageAppointments/ManageAppointmentHeading';
+import { Accordion, AccordionHeader, AccordionItem, AccordionPane } from "@mbkit/accordion";
+import ManageAppointments from './components/ManageAppointments/ManageAppointments';
 
-export const App = () => {
-    const [count, setCount] = useState(0);
-    return (
-        <>
-            <div className={styles.count} data-testid={'count'}>
-                {count}
-            </div>
-            <button onClick={() => setCount(count + 1)}>Add</button>
-            <button onClick={() => setCount(count - 1)}>Subtract</button>
-        </>
+export const App = () => {        
+    return (   
+        <div id={styles.heading_outerdivstyle}>        
+            <ManageAppointmentHeading/>     
+            <ManageAppointments/>
+        </div>
     );
 };
 export default App;

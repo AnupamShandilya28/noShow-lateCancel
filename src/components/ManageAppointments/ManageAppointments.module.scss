@@ -1,0 +1,123 @@
+
+@font-face {
+  font-family: 'Averta';
+  src: url(../../AvertaDemo-Regular.otf);
+}
+
+#sorticon{
+  position: relative;
+  left: 1.5%;
+  right: 12.5%;
+  top: 5%;
+  bottom: 25%;
+  font-size: 12px;
+}
+
+#infoicon{
+  padding-right: 8px;
+  position: relative;
+  left: 2.5%;
+  right: 12.25%;
+  top: 7.5%;
+  bottom: 6.25%;
+  font-size: 13px;
+  
+}
+#scrolll{
+  overflow-y: scroll;
+}
+table  {  
+    // table-layout: fixed;
+    padding: 8px 16px 16px;
+    position: static;
+    width: 1355px;
+    height: 506px;
+    top: 411px;
+    left: 40px;
+    background: #FFFFFF;
+  }
+  thead{
+    position: static;
+    width: 1323px;
+    height: 34px;
+    left: 16px;
+    top: 8px;
+
+    background: #F8F9FA;
+    box-shadow: inset 0px -1px 0px #EFF1F3;
+    text-align:justify;
+    font-family: 'Averta';
+    font-style: normal;    
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #696C74;
+  }
+  thead th:nth-child(1) {
+
+    padding: 8px;
+    position: static;
+    width: 300px;
+    height: 34px;
+    left: calc(50% - 300px/2 - 511.5px);
+    top: calc(50% - 34px/2);
+    background: #F8F9FA;
+    box-shadow: inset 0px -1px 0px #EFF1F3;
+  }
+  
+  thead th:nth-child(2) {    
+    padding: 8px;
+    position: static;
+    width: 250px;
+    height: 34px;
+    left: calc(50% - 250px/2 - 236.5px);
+    top: calc(50% - 34px/2);
+    background: #F8F9FA;
+    box-shadow: inset 0px -1px 0px #EFF1F3;
+  }
+  
+  thead th:nth-child(3) {    
+    padding: 8px;
+    position: static;
+    width: 180px;
+    height: 34px;
+    left: calc(50% - 180px/2 - 21.5px);
+    top: calc(50% - 34px/2);
+    background: #F8F9FA;
+    box-shadow: inset 0px -1px 0px #EFF1F3;
+  }
+  
+  thead th:nth-child(4) {
+    padding: 8px;
+    position: static;
+    width: 180px;
+    height: 34px;
+    left: calc(50% - 180px/2 + 158.5px);
+    top: calc(50% - 34px/2);
+    background: #F8F9FA;
+    box-shadow: inset 0px -1px 0px #EFF1F3;
+  }
+
+  thead th:nth-child(5) {
+    padding: 8px;
+    position: static;
+    width: 180px;
+    height: 34px;
+    left: calc(50% - 180px/2 + 338.5px);
+    top: calc(50% - 34px/2);
+    background: #F8F9FA;
+    box-shadow: inset 0px -1px 0px #EFF1F3;
+  }
+
+  thead th:nth-child(6) {
+    padding: 8px;
+    position: static;
+    width: 180px;
+    height: 34px;
+    left: calc(50% - 180px/2 + 518.5px);
+    top: calc(50% - 34px/2);
+    background: #F8F9FA;
+    box-shadow: inset 0px -1px 0px #EFF1F3;
+  }
+
