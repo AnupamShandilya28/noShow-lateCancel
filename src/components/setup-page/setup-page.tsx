@@ -3,6 +3,7 @@ import styles from "./SetupPage.module.scss";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Button } from "@mbkit/button";
 import Card from "./Card";
+import ManageAppointments from "../ManageAppointments/ManageAppointments";
 export const SetupPage = () => {
   const [manageState,setManageState]=useState({manageClasses:false,manageFee:false,manageAppointment:false});
 //   const [manageFee,setManageFee]=useState(false);
@@ -30,7 +31,7 @@ export const SetupPage = () => {
         <Card managestate={manageState} setmanagestate={setManageState} title={"Manage Classes"}></Card>
         {manageState.manageClasses && <p>assdfsdfsdf</p>}
         <Card managestate={manageState} setmanagestate={setManageState} title={"Manage Appointments"}></Card>
-        {manageState.manageAppointment && <p>assdfsdfsdf</p>}
+        {manageState.manageAppointment && <ManageAppointments/>}
         <Card managestate={manageState} setmanagestate={setManageState} title={"Manage Fee Waived"}></Card>
         {manageState.manageFee && <p>assdfsdfsdf</p>}
         
