@@ -1,0 +1,8 @@
+[{"id":1,"membership":"Platinum Membership","no_show_checked":false,"no_show_input":4,"late_cancel_checked":false,"late_cancel_input":7},
+{"id":2,"membership":"Gold Membership","no_show_checked":true,"no_show_input":7,"late_cancel_checked":false,"late_cancel_input":4},
+{"id":3,"membership":"Silver Membership","no_show_checked":true,"no_show_input":10,"late_cancel_checked":false,"late_cancel_input":6},
+{"id":4,"membership":"Unlimited Membership","no_show_checked":true,"no_show_input":10,"late_cancel_checked":false,"late_cancel_input":1},
+{"id":5,"membership":"Classic Membership","no_show_checked":true,"no_show_input":7,"late_cancel_checked":false,"late_cancel_input":9},
+{"id":6,"membership":"Affiliate Membership","no_show_checked":true,"no_show_input":1,"late_cancel_checked":false,"late_cancel_input":9},
+{"id":7,"membership":"Gold Membership","no_show_checked":false,"no_show_input":5,"late_cancel_checked":false,"late_cancel_input":5},
+{"id":8,"membership":"Platinum Membership","no_show_checked":true,"no_show_input":4,"late_cancel_checked":false,"late_cancel_input":7}]
