@@ -7,6 +7,8 @@
     "@commitlint/config-conventional": "^8.3.6",
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
     "@mbkit/accordion": "^1.5.5",
     "@mbkit/button": "^1.4.5",
     "@mbkit/checkbox": "^1.4.5",
@@ -89,6 +91,7 @@
   "devDependencies": {
     "@storybook/builder-webpack5": "^6.5.0-alpha.51",
     "@storybook/manager-webpack5": "^6.5.0-alpha.51",
+    "@types/react-table": "^7.7.10",
     "webpack": "^5.70.0"
   }
 }
