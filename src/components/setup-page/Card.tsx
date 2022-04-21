@@ -2,6 +2,7 @@ import React, { Dispatch, SetStateAction } from "react";
 import styles from "./Card.module.scss";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 const Card:React.FC<{managestate:{manageClasses:boolean,manageFee:boolean,manageAppointment:boolean},setmanagestate:Dispatch<SetStateAction<{ manageClasses: boolean; manageFee: boolean; manageAppointment: boolean; }>>,title:string}> =(props)=>{
+  
   const onClickHandler=()=>{
       if(props.title==="Manage Classes")
       {
@@ -16,7 +17,7 @@ const Card:React.FC<{managestate:{manageClasses:boolean,manageFee:boolean,manage
           )
       }
       if(props.title==="Manage Fee Waived")
-      {
+      {        
           props.setmanagestate(
           {manageClasses:false,manageFee:true,manageAppointment:false}
           )
