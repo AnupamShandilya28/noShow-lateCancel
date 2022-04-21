@@ -1,0 +1,72 @@
+@font-face {
+  font-family: "Averta";
+  src: url(../../../assets/AvertaStd-Regular.ttf);
+}
+#tableouterdiv {
+  padding: 8px 16px 16px;
+  margin-right: 5px;
+  // background-color: aquamarine;
+}
+
+table {
+  position: static;
+  width: 1323px;
+  height: 506px;
+  top: 3236px;
+  left: 9168px;
+  background: #ffffff;
+  font-family: "Averta";
+  border-collapse: collapse;
+}
+
+#trstyle {
+  position: static;
+  width: 1323px;
+  max-height: 34px;
+  left: 16px;
+  top: 8px;
+  background: #f8f9fa;
+}
+
+.thstyle {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 7px;
+  height: 18px;
+  color: #696c74;
+}
+.thstyle #titlestyle {
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  justify-content: start;
+  text-transform: uppercase;
+  color: #696c74;
+  margin-bottom: 2px;
+}
+#sorticon {
+  position: static;
+  width: 16px;
+  height: 16px;
+  left: 24px;
+  top: 1px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  margin-left: 8px;
+}
+
+#infoicon {
+  position: static;
+  width: 16px;
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin-left: 8px;
+}

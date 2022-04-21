@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "Averta";
+  src: url(../../../assets/AvertaStd-Regular.ttf);
+}
+
+#trstyle {
+  position: static;
+  width: 1323px;
+  height: 48px;
+  background: #ffffff;
+  box-shadow: inset 0px -1px 0px #eff1f3;
+}
+
+.rowstyle {
+  box-shadow: inset 0px -1px 0px #eff1f3;
+  padding: 0px 14px;
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+}
+.divstyle {
+  display: flex;
+  flex-direction: row;
+}
+
+#inputstyle {
+  max-width: 56px;
+  height: 28px;
+  background: #ffffff;
+  border: 1px solid #a0a5ab;
+  box-sizing: border-box;
+  border-radius: 3px;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+#inputstyle:disabled {
+  border: 1px solid #d5d9de;
+  background: #ffffff;
+}
+#spanstyle {
+  padding-top: 6px;
+  position: static;
+  width: 154px;
+  height: 16px;
+  left: 66px;
+  top: 28px;
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  margin-left: 10px;
+}
+
+td:nth-child(1) {
+  width: 300px;
+}
+
+td:nth-child(2) {
+  width: 250px;
+}
+td:nth-child(3) {
+  width: 180px;
+}
+td:nth-child(4) {
+  width: 180px;
+}
+td:nth-child(5) {
+  width: 180px;
+}
+td:nth-child(6) {
+  width: 180px;
+}

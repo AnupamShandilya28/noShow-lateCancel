@@ -6,20 +6,25 @@ const Card:React.FC<{managestate:{manageClasses:boolean,manageFee:boolean,manage
   const onClickHandler=()=>{
       if(props.title==="Manage Classes")
       {
-          props.setmanagestate(
-          {manageClasses:true,manageFee:false,manageAppointment:false}
+          props.setmanagestate((prev)=>{
+            return {manageClasses:!prev.manageClasses,manageFee:false,manageAppointment:false}
+          }
           )
       }
       if(props.title==="Manage Appointments")
       {
-          props.setmanagestate(
-          {manageClasses:false,manageFee:false,manageAppointment:true}
+          props.setmanagestate((prev)=>{
+            return {manageClasses:false,manageFee:false,manageAppointment:!prev.manageAppointment}
+          }
+          
           )
       }
       if(props.title==="Manage Fee Waived")
-      {        
-          props.setmanagestate(
-          {manageClasses:false,manageFee:true,manageAppointment:false}
+      {
+          props.setmanagestate((prev)=>{
+            return {manageClasses:false,manageFee:!prev.manageFee,manageAppointment:false}
+          }
+          
           )
       }
 
