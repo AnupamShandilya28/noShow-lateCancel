@@ -1,8 +1,10 @@
 import React, { Dispatch, SetStateAction } from "react";
 import styles from "./Card.module.scss";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown'
 const Card:React.FC<{managestate:{manageClasses:boolean,manageFee:boolean,manageAppointment:boolean},setmanagestate:Dispatch<SetStateAction<{ manageClasses: boolean; manageFee: boolean; manageAppointment: boolean; }>>,title:string}> =(props)=>{
   
+  let arrow_icon=<ArrowForwardIosIcon className={styles.icons} />;
   const onClickHandler=()=>{
       if(props.title==="Manage Classes")
       {
@@ -22,9 +24,17 @@ const Card:React.FC<{managestate:{manageClasses:boolean,manageFee:boolean,manage
       if(props.title==="Manage Fee Waived")
       {
           props.setmanagestate((prev)=>{
+
+            if(prev.manageFee===true)
+            {
+              arrow_icon=<ArrowForwardIosIcon className={styles.icons} />;
+            }
+            else
+            {
+              arrow_icon=<KeyboardArrowDownIcon/>
+            }
             return {manageClasses:false,manageFee:!prev.manageFee,manageAppointment:false}
-          }
-          
+          }          
           )
       }
 
@@ -36,7 +46,8 @@ const Card:React.FC<{managestate:{manageClasses:boolean,manageFee:boolean,manage
         className={styles._header}
         onClick={onClickHandler}
       >
-        <ArrowForwardIosIcon className={styles.icons} />
+        {/* <ArrowForwardIosIcon className={styles.icons} /> */}
+        {arrow_icon}
         <div className={styles._ui_title}>{props.title}</div>
       </div>
     </div>
