@@ -1,4 +1,4 @@
-import styles from "./Pro.module.scss";
+import styles from "./Main.module.scss";
 import React from "react";
 
 import Dates from "./Dates";

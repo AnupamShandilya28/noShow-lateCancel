@@ -3,7 +3,7 @@ import styles from "./Filter.module.scss";
 import { Label } from "@mbkit/label";
 import { Checkbox } from "@mbkit/checkbox";
 // import { MultiSelect } from "@mbkit/select";
-import { MultiSelect, MultiSelectOption } from "./MultiSelect/MultiSelect";
+import { MultiSelect, MultiSelectOption } from "../MultiSelect/MultiSelect";
 
 const Filters = () => {
   const options1: MultiSelectOption[] = [
