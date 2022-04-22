@@ -14,11 +14,12 @@ const EntryRow: React.FC<{
     Apply: boolean;
     Type: string;
   }>;
+  onRowUpdate: (id: number) => void;
 }> = (props) => {
   return (
     <tr {...props.row.getRowProps()}>
       {props.row.cells.map((cell) => {
-        return <EntryCell cell={cell} />;
+        return <EntryCell updateRow={props.onRowUpdate} cell={cell} />;
       })}
     </tr>
   );

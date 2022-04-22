@@ -1,7 +1,8 @@
-
+import React from 'react';
 import { Column} from "react-table";
+import styles from './BasicTable.module.scss';
 
-interface TableColumns{
+export interface TableColumns{
   Name: string;
     Class: string;
     Date: string;
@@ -46,5 +47,4 @@ export const COLUMNS: Column<TableColumns>[]= [
     Header: "STATUS",
     accessor: "Type",
   },
-
 ];

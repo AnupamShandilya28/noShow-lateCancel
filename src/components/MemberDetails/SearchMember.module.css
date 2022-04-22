@@ -1,0 +1,174 @@
+@font-face {
+  font-family: 'Averta';
+  src: url(../../AvertaDemo-Regular.otf);
+}
+
+.search {
+  /* Frame 784 */
+  /* Auto layout */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 0px;
+  position: static;
+  width: 1321px;
+  height: 40px;
+  left: 27px;
+  top: 16px;
+  /* Inside auto layout */
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+  -ms-flex-positive: 0;
+      flex-grow: 0;
+  margin: 20px 0px;
+}
+
+.searchbox {
+  /* Frame 782 */
+  /* Auto layout */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px;
+  position: static;
+  width: 347px;
+  height: 40px;
+  left: 0px;
+  top: 0px;
+  /* Inside auto layout */
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
+  -ms-flex-positive: 0;
+      flex-grow: 0;
+  margin: 10px 0px;
+}
+
+::-webkit-input-placeholder {
+  /* Search Client Name, Client ID */
+  position: static;
+  width: 299px;
+  height: 24px;
+  left: 40px;
+  top: 8px;
+  /* Text/Body */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  /* Neutral/Darkest */
+  color: #2d2d2d;
+  opacity: 0.5;
+  /* Inside auto layout */
+  -webkit-box-flex: 0;
+          flex: none;
+  -webkit-box-ordinal-group: 2;
+          order: 1;
+  -webkit-box-flex: 1;
+          flex-grow: 1;
+  margin: 0px 8px;
+}
+
+:-ms-input-placeholder {
+  /* Search Client Name, Client ID */
+  position: static;
+  width: 299px;
+  height: 24px;
+  left: 40px;
+  top: 8px;
+  /* Text/Body */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  /* Neutral/Darkest */
+  color: #2d2d2d;
+  opacity: 0.5;
+  /* Inside auto layout */
+  -ms-flex: none;
+      flex: none;
+  -ms-flex-order: 1;
+      order: 1;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  margin: 0px 8px;
+}
+
+::-ms-input-placeholder {
+  /* Search Client Name, Client ID */
+  position: static;
+  width: 299px;
+  height: 24px;
+  left: 40px;
+  top: 8px;
+  /* Text/Body */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  /* Neutral/Darkest */
+  color: #2d2d2d;
+  opacity: 0.5;
+  /* Inside auto layout */
+  -ms-flex: none;
+      flex: none;
+  -ms-flex-order: 1;
+      order: 1;
+  -ms-flex-positive: 1;
+      flex-grow: 1;
+  margin: 0px 8px;
+}
+
+::placeholder {
+  /* Search Client Name, Client ID */
+  position: static;
+  width: 299px;
+  height: 24px;
+  left: 40px;
+  top: 8px;
+  /* Text/Body */
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  /* Neutral/Darkest */
+  color: #2d2d2d;
+  opacity: 0.5;
+  /* Inside auto layout */
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 0px 8px;
+}
+/*# sourceMappingURL=SearchMember.module.css.map */

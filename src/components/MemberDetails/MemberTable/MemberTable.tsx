@@ -10,7 +10,7 @@ const MemberTable = () => {
   return (
     <div className={styles.main_table}>
      
-      <BasicTable />
+      {/* <BasicTable /> */}
     </div>
   );
 };
