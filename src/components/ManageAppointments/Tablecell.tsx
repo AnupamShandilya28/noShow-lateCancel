@@ -14,9 +14,14 @@ const Tablecell: React.FC<{
   inputvalueLC: string;
   inputvalueNS:string;
 }> = (props) => {
-  const [inputvalue, setinputvalue] = useState("");
+  const [inputvalue, setinputvalue] = useState("120");
 
   const onChangeInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    for(let i=0;i<event.target.value.length;i++)
+    {
+      if(!(event.target.value[i]>='0' && event.target.value[i]<='9'))
+      return;
+    }
     setinputvalue(event.target.value);
   };
   const onChangeInputHandlerLC = (
@@ -56,7 +61,7 @@ const Tablecell: React.FC<{
         <div className={styles.divstyle}>
           <Input
             id={styles.inputstyle}
-            value={props.cell.value}
+            value={inputvalue}
             onChange={onChangeInputHandler}
           />
           <span id={styles.spanstyle}>Minutes (Prior to class)</span>

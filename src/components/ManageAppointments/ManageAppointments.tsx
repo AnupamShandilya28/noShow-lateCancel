@@ -32,12 +32,12 @@ const ManageAppointments =() =>{
             {headerGroup.headers.map(column => (              
               <th {...column.getHeaderProps()}>
                 {column.render('Header')}
-                {(column.render('Header')==="TIME (PRIOR TO CLASS)" || column.render('Header')==="NO SHOW") && <span>
+                {(column.render('Header')==="TIME (PRIOR TO CLASS)" || column.render('Header')==="NO SHOW" || column.render('Header')==="LATE CANCEL") && <span>
                   <InfoIcon id={styles.infoicon}/>
                   </span>}                
-                <span >
+                {(column.render('Header')==="TIME (PRIOR TO CLASS)" || column.render('Header')==="TYPE") &&<span >
                   <SortIcon id={styles.sorticon}/>
-                </span>
+                </span>}
                 </th>   
             ))}
           </tr>
@@ -61,7 +61,7 @@ function processColumns(
   COLUMNS: { Header: string; accessor: string }[],
   data: {
     id: number;
-    TYPEOFCLASS: string;
+    TYPE: string;
     TIME: number;
     LATECANCEL: boolean;
     CHARGES_LC: number;
