@@ -22,11 +22,23 @@ const Tablecell: React.FC<{
   const onChangeInputHandlerLC = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
+    for(let i=0;i<event.target.value.length;i++)
+    {
+      if(!(event.target.value[i]>='0' && event.target.value[i]<='9'))
+      return;
+    }
     props.setinputvalueLC(event.target.value);
   };
   const onChangeInputHandlerNS = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
+    
+    for(let i=0;i<event.target.value.length;i++)
+    {
+      if(!(event.target.value[i]>='0' && event.target.value[i]<='9'))
+      return;
+    }
+    console.log("sdfsdf");
     props.setinputvalueNS(event.target.value);
   };
   const onChangeLateCancel = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -65,7 +77,7 @@ const Tablecell: React.FC<{
   } else if (props.cell.column.id == "CHARGES_NS") {
     return (
       <td id={styles.rowstyle}>
-        <Input
+        <Input          
           id={styles.inputstyle}
           onChange={onChangeInputHandlerNS}
           disabled={!props.checkednoshow}
