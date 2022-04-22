@@ -2,7 +2,7 @@ import { Checkbox } from "@mbkit/checkbox";
 import { Input } from "@mbkit/input";
 import React from "react";
 import { SetStateAction, useState } from "react";
-import styles from "./Tablerow.module.scss";
+import styles from "./styles/Tablerow.module.scss";
 const Tablecell: React.FC<{
   setcheckedlatecancel: (arg0: boolean) => void;
   setcheckednoshow: (arg0: boolean) => void;

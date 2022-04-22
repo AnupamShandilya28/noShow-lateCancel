@@ -1,5 +1,5 @@
 import { Fragment, useMemo, useState } from "react";
-import styles from "./ManageAppointments.module.scss"
+import styles from "./styles/ManageAppointments.module.scss"
 import {useTable,useSortBy} from 'react-table';
 import { COLUMNS } from "./columns";
 import MOCK_DATA from '../../data/manageAppointments/MOCK_DATA.json'
