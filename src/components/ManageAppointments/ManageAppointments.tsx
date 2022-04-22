@@ -24,7 +24,7 @@ const ManageAppointments =() =>{
   }
   )
     return (  
-    <div id="scrolll">
+    <div id={styles.outerdiv}>
     <table {...getTableProps()}>
       <thead>
         {headerGroups.map(headerGroup => (

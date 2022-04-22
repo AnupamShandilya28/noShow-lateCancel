@@ -52,26 +52,26 @@ const Card: React.FC<{
       <div className={styles._header} onClick={onClickHandler}>
         {props.title === "Manage Classes" &&
           !props.managestate.manageClasses && (
-            <ArrowForwardIosIcon className={styles.icons} />
+            <ArrowForwardIosIcon id={styles.ficons} />
           )}
         {props.title === "Manage Classes" &&
           props.managestate.manageClasses && (
-            <KeyboardArrowDownIcon className={styles.icons} />
+            <KeyboardArrowDownIcon id={styles.bicons} />
           )}
         {props.title === "Manage Appointments" &&
           !props.managestate.manageAppointment && (
-            <ArrowForwardIosIcon className={styles.icons} />
+            <ArrowForwardIosIcon id={styles.ficons} />
           )}
         {props.title === "Manage Appointments" &&
           props.managestate.manageAppointment && (
-            <KeyboardArrowDownIcon className={styles.icons} />
+            <KeyboardArrowDownIcon id={styles.bicons} />
           )}
         {props.title === "Manage Fee Waived" &&
           !props.managestate.manageFee && (
-            <ArrowForwardIosIcon className={styles.icons} />
+            <ArrowForwardIosIcon id={styles.ficons} />
           )}
         {props.title === "Manage Fee Waived" && props.managestate.manageFee && (
-          <KeyboardArrowDownIcon className={styles.icons} />
+          <KeyboardArrowDownIcon id={styles.bicons} />
         )}
         <div className={styles._ui_title}>{props.title}</div>
       </div>

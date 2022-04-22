@@ -23,14 +23,14 @@
   font-size: 13px;
   
 }
-#scrolll{
-  overflow-y: scroll;
+#outerdiv{
+  padding-left: 16px;  
 }
 table  {  
     // table-layout: fixed;
-    padding: 8px 16px 16px;
+    // padding-left: 16px;
     position: static;
-    width: 1355px;
+    width: 1323px;
     height: 506px;
     top: 411px;
     left: 40px;

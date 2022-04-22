@@ -22,6 +22,10 @@ color: #2D2D2D;
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
+    #inputstyle:disabled {
+      border: 1px solid #D5D9DE;
+      background: #FFFFFF;
+    }
 }
 
 #inputstyle{    

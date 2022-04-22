@@ -20,6 +20,7 @@ const ManageFeeWaived = () => {
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
     tableInstance;
   return (
+    <div className={styles.table}>
     <table {...getTableProps()}>
       <thead>
         {headerGroups.map((headerGroup) => (
@@ -49,6 +50,7 @@ const ManageFeeWaived = () => {
         })}
       </tbody>
     </table>
+    </div>
   );
 };
 

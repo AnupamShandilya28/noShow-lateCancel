@@ -80,10 +80,15 @@
   //   background: #FFFFFF;//#e8f388;
   // }
   
-  .icons {
+  #ficons {
     color: #696c74;
-    height: 32px;
-    width: 32px;
+    // height: 32px;
+    // width: 32px;
+    font-size: 1rem;
+  }
+  #bicons{
+    font-size: 1.5rem;
+    color: #696c74;
   }
   
   // <HomeIcon style={{ color: green[500] }} />

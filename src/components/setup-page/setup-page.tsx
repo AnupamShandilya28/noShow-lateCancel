@@ -6,7 +6,6 @@ import Card from "./Card";
 import ManageAppointments from "../ManageAppointments/ManageAppointments";
 import ManageFeeWaived from "../ManageFeeWaived/ManageFeeWaived";
 import ManageClasses from "../ManageClasses/ManageClasses";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 export const SetupPage = () => {
   const [manageState, setManageState] = useState({
     manageClasses: false,
