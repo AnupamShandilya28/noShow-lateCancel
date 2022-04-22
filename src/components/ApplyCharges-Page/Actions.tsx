@@ -12,7 +12,6 @@ const Actions = (props:any) => {
         <Button variant="secondary" onClick={() => onSearchButtonClick(true)}>
           Search
         </Button>
-
         <br />
         <br />
         <Button variant="primary">Download Report</Button>
