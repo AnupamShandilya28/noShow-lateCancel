@@ -35,9 +35,9 @@ const ManageFeeWaived = () => {
                     <InfoIcon id={styles.infoicon} />
                   </span>
                 )}
-                <span>
+                {/* <span>
                   <SortIcon id={styles.sorticon} />
-                </span>
+                </span> */}
               </th>
             ))}
           </tr>

@@ -1,6 +1,6 @@
 export const COLUMNS = [
   {
-    Header: "TYPES OF MEMBERSHIP",
+    Header: "TYPE",
     accessor: "membership",
   },
   {

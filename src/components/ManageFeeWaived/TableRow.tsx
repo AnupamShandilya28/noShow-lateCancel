@@ -8,7 +8,7 @@ const TableRow = (props: {
       React.HTMLAttributes<HTMLTableRowElement>;
     cells: {
       row: { id: string };
-      column: { id: string};
+      column: { id: string };
       value:
         | boolean
         | React.ReactChild
@@ -36,9 +36,15 @@ const TableRow = (props: {
     });
   };
   const changeNoShowInputhandler = (no_show_input: string) => {
+    for (let i = 0; i < no_show_input.length; i++) {
+      if (!(no_show_input[i] >= "0" && no_show_input[i] <= "9")) return;
+    }
     setNoShowInput(no_show_input);
   };
   const changeLateCancelInputhandler = (late_cancel_input: string) => {
+    for (let i = 0; i < late_cancel_input.length; i++) {
+      if (!(late_cancel_input[i] >= "0" && late_cancel_input[i] <= "9")) return;
+    }
     setLateCancelInput(late_cancel_input);
   };
   const currentState = {
@@ -55,7 +61,7 @@ const TableRow = (props: {
     <tr {...props.row.getRowProps()}>
       {props.row.cells.map(
         (cell: {
-          row: { id:string };
+          row: { id: string };
           column: { id: string };
           value:
             | boolean
