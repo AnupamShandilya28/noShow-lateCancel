@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./Content.module.scss";
-
 const Content = (props: any) => {
   return (
     
