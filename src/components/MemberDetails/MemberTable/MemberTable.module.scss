@@ -44,12 +44,12 @@ $fontFamily: var(
   display: flex;
   flex-direction: column;
   //justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding: 0px;
 
   position: static;
   width: 1330px;
-  height: 594px;
+  // height: 594px;
   left: 24px;
   top: 10px;
 
@@ -58,14 +58,15 @@ $fontFamily: var(
   background: #ffffff;
   /* Level 2 (elevated cards) */
 
-  box-shadow: 0px 1px 3px rgba(45, 45, 45, 0.2);
+  // box-shadow: 0px 1px 3px rgba(45, 45, 45, 0.2); //For the border below the next and previous buttons.
+  
 
   /* Inside auto layout */
 
   flex: none;
   order: 2;
   flex-grow: 0;
-  margin: 20px 0px;
+  // margin: 20px 0px;
 }
 
 .header {
@@ -707,4 +708,6 @@ $fontFamily: var(
   order: 0;
   flex-grow: 0;
   margin: 0px 10px;
+
+  
 }
