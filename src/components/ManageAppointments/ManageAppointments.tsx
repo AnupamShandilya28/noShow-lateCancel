@@ -40,7 +40,7 @@ const ManageAppointments =() =>{
                           <>
                             This is the time for cancelation before the class.
                             <br />
-                            You can update this time from Cancelation Window"
+                            You can update this time from Cancelation Window
                           </>
                         }
                       >
@@ -56,7 +56,7 @@ const ManageAppointments =() =>{
                         <>
                           This is the time for cancelation before the class.
                           <br />
-                          You can update this time from Cancelation Window"
+                          You can update this time from Cancelation Window
                         </>
                       }
                     >
