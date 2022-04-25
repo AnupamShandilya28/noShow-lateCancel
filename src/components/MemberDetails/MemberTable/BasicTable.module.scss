@@ -1,0 +1,299 @@
+@font-face {
+  font-family: "Averta";
+  src: url("C:\Users\Meghana.Maringanty\Desktop\Table\table\src\AvertaDemo-Regular.otf");
+}
+
+.main_div{
+  display: flex;
+  justify-content: space-between;
+}
+
+.flyout_div{
+  align-items: flex-end;
+  margin: 0px 5px;
+  flex: auto;
+}
+
+#main_table {
+  // display: flex;
+  // flex-direction: column;
+  // //justify-content: center;
+  // align-items: flex-start;
+  // padding: 0px;
+
+  position: static;
+  // width: 1327px;
+  // height: 594px;
+  left: 24px;
+  top: 136px;
+
+  // table-layout: auto;
+
+  /* Neutral/White */
+
+  background: #ffffff;
+  /* Level 2 (elevated cards) */
+
+  box-shadow: 0px 1px 3px rgba(45, 45, 45, 0.2);
+  border-collapse: collapse;
+
+  // flex: auto;
+  // order: 2;
+  // flex-grow: 0;
+  // margin: 20px 0px;
+}
+
+.header_row {
+  /* Auto layout */
+
+  position: static;
+  width: 1327px;
+  height: 34px;
+  left: 0px;
+  top: 0px;
+
+  /* Neutral/Lighter */
+
+  background: #eff1f3;
+}
+
+.header {
+  position: static;
+  width: 180px;
+  height: 34px;
+  left: calc(50% - 180px / 2 - 573.5px);
+  top: calc(50% - 34px / 2);
+
+  /* Neutral/Lighter */
+
+  background: #eff1f3;
+  box-shadow: inset 0px -1px 0px #eff1f3;
+}
+
+thead th label {
+  position: static;
+
+  left: 8px;
+  top: 8px;
+
+  /* Text/Table Heading */
+
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height, or 133% */
+
+  text-transform: uppercase;
+
+  /* Neutral/Darker */
+
+  color: #696c74;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 8px;
+}
+
+.NAME{
+  position: static;
+  width: 180px;
+  height: 34px;
+  left: calc(50% - 180px / 2 - 573.5px);
+  top: calc(50% - 34px / 2);
+
+  /* Neutral/Lighter */
+
+  background: #eff1f3;
+  box-shadow: inset 0px -1px 0px #eff1f3;
+}
+
+.CLASSES {
+  position: static;
+  width: 200px;
+  height: 34px;
+  left: calc(50% - 200px / 2 - 383.5px);
+  top: calc(50% - 34px / 2);
+  // padding: 0px 8px 0px 0px;
+
+  /* Neutral/Lighter */
+
+  background: #eff1f3;
+  box-shadow: inset 0px -1px 0px #eff1f3;
+}
+
+.DATE {
+  position: static;
+  width: 170px;
+  height: 34px;
+  left: calc(50% - 170px / 2 - 198.5px);
+  top: calc(50% - 34px / 2);
+
+  /* Neutral/Lighter */
+
+  background: #eff1f3;
+  box-shadow: inset 0px -1px 0px #eff1f3;
+}
+
+.PRICING {
+  position: static;
+  width: 215px;
+  height: 34px;
+  left: calc(50% - 215px / 2 - 6px);
+  top: calc(50% - 34px / 2);
+
+  /* Neutral/Lighter */
+
+  background: #eff1f3;
+  box-shadow: inset 0px -1px 0px #eff1f3;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 3;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 0px 0px;
+}
+
+.CANCEL {
+  position: static;
+  width: 110px;
+  height: 34px;
+  left: calc(50% - 110px / 2 + 156.5px);
+  top: calc(50% - 34px / 2);
+
+  /* Neutral/Lighter */
+
+  background: #eff1f3;
+  box-shadow: inset 0px -1px 0px #eff1f3;
+}
+
+.WAIVED {
+  position: static;
+  width: 130px;
+  height: 34px;
+  left: calc(50% - 130px / 2 + 276.5px);
+  top: calc(50% - 34px / 2);
+
+  /* Neutral/Lighter */
+
+  background: #eff1f3;
+  box-shadow: inset 0px -1px 0px #eff1f3;
+}
+
+.CHARGES {
+  position: static;
+  width: 160px;
+  height: 34px;
+  left: calc(50% - 160px / 2 + 421.5px);
+  top: calc(50% - 34px / 2);
+
+  /* Neutral/Lighter */
+
+  background: #eff1f3;
+  box-shadow: inset 0px -1px 0px #eff1f3;
+}
+
+.STATUS {
+  position: static;
+  width: 160px;
+  height: 34px;
+  left: calc(50% - 130px / 2 + 566.5px);
+  top: calc(50% - 34px / 2);
+
+  /* Neutral/Lighter */
+
+  background: #eff1f3;
+  box-shadow: inset 0px -1px 0px #eff1f3;
+}
+
+thead span {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 8px 0px;
+}
+
+#sort_icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+
+  position: static;
+  width: 16px;
+  height: 18px;
+  left: 52px;
+  top: 8px;
+}
+
+.info_icon {
+  /* Information */
+
+  position: static;
+  width: 16px;
+  height: 16px;
+  left: 0px;
+  top: 1px;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 8px;
+}
+
+#settings_icon {
+  /* Tools */
+
+  position: static;
+  width: 16px;
+  height: 16px;
+  left: calc(50% - 16px / 2);
+  top: calc(50% - 16px / 2);
+  display: flex;
+  transform: scale(calc(1 / 2.2));
+  align-items: center;
+  margin-left: 1px;
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.settings_div {
+  position: relative;
+  margin-left: 50px;
+  margin-right: 10px;
+  box-shadow: inset 1px 0px 0px rgba(0, 0, 0, 0.08);
+  transform: scale(2.2);
+}
+
+.pagination{
+  display: flex;
+flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-family: "Averta";
+}
+.pagination_button{
+  width: 80px;
+  font-family: "Averta";
+}
+.page_index{
+  padding: 8px;
+  font-family: "Averta";
+}
+.select_page{
+  padding: 5px;
+  margin-right: 10px;
+  font-family: "Averta";
+}

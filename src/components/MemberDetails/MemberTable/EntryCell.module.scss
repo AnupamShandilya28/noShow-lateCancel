@@ -1,0 +1,345 @@
+@font-face {
+  font-family: "Averta";
+  src: url(../../../AvertaDemo-Regular.otf);
+}
+
+.entry_name {
+  //   padding: 8px;
+  padding: 8px 0px 8px 8px;
+
+  position: static;
+  width: 180px;
+  left: calc(50% - 180px / 2 - 572.5px);
+  top: 0%;
+  bottom: 0%;
+
+  background: #ffffff;
+  mix-blend-mode: multiply;
+  box-shadow: inset 0px -1px 0px #eff1f3;
+}
+
+.name_div {
+  position: static;
+    width: 140px;
+  min-width: 120px;
+  height: 24px;
+  left: 8px;
+  top: 8px;
+}
+
+.name_label {
+  position: static;
+    width: 120px;
+  height: 24px;
+  left: 0px;
+  top: 0px;
+
+  /* Text/Body */
+
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  /* Neutral/Darkest */
+
+  color: #2d2d2d;
+}
+
+.entry_class {
+    padding: 8px;
+  // padding: 8px 0px;
+
+  position: static;
+  width: 200px;
+  left: calc(50% - 200px / 2 - 382.5px);
+  top: 0%;
+  bottom: 0%;
+
+  background: #ffffff;
+  mix-blend-mode: multiply;
+  box-shadow: inset 0px -1px 0px #eff1f3;
+}
+
+.class_label {
+  position: static;
+    width: 128px;
+  height: 24px;
+  left: 0px;
+  top: 0px;
+
+  /* Text/Body */
+
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  /* Black */
+
+  color: #0f172a;
+}
+
+.entry_date {
+    padding: 8px;
+  // padding: 8px 0px;
+
+  position: static;
+  width: 170px;
+  left: calc(50% - 170px / 2 - 197.5px);
+  top: 0%;
+  bottom: 0%;
+
+  background: #ffffff;
+  mix-blend-mode: multiply;
+  box-shadow: inset 0px -1px 0px #eff1f3;
+}
+
+.date_label {
+  position: static;
+    width: 151px;
+  height: 24px;
+  left: 0px;
+  top: 0px;
+
+  /* Text/Body */
+
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  /* Neutral/Darkest */
+
+  color: #2d2d2d;
+}
+
+.entry_pricing {
+    padding: 8px;
+  // padding: 8px 0px;
+
+  position: static;
+  width: 215px;
+  left: calc(50% - 215px / 2 - 5px);
+  top: 0%;
+  bottom: 0%;
+
+  background: #ffffff;
+  mix-blend-mode: multiply;
+  box-shadow: inset 0px -1px 0px #eff1f3;
+}
+
+.pricing_label {
+  /* LABEL */
+
+  position: static;
+    width: 167px;
+  height: 24px;
+  left: 0px;
+  top: 0px;
+
+  /* Text/Body */
+
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  /* Neutral/Darkest */
+
+  color: #2d2d2d;
+}
+
+.entry_cancel {
+    padding: 8px;
+  // padding: 8px 0px;
+
+  position: static;
+  width: 110px;
+  left: calc(50% - 110px / 2 + 157.5px);
+  top: 0%;
+  bottom: 0%;
+
+  background: #ffffff;
+  mix-blend-mode: multiply;
+  box-shadow: inset 0px -1px 0px #eff1f3;
+}
+
+.cancel_label {
+  position: static;
+    width: 9px;
+  height: 24px;
+  left: 0px;
+  top: 0px;
+
+  /* Text/Body */
+
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  /* Black */
+
+  color: #0f172a;
+}
+
+.entry_waive {
+    padding: 8px;
+  // padding: 8px 0px;
+
+  position: static;
+  width: 130px;
+  left: calc(50% - 130px / 2 + 277.5px);
+  top: 0%;
+  bottom: 0%;
+
+  background: #ffffff;
+  mix-blend-mode: multiply;
+  box-shadow: inset 0px -1px 0px #eff1f3;
+}
+
+.waive_div {
+  padding: 0px 16px 0px 8px;
+
+  position: static;
+    width: 81px;
+  height: 24px;
+  left: 8px;
+  top: 8px;
+}
+
+.entry_charges {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px 8px 8px;
+  // padding: 8px 0px;
+
+  position: static;
+  width: 160px;
+  left: calc(50% - 160px / 2 + 422.5px);
+  top: 0%;
+  bottom: 0%;
+
+  background: #ffffff;
+  box-shadow: inset 0px -1px 0px #eff1f3;
+}
+
+.waive_div {
+    padding: 0px 16px 0px 0px;
+
+  position: static;
+    width: 81px;
+  height: 24px;
+  left: 63px;
+  top: 8px;
+}
+
+.charges_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    padding: 0px 16px 0px 0px;
+
+  position: static;
+  width: 81px;
+  height: 24px;
+  left: 63px;
+  top: 8px;
+}
+
+.charges_label {
+  position: static;
+    width: 28px;
+  height: 24px;
+  left: 0px;
+  top: 0px;
+
+  /* Text/Body */
+
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  /* Black */
+
+  color: #0f172a;
+}
+
+.entry_type {
+  align-items: center;
+  padding: 8px 0px;
+
+  position: static;
+  width: 160px;
+  left: calc(50% - 160px / 2 + 582.5px);
+  top: 0%;
+  bottom: 0%;
+
+  background: #ffffff;
+  box-shadow: inset 0px -1px 0px #eff1f3;
+}
+
+.type_div {
+  padding: 0px;
+
+  position: static;
+  width: 151px;
+  height: 24px;
+  left: 16px;
+  top: 8px;
+}
+
+// .type_checkbox{
+//     padding: 0px;
+
+// position: static;
+// width: 151px;
+// left: calc(50% - 151px/2);
+// top: 0%;
+// bottom: 0%;
+// }
+
+.type_checkbox:not(:checked) {
+  background: white;
+}
+
+.type_label {
+  position: static;
+    width: 111px;
+  height: 24px;
+  left: 40px;
+  top: 0px;
+
+  /* Text/Body */
+
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  margin: 0px 16px;
+
+  /* Neutral/Darkest */
+
+  color: #2d2d2d;
+}
+
+.type_checkbox:not(:checked) {
+  background: white;
+}
