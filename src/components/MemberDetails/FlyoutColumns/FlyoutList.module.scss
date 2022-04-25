@@ -1,0 +1,52 @@
+.list{
+    list-style-type: none;
+    /* Select All */
+
+
+/* Auto layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 8px 16px 0px;
+
+position: static;
+width: 235px;
+// height: 40px;
+left: 0px;
+top: 0px;
+
+background: #FFFFFF;
+mix-blend-mode: multiply;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+margin: 0px 0px;
+}
+
+.line{
+    /* Line 5 */
+
+
+position: static;
+width: 203px;
+height: 0px;
+left: 16px;
+top: 40px;
+
+/* Neutral/Lighter */
+
+border: 1px solid #EFF1F3;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+margin: 8px 0px;
+}

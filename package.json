@@ -91,6 +91,7 @@
   "devDependencies": {
     "@storybook/builder-webpack5": "^6.5.0-alpha.51",
     "@storybook/manager-webpack5": "^6.5.0-alpha.51",
+    "@types/react-table": "^7.7.10",
     "webpack": "^5.70.0"
   }
 }

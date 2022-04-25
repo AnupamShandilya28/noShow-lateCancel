@@ -1,4 +1,4 @@
-const mock_data = [{"Name":"Leigha Cristo ","Class":"Meditation Class","Date":"2021-11-26 03:16","Pricing":"Unlimited Membership","Cancel":3,"Waive":1,"Charges":20,"Apply":true,"Type":"No-Show"},
+const mock_data = [{"Name":"Leigha Cristo aaaaaaa ","Class":"Meditation Class","Date":"2021-11-26 03:16","Pricing":"Unlimited Membership","Cancel":3,"Waive":1,"Charges":20,"Apply":true,"Type":"No-Show"},
 {"Name":"Eziechiele","Class":"Yoga Class","Date":"2021-12-21 15:19","Pricing":"10-Classpack","Cancel":3,"Waive":2,"Charges":20,"Apply":false,"Type":"Late Cancel"},
 {"Name":"Larisa Kearsley","Class":"Meditation Class","Date":"2021-08-22 01:15","Pricing":"5-Classpack","Cancel":3,"Waive":2,"Charges":20,"Apply":true,"Type":"Late Cancel"},
 {"Name":"Trula Massel","Class":"Cross-Fit","Date":"2021-06-29 12:04","Pricing":"Superb-Plan","Cancel":3,"Waive":2,"Charges":20,"Apply":false,"Type":"No-Show"},

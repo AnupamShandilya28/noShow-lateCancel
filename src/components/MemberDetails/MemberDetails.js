@@ -6,11 +6,17 @@ import Header from "./Header";
 import MemberTable from "./MemberTable/MemberTable";
 import ApplyChargesModal from "../UI/ApplyChargesModal";
 import CheckEnableContext from '../store/check-enable-context';
+import FlyoutContext from "../store/flyout-context";
+import { BasicTable } from "./MemberTable/BasicTable";
+import FlyoutColumns from "./FlyoutColumns/FlyoutColumns";
+import { PaginationTable } from "./MemberTable/PaginationTable";
 
 const MemberDetails = () => {
+  const flyoutCtx = useContext(FlyoutContext);
   const [isApply, setIsApply] = useState(false);
   const [isConfirmed, setIsConfirmed] = useState(false);
   const [isTouchedConfirm, setIsTouchedConfirm] = useState(false);
+  // const [isShowFlyout, setIsShowFlyout] = useState(false);
 
   const enableCtx = useContext(CheckEnableContext);
 
@@ -24,7 +30,7 @@ const MemberDetails = () => {
     setIsApply(true);
   };
 
-  const confirmHandler = (status: boolean) => {
+  const confirmHandler = (status) => {
     setIsTouchedConfirm(true);
     setIsConfirmed(status);
     setIsApply(false);
@@ -35,14 +41,19 @@ const MemberDetails = () => {
     
   }
 
+  // const showFlyoutHandler = (isShow) => {
+  //   setIsShowFlyout(isShow);
+  // }
+
   return (
       <div className={styles.member_details_page}>
         {isApply && <ApplyChargesModal onConfirm={confirmHandler} onClose={() => setIsApply(false)}/>}
-        {isConfirmed && isTouchedConfirm && <Toaster className={styles.toaster} show={true}><label className={styles.t_text}>Charges applied successfully!</label></Toaster>}
-       
+        {isConfirmed && isTouchedConfirm && <Toaster className={styles.toaster} show={true}><label className={styles.t_text}>The cancellation has been successfully executed</label></Toaster>}
+        {/* {isShowFlyout && <FlyoutColumns onCheck={checkHandler} />} */}
         <SearchMember />
         <Header onApply={showApplyHandler} />
-        <MemberTable />
+        <div className={styles.main_table}><PaginationTable /></div>
+        {/* <PaginationTable /> */}
       </div>
   );
 };

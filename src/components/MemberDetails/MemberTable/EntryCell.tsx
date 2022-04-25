@@ -6,6 +6,7 @@ import CheckEnableContext from "../../store/check-enable-context";
 import { Cell } from "react-table";
 
 const EntryCell: React.FC<{
+<<<<<<< HEAD
   cell: Cell<
     {
       Name: string;
@@ -24,6 +25,22 @@ const EntryCell: React.FC<{
 
   const [isCheck, setIsCheck] = useState(props.cell.row.original.Apply);
 
+=======
+  cell: Cell<{
+    Name: string;
+    Class: string;
+    Date: string;
+    Pricing: string;
+    Cancel: number;
+    Waive: number;
+    Charges: number;
+    Apply: boolean;
+    Type: string;
+  }>;
+  updateRow: (id: number) => void;
+}> = (props) => {
+  const [isCheck, setIsCheck] = useState(props.cell.row.original.Apply);
+>>>>>>> fb7c7f964f90711faa5df25c3517fb05ba0706dc
   const isCheckHandler = () => {
     console.log(props.cell.row.index);
     props.updateRow(props.cell.row.index);
