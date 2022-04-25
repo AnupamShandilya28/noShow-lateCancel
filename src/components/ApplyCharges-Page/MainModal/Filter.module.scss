@@ -1,31 +1,25 @@
 .second {
+  position: static;
+  left: 0%;
+  right: 76.1%;
+  top: 0%;
+  bottom: 85.11%;
+
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+
+  color: #2d2d2d;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 0px;
   display: table-cell;
-  padding-left: 1.2rem;
-  padding-right: auto;
-  width: 90rem;
+  padding-left: 24px;
+  padding-right: 24px;
+  width: 766px;
 }
 
-
-.second p {
-  margin-top: 0%;
-}
-
-/* .multiselect label{
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #2d2d2d;
-} */
-/* .second label {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #2d2d2d;
-} */
-
-/* option {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-  color: #2d2d2d;
-} */

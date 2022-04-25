@@ -26,10 +26,10 @@ const ApplyCharges = () => {
         <h2 className={styles.head}>No Show/Late Cancel</h2>
         <Label>
           <span className={styles.head2}>Manager Tools </span>
-          <span className={styles.lab}>{">"}No Show/Late Cancel</span>
+          <span className={styles.lab}>{">"} No Show/Late Cancel</span>
         </Label>
 
-        <div className={styles.proDiv}>
+        <div className={styles.mainDiv}>
           <Main onSearchClick={searchButtonHandler}></Main>
         </div>
         {showLoader && <Spinner />}

@@ -1,23 +1,35 @@
-
 .third {
+  position: static;
+left: 0%;
+right: 63.56%;
+top: 0%;
+bottom: 81.08%;
+
+/* Display/Desktop/H4 */
+
+font-family: 'Averta';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 28px;
+color: #2D2D2D;
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 0px;
   display: table-cell;
-  padding-left: 26px;
-
-  width: 30rem;
+  padding-left: 24px;
+  padding-right: 24px;
+  width: 280px;
 }
-.third p{
-  margin-top: 0%;
-}
-
-/* .backdrop {
-  color: "#fff";
-} */
 
 .third button {
-  width: 19rem;
+  font-family: 'Averta';
+font-style: normal;
+  width: 266px;
+  height: 40px;
+  padding: 8px 16px;
+  gap: 8px;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 16px;  
 }
-
-

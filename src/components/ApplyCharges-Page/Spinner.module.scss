@@ -1,9 +1,26 @@
+.spinnerDiv{
+  display:flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 24px;
 
+  position:absolute;
+  width: 1375px;
+  height: 75px;
+  left: 32px;
+  top: 690px;
+
+  background: #ffffff;
+
+  box-shadow: 0px 1px 3px rgba(45, 45, 45, 0.2);
+  border-radius: 3px;
+}
 .loader {
     font-size: 10px;
    // margin: 50px auto;
-   margin-top: 430px;
-   margin-left: 840px;
+   margin-top: 451px;
+   margin-left: 688px;
    z-index: 1;
     text-indent: -9999em;
     width: 7em;
@@ -33,7 +50,7 @@
     content: '';
   }
   .loader:after {
-    background: #E5E5E5;;
+    background: #fefbfb;
     width: 85%;
     height: 85%;
     border-radius: 50%;

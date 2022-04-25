@@ -1,16 +1,24 @@
 .first {
-  display: table-cell;
-  width: 24rem;
+  position: static;
+  left: 0%;
+  right: 76.1%;
+  top: 0%;
+  bottom: 85.11%;
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  padding-right: 24px;
+
+  color: #2d2d2d;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  margin: 0px 0px;
 }
-.first label {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-}
-.first p {
-  padding-left: 6px;
-  margin-top: 0%;
-}
+
 
 .first input {
   background: url("../../../assets/icon/calender.png") no-repeat left;
@@ -22,27 +30,21 @@
   box-sizing: border-box;
   border-radius: 5px;
   height: 40px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
-
+  position: static;
   color: #2d2d2d;
-
-  flex: none;
-  order: 2;
-  flex-grow: 1;
-  margin: 0px 10px;
+  
 }
 
 .SDCalenderPopup {
   position: absolute;
-  left: 37px;
+  left: 27px;
   top: 158px;
   z-index: 9;
+  
 }
 .EDCalenderPopup {
   position: absolute;
-  left: 37px;
-  top: 243px;
+  left: 27px;
+  top: 248px;
   z-index: 9;
 }
