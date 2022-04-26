@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
-import styles from './App.module.scss';
-import MemberDetails from './components/MemberDetails/MemberDetails';
+
+import ApplyCharges from './components/ApplyCharges-Page/ApplyCharges';
 
 export const App = () => {
     const [count, setCount] = useState(0);
     return (
         <>
-            <MemberDetails />
+        <ApplyCharges/>
+            
         </>
     );
 };

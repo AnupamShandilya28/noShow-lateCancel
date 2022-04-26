@@ -1,7 +1,7 @@
 
 import { Column} from "react-table";
 
-interface TableColumns{
+export interface TableColumns{
   Name: string;
     Class: string;
     Date: string;
