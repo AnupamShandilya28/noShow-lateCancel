@@ -56,7 +56,7 @@ const Dates = () => {
         <>
           <ClickAwayListener onClickAway={closeStartDateCalendarHandler}>
             <Label htmlFor="name" id="name-label">
-              Start Date
+            <span className={styles.start}>Start Date</span>
               <Input
                 type="text"
                 value={dateFormat(startDate, "d/m/yyyy")}
@@ -78,7 +78,7 @@ const Dates = () => {
         <>
           <ClickAwayListener onClickAway={closeEndDateCalendarHandler}>
             <Label htmlFor="name" id="name-label">
-              End Date
+            <span className={styles.start}>End Date</span>
               <Input
                 type="text"
                 value={dateFormat(endDate, "d/m/yyyy")}

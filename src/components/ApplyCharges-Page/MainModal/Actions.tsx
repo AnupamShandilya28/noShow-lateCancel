@@ -22,7 +22,7 @@ const Actions = (props: any) => {
         <p>Actions</p>
         <Button variant="secondary" onClick={handler}>
           {!showLoader && <>Search</>}
-          {showLoader && <>Loading...</>}
+          {showLoader && <div className={styles.loader}></div>}
         </Button>
         <br />
         <br />

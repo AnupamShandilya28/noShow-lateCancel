@@ -18,24 +18,24 @@
   left: 0px;
   overflow: auto;
 }
-
-.lab {
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 20px;
-  color: #696c74;
-}
-
 .head {
   margin-top: 170px;
   margin-left: 32px;
   margin-bottom: 4px;
 }
 .head2 {
-  margin-left: 26px;
+  margin-left: 32px;
 
   color: rgba(105, 108, 116, 1);
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
 }
+
+.head3 {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  color: #696c74;
+}
+
