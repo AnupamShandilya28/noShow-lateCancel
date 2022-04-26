@@ -6,7 +6,7 @@ import Spinner from "./Spinner";
 import MemberDetails from "../MemberDetails/MemberDetails";
 const ApplyCharges = () => {
   const [showChargesPage, setShowChargesPage] = useState(false);
-  const [showLoader, setShowLoader] = useState(false);;
+  const [showLoader, setShowLoader] = useState(false);
 
   const searchButtonHandler = () => {
     setShowLoader(true);
@@ -20,16 +20,15 @@ const ApplyCharges = () => {
     <>
       <div className={styles.main}>
         <h2 className={styles.head}>No Show/Late Cancel</h2>
-        <Label>
-          <span className={styles.head2}>Manager Tools </span>
-          <span className={styles.lab}>{">"} No Show/Late Cancel</span>
-        </Label>
+
+        <span className={styles.head2}>Manager Tools </span>
+        <span className={styles.head3}>{">"} No Show/Late Cancel</span>
 
         <div className={styles.mainDiv}>
           <Main onSearchClick={searchButtonHandler}></Main>
         </div>
         {showLoader && <Spinner />}
-        {showChargesPage && <MemberDetails/>}
+        {showChargesPage && <MemberDetails />}
       </div>
     </>
   );
