@@ -17,10 +17,9 @@ const Tablecell: React.FC<{
   const [inputvalue, setinputvalue] = useState("120");
 
   const onChangeInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const i=event.target.value.length;
-    if(i)
+    for(let i=0;i<event.target.value.length;i++)
     {
-      if(!(event.target.value[i-1]>='0' && event.target.value[i-1]<='9'))
+      if(!(event.target.value[i]>='0' && event.target.value[i]<='9'))
       return;
     }
     setinputvalue(event.target.value);
@@ -28,10 +27,9 @@ const Tablecell: React.FC<{
   const onChangeInputHandlerLC = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
-    const i=event.target.value.length;
-    if(i)
+    for(let i=0;i<event.target.value.length;i++)
     {
-      if(!(event.target.value[i-1]>='0' && event.target.value[i-1]<='9'))
+      if(!(event.target.value[i]>='0' && event.target.value[i]<='9'))
       return;
     }
     props.setinputvalueLC(event.target.value);
@@ -39,11 +37,9 @@ const Tablecell: React.FC<{
   const onChangeInputHandlerNS = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
-    
-    const i=event.target.value.length;
-    if(i)
+    for(let i=0;i<event.target.value.length;i++)
     {
-      if(!(event.target.value[i-1]>='0' && event.target.value[i-1]<='9'))
+      if(!(event.target.value[i]>='0' && event.target.value[i]<='9'))
       return;
     }
     props.setinputvalueNS(event.target.value);
