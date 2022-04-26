@@ -27,9 +27,9 @@ const Tablecell: React.FC<{
   const onChangeInputHandlerLC = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
-    for(let i=0;i<event.target.value.length;i++)
+    const i=event.target.value.length;
     {
-      if(!(event.target.value[i]>='0' && event.target.value[i]<='9'))
+      if(!(event.target.value[i-1]>='0' && event.target.value[i-1]<='9'))
       return;
     }
     props.setinputvalueLC(event.target.value);
