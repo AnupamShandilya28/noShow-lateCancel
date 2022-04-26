@@ -1,6 +1,6 @@
 export const COLUMNS = [
   {
-    Header: "TYPE OF CLASS",
+    Header: "TYPE",
     accessor: "type_of_class",
   },
   {

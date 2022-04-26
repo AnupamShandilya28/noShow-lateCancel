@@ -6,6 +6,7 @@ import SortIcon from "@mui/icons-material/Sort";
 import InfoIcon from "@mui/icons-material/Info";
 import MOCK_DATA from "../../data/manageClasses/MOCK_DATA.json";
 import ManageClassTableRow from "./ManageClassTableRow";
+import { Tipsy, TipsyExamples } from "@mbkit/tipsy";
 
 const ManageClasses = () => {
   const data = useMemo(() => MOCK_DATA, []);
@@ -32,12 +33,36 @@ const ManageClasses = () => {
                       <span id={styles.titlestyle}>
                         {column.render("Header")}
                       </span>
-                      {(column.render("Header") === "TIME (PRIOR TO CLASS)" ||
-                        column.render("Header") === "LATE CANCEL" ||
-                        column.render("Header") === "NO SHOW") && (
-                        <InfoIcon id={styles.infoicon}></InfoIcon>
+                      {column.render("Header") === "TIME (PRIOR TO CLASS)" && (
+                        <Tipsy
+                          position="top-center"
+                          label="Don't put anything critical to getting the task at hand complete in here"
+                        >
+                          <span>
+                            <InfoIcon id={styles.infoicon} />
+                          </span>
+                        </Tipsy>
                       )}
-                      <SortIcon id={styles.sorticon} />
+                      {column.render("Header") === "LATE CANCEL" && (
+                        <Tipsy
+                          position="top-center"
+                          label="Don't put anything critical to getting the task at hand complete in here"
+                        >
+                          <span>
+                            <InfoIcon id={styles.infoicon} />
+                          </span>
+                        </Tipsy>
+                      )}
+                      {column.render("Header") === "NO SHOW" && (
+                        <Tipsy
+                          position="top-center"
+                          label="Don't put anything critical to getting the task at hand complete in here"
+                        >
+                          <span>
+                            <InfoIcon id={styles.infoicon} />
+                          </span>
+                        </Tipsy>
+                      )}
                     </div>
                   </th>
                 );

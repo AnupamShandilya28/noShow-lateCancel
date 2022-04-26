@@ -7,10 +7,6 @@
   background-color: #f3f0ef;
 }
 .header {
-  /* Frame 794 */
-
-  /* Auto layout */
-
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -27,58 +23,40 @@
 }
 
 #buttonstyles {
-  /* _primary-small */
-
-  /* Auto layout */
-
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 8px 16px;
+  padding: 8px 21px;
 
   position: static;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 0%;
-  height: 32px;
-  width: 81px;
-  /* Mindbody Business/Base */
-
+  height: 40px;
+  width: 97px;
   background: #0a7c8e;
   border-radius: 5px;
-
-  /* Inside auto layout */
-
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-  margin: 0px 0px;
-
   cursor: pointer;
   border: none;
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  text-align: center;
 }
 
 .headname {
-  /* Frame 793 */
-
-  /* Auto layout */
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   padding: 0px;
-
   position: static;
   width: 1238px;
   height: 60px;
   left: 16px;
   top: 16px;
-
-  /* Inside auto layout */
-
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -88,29 +66,18 @@
 }
 
 #title {
-  /* Member Classification */
-
   position: static;
   width: 387px;
   height: 36px;
   left: 0px;
   top: 0px;
-
-  /* Display/Desktop/H3 */
-
   font-family: "Averta";
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
   line-height: 36px;
   /* identical to box height, or 150% */
-
-  /* Neutral/Darkest */
-
   color: #2d2d2d;
-
-  /* Inside auto layout */
-
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -118,23 +85,16 @@
 }
 
 #pages {
-  /* Page/Breadcrumbs */
-
-  /* Auto layout */
-
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 0px;
+  // padding: 0px;
 
   position: static;
   left: 0%;
   right: 77.46%;
   top: 73.33%;
   bottom: 0%;
-
-  /* Inside auto layout */
-
   flex: none;
   order: 1;
   flex-grow: 0;
@@ -143,10 +103,6 @@
 }
 
 #page1 {
-  /* 01 */
-
-  /* Auto layout */
-
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -157,82 +113,50 @@
   height: 16px;
   left: 0px;
   top: 0px;
-
-  /* Inside auto layout */
-
   flex: none;
   order: 0;
   flex-grow: 0;
   margin: 0px 4px;
-
-  /* Text/Body Small */
-
   font-family: "Averta";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
   /* identical to box height, or 114% */
-
   display: flex;
   align-items: center;
   text-align: center;
-
-  /* Neutral/Darker */
-
   color: #696c74;
 }
 
 #page2 {
-  /* 01 */
-
-  /* Auto layout */
-
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 0px;
-
   position: static;
   width: 150px;
   height: 16px;
   left: 119px;
   top: 0px;
-
-  /* Inside auto layout */
-
   flex: none;
   order: 0;
   flex-grow: 0;
   margin: 0px 4px;
-
-  /* Text/Body Small */
-
   font-family: "Averta";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
-  /* identical to box height, or 114% */
-
   display: flex;
   align-items: center;
   text-align: center;
-
-  /* Neutral/Darker */
-
   color: #696c74;
 }
 
-// .arrow {
-//   color: #696c74;
-//   width: 5.5px;
-//   height: 12.5px
-
-// }
 #arrow1,
 #arrow2 {
-  color: #696c74;
+  color: #d5d9de;
   width: 15.5px;
   height: 18.5px;
 }

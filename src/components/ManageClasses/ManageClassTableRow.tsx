@@ -1,3 +1,4 @@
+import { Rowing } from "@material-ui/icons";
 import { Checkbox } from "@mbkit/checkbox";
 import { Input } from "@mbkit/input";
 import React, { useState } from "react";
@@ -16,6 +17,9 @@ const ManageClassTableRow: React.FC<{
     no_show_charge: number;
   }>;
 }> = (props) => {
+  const [timeInput, setTimeInput] = useState(
+    props.row.values["time_prior_to_class"]
+  );
   const [isLateCancel, setIslateCancel] = useState(
     props.row.values["late_cancel"]
   );
@@ -36,15 +40,27 @@ const ManageClassTableRow: React.FC<{
     setNoShowChargeInput(0);
   };
 
-  const onTimeChangeHandler = (event: any) => {};
+  const checkValidity = (value: string): boolean => {
+    for (let i = 0; i < value.length; i++) {
+      if (!(value[i] >= "0" && value[i] <= "9")) return false;
+    }
+    return true;
+  };
+
+  const onTimeChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (!checkValidity(event.target.value)) return;
+    setTimeInput(event.target.value);
+  };
   const onLateCancelChargeHandler = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
+    if (!checkValidity(event.target.value)) return;
     setLateCancelChargeInput(event.target.value);
   };
   const onNoShowChargeHandler = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
+    if (!checkValidity(event.target.value)) return;
     setNoShowChargeInput(event.target.value);
   };
 
@@ -52,14 +68,18 @@ const ManageClassTableRow: React.FC<{
     <tr id={styles.trstyle} {...props.row.getRowProps()}>
       {props.row.cells.map((cell) => {
         if (cell.column.id === "type_of_class") {
-          return <td className={styles.rowstyle}>{cell.value}</td>;
+          return (
+            <td key={cell.row.id + cell.column.id} className={styles.rowstyle}>
+              {cell.value}
+            </td>
+          );
         } else if (cell.column.id === "time_prior_to_class") {
           return (
-            <td className={styles.rowstyle}>
+            <td key={cell.row.id + cell.column.id} className={styles.rowstyle}>
               <div className={styles.divstyle}>
                 <Input
                   id={styles.inputstyle}
-                  value={cell.value}
+                  value={timeInput}
                   onChange={onTimeChangeHandler}
                 />
                 <span id={styles.spanstyle}>Minutes (Prior to class)</span>
@@ -68,7 +88,7 @@ const ManageClassTableRow: React.FC<{
           );
         } else if (cell.column.id === "late_cancel") {
           return (
-            <td className={styles.rowstyle}>
+            <td key={cell.row.id + cell.column.id} className={styles.rowstyle}>
               <div className={styles.divstyle}>
                 <Checkbox
                   className={styles.checkboxstyle}
@@ -81,7 +101,7 @@ const ManageClassTableRow: React.FC<{
           );
         } else if (cell.column.id === "late_cancel_charge") {
           return (
-            <td className={styles.rowstyle}>
+            <td key={cell.row.id + cell.column.id} className={styles.rowstyle}>
               <div className={styles.divstyle}>
                 <Input
                   id={styles.inputstyle}
@@ -97,7 +117,7 @@ const ManageClassTableRow: React.FC<{
           );
         } else if (cell.column.id === "no_show") {
           return (
-            <td className={styles.rowstyle}>
+            <td key={cell.row.id + cell.column.id} className={styles.rowstyle}>
               <div className={styles.divstyle}>
                 <Checkbox
                   className={styles.checkboxstyle}
@@ -111,7 +131,7 @@ const ManageClassTableRow: React.FC<{
           );
         } else if (cell.column.id === "no_show_charge") {
           return (
-            <td className={styles.rowstyle}>
+            <td key={cell.row.id + cell.column.id} className={styles.rowstyle}>
               <div className={styles.divstyle}>
                 <Input
                   id={styles.inputstyle}

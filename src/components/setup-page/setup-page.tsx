@@ -30,11 +30,11 @@ export const SetupPage = () => {
       <Toaster show={updatebutton}>Changes updated successfully!</Toaster>
       <span className={styles.header}>
         <div className={styles.headname}>
-          <div id={styles.title}>NoShow/Late Cancel</div>
+          <div id={styles.title}>No-show/Late Cancel</div>
           <div id={styles.pages}>
             <div id={styles.page1}>Manager Tools</div>
             <ArrowForwardIosIcon id={styles.arrow1} />
-            <div id={styles.page2}>No Show / Late Cancel</div>
+            <div id={styles.page2}>No-show/Late Cancel</div>
             <ArrowForwardIosIcon id={styles.arrow2} />
           </div>
         </div>

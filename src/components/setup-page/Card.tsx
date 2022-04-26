@@ -1,7 +1,6 @@
 import React, { Dispatch, SetStateAction } from "react";
 import styles from "./Card.module.scss";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 const Card: React.FC<{
   managestate: {
     manageClasses: boolean;
@@ -56,7 +55,7 @@ const Card: React.FC<{
           )}
         {props.title === "Manage Classes" &&
           props.managestate.manageClasses && (
-            <KeyboardArrowDownIcon id={styles.bicons} />
+            <ArrowForwardIosIcon id={styles.bicons} />
           )}
         {props.title === "Manage Appointments" &&
           !props.managestate.manageAppointment && (
@@ -64,14 +63,14 @@ const Card: React.FC<{
           )}
         {props.title === "Manage Appointments" &&
           props.managestate.manageAppointment && (
-            <KeyboardArrowDownIcon id={styles.bicons} />
+            <ArrowForwardIosIcon id={styles.bicons} />
           )}
         {props.title === "Manage Fee Waived" &&
           !props.managestate.manageFee && (
             <ArrowForwardIosIcon id={styles.ficons} />
           )}
         {props.title === "Manage Fee Waived" && props.managestate.manageFee && (
-          <KeyboardArrowDownIcon id={styles.bicons} />
+          <ArrowForwardIosIcon id={styles.bicons} />
         )}
         <div className={styles._ui_title}>{props.title}</div>
       </div>
