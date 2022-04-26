@@ -36,7 +36,13 @@ const ManageClasses = () => {
                       {column.render("Header") === "TIME (PRIOR TO CLASS)" && (
                         <Tipsy
                           position="top-center"
-                          label="Don't put anything critical to getting the task at hand complete in here"
+                          label={
+                            <>
+                              This is the time for cancelation before the class.
+                              <br />
+                              You can update this time from Cancelation Window
+                            </>
+                          }
                         >
                           <span>
                             <InfoIcon id={styles.infoicon} />

@@ -1,4 +1,4 @@
-import { Fragment, useMemo, useState } from "react";
+import { useMemo } from "react";
 import styles from "./styles/ManageAppointments.module.scss";
 import { useTable, useSortBy } from "react-table";
 import { COLUMNS } from "./columns";
@@ -7,7 +7,7 @@ import SortIcon from "@mui/icons-material/Sort";
 import InfoIcon from "@material-ui/icons/Info";
 import Tablerow from "./Tablerow";
 import React from "react";
-import { Tipsy, TipsyExamples } from "@mbkit/tipsy";
+import { Tipsy } from "@mbkit/tipsy";
 const ManageAppointments = () => {
   const data = useMemo(() => MOCK_DATA, []);
   const columns = useMemo(() => processColumns(COLUMNS, data), [COLUMNS, data]);
@@ -43,22 +43,6 @@ const ManageAppointments = () => {
                       </span>
                     </Tipsy>
                   )}
-                  {column.render("Header") === "NO SHOW" && (
-                    <Tipsy
-                      position="top-center"
-                      label={
-                        <>
-                          This is the time for cancelation before the class.
-                          <br />
-                          You can update this time from Cancelation Window
-                        </>
-                      }
-                    >
-                      <span>
-                        <InfoIcon id={styles.infoicon} />
-                      </span>
-                    </Tipsy>
-                  )}
                   {column.render("Header") === "LATE CANCEL" && (
                     <Tipsy
                       position="top-center"
@@ -75,12 +59,12 @@ const ManageAppointments = () => {
                       </span>
                     </Tipsy>
                   )}
-                  {(column.render("Header") === "TIME (PRIOR TO CLASS)" ||
-                    column.render("Header") === "TYPE") && (
-                    <span>
-                      <SortIcon id={styles.sorticon} />
-                    </span>
-                  )}
+                  {/* {(column.render("Header") === "TIME (PRIOR TO CLASS)" ||
+                      column.render("Header") === "TYPE") && (
+                      <span>
+                        <InfoIcon id={styles.infoicon} />
+                      </span>
+                    )} */}
                 </th>
               ))}
             </tr>
