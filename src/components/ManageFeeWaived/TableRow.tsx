@@ -36,25 +36,14 @@ const TableRow = (props: {
     });
   };
   const changeNoShowInputhandler = (no_show_input: string) => {
-    const Length = no_show_input.length;
-    if (Length) {
-      if (
-        !(no_show_input[Length - 1] >= "0" && no_show_input[Length - 1] <= "9")
-      )
-        return;
+    for (let i = 0; i < no_show_input.length; i++) {
+      if (!(no_show_input[i] >= "0" && no_show_input[i] <= "9")) return;
     }
     setNoShowInput(no_show_input);
   };
   const changeLateCancelInputhandler = (late_cancel_input: string) => {
-    const Length = late_cancel_input.length;
-    if (Length) {
-      if (
-        !(
-          late_cancel_input[Length - 1] >= "0" &&
-          late_cancel_input[Length - 1] <= "9"
-        )
-      )
-        return;
+    for (let i = 0; i < late_cancel_input.length; i++) {
+      if (!(late_cancel_input[i] >= "0" && late_cancel_input[i] <= "9")) return;
     }
     setLateCancelInput(late_cancel_input);
   };
