@@ -1,7 +1,7 @@
 export const COLUMNS=[
     {
-        Header:"TYPE OF CLASS",
-        accessor:"TYPEOFCLASS"
+        Header:"TYPE",
+        accessor:"TYPE"
     },
     {
         Header:"TIME (PRIOR TO CLASS)",

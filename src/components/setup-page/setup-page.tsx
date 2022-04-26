@@ -6,17 +6,28 @@ import Card from "./Card";
 import ManageAppointments from "../ManageAppointments/ManageAppointments";
 import ManageFeeWaived from "../ManageFeeWaived/ManageFeeWaived";
 import ManageClasses from "../ManageClasses/ManageClasses";
+import { Toaster } from "@mbkit/toaster";
 export const SetupPage = () => {
   const [manageState, setManageState] = useState({
     manageClasses: false,
     manageFee: false,
     manageAppointment: false,
   });
+  const [updatebutton, setupdatebutton] = useState(false);
+
+  const hidetoaster = () => {
+    setupdatebutton(false);
+  };
+  const onclickhandler = () => {
+    setupdatebutton(true);
+    setTimeout(hidetoaster, 5000);
+  };
   //   const [manageFee,setManageFee]=useState(false);
   //   const [manageAppointment,setManageAppointment]=useState(false);
   //   const stateobject={manageAppointment,manageClasses,manageFee,setManageAppointment,setManageClasses,setManageFee};
   return (
     <div className={styles.firstpage}>
+      <Toaster show={updatebutton}>Changes updated successfully!</Toaster>
       <span className={styles.header}>
         <div className={styles.headname}>
           <div id={styles.title}>NoShow/Late Cancel</div>
@@ -27,7 +38,11 @@ export const SetupPage = () => {
             <ArrowForwardIosIcon id={styles.arrow2} />
           </div>
         </div>
-        <Button id={styles.buttonstyles} variant={"primary"}>
+        <Button
+          id={styles.buttonstyles}
+          variant={"primary"}
+          onClick={onclickhandler}
+        >
           Update
         </Button>
       </span>

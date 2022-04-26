@@ -2,7 +2,7 @@ import { Checkbox } from "@mbkit/checkbox";
 import { Input } from "@mbkit/input";
 import React from "react";
 import { SetStateAction, useState } from "react";
-import styles from "./Tablerow.module.scss";
+import styles from "./styles/Tablerow.module.scss";
 const Tablecell: React.FC<{
   setcheckedlatecancel: (arg0: boolean) => void;
   setcheckednoshow: (arg0: boolean) => void;
@@ -14,19 +14,36 @@ const Tablecell: React.FC<{
   inputvalueLC: string;
   inputvalueNS:string;
 }> = (props) => {
-  const [inputvalue, setinputvalue] = useState("");
+  const [inputvalue, setinputvalue] = useState("120");
 
   const onChangeInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    for(let i=0;i<event.target.value.length;i++)
+    {
+      if(!(event.target.value[i]>='0' && event.target.value[i]<='9'))
+      return;
+    }
     setinputvalue(event.target.value);
   };
   const onChangeInputHandlerLC = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
+    for(let i=0;i<event.target.value.length;i++)
+    {
+      if(!(event.target.value[i]>='0' && event.target.value[i]<='9'))
+      return;
+    }
     props.setinputvalueLC(event.target.value);
   };
   const onChangeInputHandlerNS = (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
+    
+    for(let i=0;i<event.target.value.length;i++)
+    {
+      if(!(event.target.value[i]>='0' && event.target.value[i]<='9'))
+      return;
+    }
+    console.log("sdfsdf");
     props.setinputvalueNS(event.target.value);
   };
   const onChangeLateCancel = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -44,7 +61,7 @@ const Tablecell: React.FC<{
         <div className={styles.divstyle}>
           <Input
             id={styles.inputstyle}
-            value={props.cell.value}
+            value={inputvalue}
             onChange={onChangeInputHandler}
           />
           <span id={styles.spanstyle}>Minutes (Prior to class)</span>
@@ -65,7 +82,7 @@ const Tablecell: React.FC<{
   } else if (props.cell.column.id == "CHARGES_NS") {
     return (
       <td id={styles.rowstyle}>
-        <Input
+        <Input          
           id={styles.inputstyle}
           onChange={onChangeInputHandlerNS}
           disabled={!props.checkednoshow}
