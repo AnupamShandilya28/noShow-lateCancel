@@ -17,9 +17,10 @@ const Tablecell: React.FC<{
   const [inputvalue, setinputvalue] = useState("120");
 
   const onChangeInputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-    for(let i=0;i<event.target.value.length;i++)
+    const i=event.target.value.length;
+    if(i)
     {
-      if(!(event.target.value[i]>='0' && event.target.value[i]<='9'))
+      if(!(event.target.value[i-1]>='0' && event.target.value[i-1]<='9'))
       return;
     }
     setinputvalue(event.target.value);
@@ -28,6 +29,7 @@ const Tablecell: React.FC<{
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
     const i=event.target.value.length;
+    if(i)
     {
       if(!(event.target.value[i-1]>='0' && event.target.value[i-1]<='9'))
       return;
@@ -38,12 +40,12 @@ const Tablecell: React.FC<{
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
     
-    for(let i=0;i<event.target.value.length;i++)
+    const i=event.target.value.length;
+    if(i)
     {
-      if(!(event.target.value[i]>='0' && event.target.value[i]<='9'))
+      if(!(event.target.value[i-1]>='0' && event.target.value[i-1]<='9'))
       return;
     }
-    console.log("sdfsdf");
     props.setinputvalueNS(event.target.value);
   };
   const onChangeLateCancel = (event: React.ChangeEvent<HTMLInputElement>) => {
