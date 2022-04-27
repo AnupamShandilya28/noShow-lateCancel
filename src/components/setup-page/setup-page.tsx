@@ -22,9 +22,34 @@ export const SetupPage = () => {
     setupdatebutton(true);
     setTimeout(hidetoaster, 5000);
   };
-  //   const [manageFee,setManageFee]=useState(false);
-  //   const [manageAppointment,setManageAppointment]=useState(false);
-  //   const stateobject={manageAppointment,manageClasses,manageFee,setManageAppointment,setManageClasses,setManageFee};
+  const onClassExpandHandler = (isExpanded: boolean) => {
+    setManageState((prev) => {
+      return {
+        manageClasses: isExpanded,
+        manageAppointment: false,
+        manageFee: false,
+      };
+    });
+  };
+  const onAppointmentExpandHandler = (isExpanded: boolean) => {
+    setManageState((prev) => {
+      return {
+        manageClasses: false,
+        manageAppointment: isExpanded,
+        manageFee: false,
+      };
+    });
+  };
+  const onFeeExpandHandler = (isExpanded: boolean) => {
+    setManageState((prev) => {
+      return {
+        manageClasses: false,
+        manageAppointment: false,
+        manageFee: isExpanded,
+      };
+    });
+  };
+
   return (
     <div className={styles.firstpage}>
       <Toaster show={updatebutton}>Changes updated successfully!</Toaster>
@@ -46,24 +71,23 @@ export const SetupPage = () => {
           Update
         </Button>
       </span>
-      {/* state={activepane:0} */}
 
       <div className={styles.whitespace}>
         <Card
-          managestate={manageState}
-          setmanagestate={setManageState}
+          isExpanded={manageState.manageClasses}
+          onExpand={onClassExpandHandler}
           title={"Manage Classes"}
         ></Card>
         {manageState.manageClasses && <ManageClasses />}
         <Card
-          managestate={manageState}
-          setmanagestate={setManageState}
+          isExpanded={manageState.manageAppointment}
+          onExpand={onAppointmentExpandHandler}
           title={"Manage Appointments"}
         ></Card>
         {manageState.manageAppointment && <ManageAppointments />}
         <Card
-          managestate={manageState}
-          setmanagestate={setManageState}
+          isExpanded={manageState.manageFee}
+          onExpand={onFeeExpandHandler}
           title={"Manage Fee Waived"}
         ></Card>
         {manageState.manageFee && <ManageFeeWaived />}

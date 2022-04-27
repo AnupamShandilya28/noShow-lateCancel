@@ -12,13 +12,10 @@ const ManageClasses = () => {
   const data = useMemo(() => MOCK_DATA, []);
   const columns = useMemo(() => processColumns(COLUMNS, data), [COLUMNS, data]);
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
-    useTable(
-      {
-        columns,
-        data,
-      },
-      useSortBy
-    );
+    useTable({
+      columns,
+      data,
+    });
 
   return (
     <div id={styles.tableouterdiv}>
