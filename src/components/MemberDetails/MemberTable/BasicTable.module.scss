@@ -83,6 +83,7 @@ thead th label {
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
+  max-width: 100%;
   /* identical to box height, or 133% */
 
   text-transform: uppercase;
@@ -270,8 +271,9 @@ thead span {
 
 .settings_div {
   position: relative;
-  margin-left: 50px;
-  margin-right: 10px;
+  // margin-left: 50px;
+  // margin-right: 10px;
+  margin: 0px 35px;
   box-shadow: inset 1px 0px 0px rgba(0, 0, 0, 0.08);
   transform: scale(2.2);
 }

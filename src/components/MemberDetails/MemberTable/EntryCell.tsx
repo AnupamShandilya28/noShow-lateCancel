@@ -21,9 +21,11 @@ const EntryCell: React.FC<{
 }> = (props) => {
   const [isCheck, setIsCheck] = useState(props.cell.row.original.Apply);
   const isCheckHandler = () => {
+    console.log("original check ", props.cell.row.original.Apply);
+    
     console.log(props.cell.row.index);
-    props.updateRow(props.cell.row.index);
     setIsCheck(!isCheck);
+    props.updateRow(props.cell.row.index);
   };
 
   const enableCtx = useContext(CheckEnableContext);

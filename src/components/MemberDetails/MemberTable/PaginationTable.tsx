@@ -35,12 +35,15 @@ export const PaginationTable = () => {
     // { id: 11, value: "Staff Name", isChecked: false },
   ]);
 
-  const [columns, setColumns] = useState(COLUMNS);
+  // const [columns, setColumns] = useState(COLUMNS);
   const [data, setData] = useState(MOCK_DATA);
-  const [skipPageReset, setSkipPageReset] = useState(false);
+  // const [skipPageReset, setSkipPageReset] = useState(false);
+  // const data = useMemo(() => MOCK_DATA, []);
+  const columns = useMemo(() => COLUMNS, []);
+
 
   const rowUpdateHandler = (id: number) => {
-    setSkipPageReset(true);
+    // setSkipPageReset(true);
     console.log("Index:", id);
     // var id_string = id.toString();
     // console.log("Row:", rowState);
@@ -57,7 +60,7 @@ export const PaginationTable = () => {
       ];
     });
 
-    console.log(id);
+    console.log("id--", id);
   };
 
   const {
@@ -73,13 +76,15 @@ export const PaginationTable = () => {
     setPageSize,
     state,
     prepareRow,
+    allColumns,
+    getToggleHideAllColumnsProps,
     setHiddenColumns,
   } = useTable(
     {
       columns,
       data,
-      autoResetPage: !skipPageReset,
-      rowUpdateHandler,
+      // autoResetPage: !skipPageReset,
+      // rowUpdateHandler,
     },
     useSortBy,
     usePagination
@@ -89,9 +94,9 @@ export const PaginationTable = () => {
   console.log("Data", data);
   // console.log(page[0].original.Apply);
 
-  React.useEffect(() => {
-    setSkipPageReset(false);
-  }, [data]);
+  // React.useEffect(() => {
+  //   setSkipPageReset(false);
+  // }, [data]);
 
   // const tableUpdateHandler = () => {
   //   setData((prevState) => {
@@ -117,22 +122,22 @@ export const PaginationTable = () => {
     // flyoutCtx.columnList = showColumns;
   };
 
-  useEffect(() => {
-    const tempArray: Array<Column<TableColumns>> = [];
-    showColumns.map((column) => {
-      if (column.isChecked === false) {
-        const objectArray = COLUMNS.filter((x) => x.accessor === column.id);
-        console.log("Object", objectArray);
-        tempArray.push(objectArray[0]);
-      }
-    });
-    console.log("temparray", tempArray);
-    console.log("COLUMN", COLUMNS);
-    // setColumnsT(tempArray);
-    console.log("effect");
-    // console.log(columns);
-    setHiddenColumns(tempArray.map((item) => item.accessor!.toString()));
-  }, [showColumns]);
+  // useEffect(() => {
+  //   const tempArray: Array<Column<TableColumns>> = [];
+  //   showColumns.map((column) => {
+  //     if (column.isChecked === false) {
+  //       const objectArray = COLUMNS.filter((x) => x.accessor === column.id);
+  //       console.log("Object", objectArray);
+  //       tempArray.push(objectArray[0]);
+  //     }
+  //   });
+  //   console.log("temparray", tempArray);
+  //   console.log("COLUMN", COLUMNS);
+  //   // setColumnsT(tempArray);
+  //   console.log("effect");
+  //   // console.log(columns);
+  //   setHiddenColumns(tempArray.map((item) => item.accessor!.toString()));
+  // }, [showColumns]);
 
   const flyoutClickHandler = () => {
     console.log("Flyout clicked...");
@@ -177,12 +182,12 @@ export const PaginationTable = () => {
                     tempClassName = styles.STATUS;
                   }
                   return (
-                    <th {...column.getHeaderProps()}>
+                    <th className={tempClassName} {...column.getHeaderProps()}>
                       <span>
                         <label {...column.getSortByToggleProps()}>
                           {column.render("Header")}
                         </label>
-                        {column.render("Header") === "STATUS" && (
+                        {column.render("Header") === "FEE TYPE" && (
                           <img
                             className={styles.info_icon}
                             src="https://img.icons8.com/ios-glyphs/30/000000/info--v1.png"
@@ -195,7 +200,7 @@ export const PaginationTable = () => {
                               style={{ color: "#BDBDBD" }}
                             />
                           )}
-                        {column.render("Header") === "STATUS" && (
+                        {column.render("Header") === "FEE TYPE" && (
                           <div className={styles.settings_div}>
                             <SettingsIcon
                               onClick={flyoutClickHandler}
@@ -213,6 +218,8 @@ export const PaginationTable = () => {
           </thead>
           <tbody {...getTableBodyProps()}>
             {page.map((row) => {
+              console.log("row----",row);
+              
               prepareRow(row);
               return <EntryRow row={row} onRowUpdate={rowUpdateHandler} />;
             })}
@@ -259,8 +266,8 @@ export const PaginationTable = () => {
         {showFlyout && (
           <FlyoutColumns
             // onRowUpdate={tableUpdateHandler}
-            columns={showColumns}
-            onCheck={checkColumnHandler}
+            columns={allColumns}
+            // onCheck={checkColumnHandler}
           />
         )}
       </div>

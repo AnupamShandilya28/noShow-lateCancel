@@ -1,6 +1,6 @@
 import React from 'react';
 import { Column} from "react-table";
-import styles from './BasicTable.module.scss';
+import styles from './EntryCell.module.scss';
 
 export interface TableColumns{
   Name: string;
@@ -44,7 +44,7 @@ export const COLUMNS: Column<TableColumns>[]= [
     accessor: "Charges",
   },
   {
-    Header: "STATUS",
+    Header: "FEE TYPE",
     accessor: "Type",
   },
 ];

@@ -8,7 +8,7 @@ const FlyoutList = (props) => {
       {props.columns.map((column) => {
         return (
           <div>
-            <FlyoutItem item={column} onCheck={props.onCheck} />
+            <FlyoutItem item={column} />
             <hr className={styles.line}></hr>
           </div>
         );
