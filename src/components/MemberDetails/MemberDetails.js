@@ -3,7 +3,7 @@ import SearchMember from "./SearchMember";
 import { Toaster, ToasterExample } from "@mbkit/toaster";
 import styles from "./MemberDetails.module.scss";
 import Header from "./Header";
-import MemberTable from "./MemberTable/MemberTable";
+
 import ApplyChargesModal from "../UI/ApplyChargesModal";
 import CheckEnableContext from '../store/check-enable-context';
 import FlyoutContext from "../store/flyout-context";

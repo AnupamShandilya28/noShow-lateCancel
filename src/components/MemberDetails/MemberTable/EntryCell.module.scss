@@ -221,8 +221,8 @@
 
 .entry_charges {
     // display: flex;
-    // justify-content: center;
-    // align-items: center;
+    justify-content: center;
+    align-items: center;
     padding: 8px 16px 8px 8px;
   // padding: 8px 0px;
 
@@ -283,7 +283,7 @@
 
 .entry_type {
   align-items: center;
-  padding: 8px 0px;
+  padding: 8px 8px 8px 16px;
 
   position: static;
   width: 160px;

@@ -16,6 +16,7 @@ import SortIcon from "@mui/icons-material/Sort";
 import { Button } from "@mbkit/button";
 import FlyoutColumns from "../FlyoutColumns/FlyoutColumns";
 import { TableColumns } from "./column";
+import classes from "./EntryCell.module.scss";
 //import classes from "./MemberTable.module.scss";
 
 export const PaginationTable = () => {
@@ -178,7 +179,7 @@ export const PaginationTable = () => {
                     tempClassName = styles.WAIVED;
                   } else if (tempClass === "CHARGES") {
                     tempClassName = styles.CHARGES;
-                  } else if (tempClass === "STATUS") {
+                  } else if (tempClass === "FEE TYPE") {
                     tempClassName = styles.STATUS;
                   }
                   return (
@@ -221,7 +222,37 @@ export const PaginationTable = () => {
               console.log("row----",row);
               
               prepareRow(row);
-              return <EntryRow row={row} onRowUpdate={rowUpdateHandler} />;
+              return (
+                <tr {...row.getRowProps()}>
+                  {row.cells.map((cell) => {
+                    // {console.log("ROWWWW CELL", cell.column.Header)}
+                  const tempClass = cell.column.Header;
+                  var tempClassName;
+                  if (tempClass === "NAME") {
+                    tempClassName = classes.entry_name;
+                  } else if (tempClass === "CLASSES / APPOINTMENTS") {
+                    tempClassName = classes.entry_class;
+                  } else if (tempClass === "DATE & TIME") {
+                    tempClassName = classes.entry_date;
+                  } else if (tempClass === "PRICING OPTION") {
+                    tempClassName = classes.entry_pricing;
+                  } else if (tempClass === "NO-SHOW/LATE") {
+                    tempClassName = classes.entry_cancel;
+                  } else if (tempClass === "FEE WAIVED") {
+                    tempClassName = classes.entry_waive;
+                  } else if (tempClass === "CHARGES") {
+                    tempClassName = classes.entry_charges;
+                  } else if (tempClass === "FEE TYPE") {
+                    tempClassName = classes.entry_type;
+                  }
+                    return (
+                      <td className={tempClassName} {...cell.getCellProps()}>
+                        {cell.render("Cell")}
+                      </td>
+                    );
+                  })}
+                </tr>
+              );
             })}
           </tbody>
         </table>

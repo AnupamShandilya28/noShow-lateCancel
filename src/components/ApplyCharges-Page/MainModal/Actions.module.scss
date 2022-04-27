@@ -1,28 +1,76 @@
-@font-face {
-  font-family: "Averta";
-  src: url("../../../assets/fonts/AvertaDemo-Regular.otf");
-}
 .third {
+  position: static;
+left: 0%;
+right: 63.56%;
+top: 0%;
+bottom: 81.08%;
+
+/* Display/Desktop/H4 */
+
+font-family: 'Averta';
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 28px;
+color: #2D2D2D;
+flex: none;
+order: 0;
+flex-grow: 0;
+margin: 0px 0px;
   display: table-cell;
-  padding-left: 26px;
-
-  width: 30rem;
+  padding-left: 24px;
+  padding-right: 24px;
+  width: 280px;
 }
-.third p{
-  margin-top: 0%;
-}
-
-/* .backdrop {
-  color: "#fff";
-} */
 
 .third button {
-  font-family: "Averta";
-  width: 19rem;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 24px;
   font-family: 'Averta';
+font-style: normal;
+  width: 266px;
+  height: 40px;
+  padding: 8px 16px;
+  gap: 8px;
+  font-weight: 400;
+  font-size: 16px;  
 }
 
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+.loader {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  margin-left: 2px;
+  z-index: 1;
+  border: solid 2px #a0a5ab;
+  border-radius: 50%;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  -webkit-transition: all 0.5s ease-in;
+  -webkit-animation-name: rotate;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+
+  transition: all 0.5s ease-in;
+  animation-name: rotate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
