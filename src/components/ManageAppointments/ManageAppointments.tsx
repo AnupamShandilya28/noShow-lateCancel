@@ -48,9 +48,25 @@ const ManageAppointments = () => {
                       position="top-center"
                       label={
                         <>
-                          This is the time for cancelation before the class.
+                          If canceled after the stipulated time.
                           <br />
-                          You can update this time from Cancelation Window
+                          Apply the required charges.
+                        </>
+                      }
+                    >
+                      <span>
+                        <InfoIcon id={styles.infoicon} />
+                      </span>
+                    </Tipsy>
+                  )}
+                  {column.render("Header") === "NO SHOW" && (
+                    <Tipsy
+                      position="top-center"
+                      label={
+                        <>
+                          If the consumer didn't cancel and was not present.
+                          <br />
+                          Apply the required charges.
                         </>
                       }
                     >
