@@ -33,6 +33,7 @@ const ManageFeeWaived = () => {
           const changeHandler = () => {
             setData(() => {
               const newArray = [...data];
+              if(newArray[cellIndex - 1].no_show_checked) newArray[cellIndex - 1].no_show_input="";
               newArray[cellIndex - 1].no_show_checked =
                 !newArray[cellIndex - 1].no_show_checked;
               return newArray;
@@ -103,6 +104,7 @@ const ManageFeeWaived = () => {
           const changeHandler = () => {
             setData(() => {
               const newArray = [...data];
+              if(newArray[cellIndex - 1].late_cancel_checked) newArray[cellIndex - 1].late_cancel_input="";
               newArray[cellIndex - 1].late_cancel_checked =
                 !newArray[cellIndex - 1].late_cancel_checked;
               return newArray;
