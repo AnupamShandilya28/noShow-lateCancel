@@ -47,7 +47,19 @@ const ManageFeeWaived = () => {
         },
       },
       {
-        Header: "FEE WAIVED",
+        Header: (
+          <>
+            <span>FEE WAIVED</span>
+            <Tipsy
+              position="top-center"
+              label="Don't put anything critical to getting the task at hand complete in here"
+            >
+              <span>
+                <InfoIcon id={styles.infoicon} />
+              </span>
+            </Tipsy>
+          </>
+        ),
         accessor: "no_show_input",
         Cell: (props: any) => {
           const cellIndex: number = props.row.original.id;
