@@ -1,10 +1,74 @@
-[{"id":1,"TYPE":"Yoga Classes","TIME":120,"LATECANCEL":false,"CHARGES_LC":9,"NOSHOW":true,"CHARGES_NS":5},
-{"id":2,"TYPE":"Pilates SC","TIME":120,"LATECANCEL":true,"CHARGES_LC":1,"NOSHOW":true,"CHARGES_NS":3},
-{"id":3,"TYPE":"Crossfit","TIME":120,"LATECANCEL":false,"CHARGES_LC":7,"NOSHOW":true,"CHARGES_NS":4},
-{"id":4,"TYPE":"Spin","TIME":120,"LATECANCEL":true,"CHARGES_LC":6,"NOSHOW":true,"CHARGES_NS":8},
-{"id":5,"TYPE":"MM Classes","TIME":120,"LATECANCEL":false,"CHARGES_LC":8,"NOSHOW":false,"CHARGES_NS":2},
-{"id":6,"TYPE":"Crossfit","TIME":120,"LATECANCEL":false,"CHARGES_LC":10,"NOSHOW":false,"CHARGES_NS":4},
-{"id":7,"TYPE":"Spin","TIME":120,"LATECANCEL":false,"CHARGES_LC":2,"NOSHOW":false,"CHARGES_NS":3},
-{"id":8,"TYPE":"Boxing","TIME":120,"LATECANCEL":true,"CHARGES_LC":7,"NOSHOW":true,"CHARGES_NS":10},
-{"id":9,"TYPE":"Calisthenics","TIME":120,"LATECANCEL":true,"CHARGES_LC":5,"NOSHOW":true,"CHARGES_NS":10},
-{"id":10,"TYPE":"Zumba","TIME":120,"LATECANCEL":false,"CHARGES_LC":8,"NOSHOW":false,"CHARGES_NS":3}]
+[
+  {
+    "id": 1,
+    "type_of_class": "Yoga Classes abd",
+    "time_prior_to_class": "120",
+    "late_cancel": false,
+    "late_cancel_charge": "0",
+    "no_show": false,
+    "no_show_charge": "0"
+  },
+  {
+    "id": 2,
+    "type_of_class": "Pilates SC",
+    "time_prior_to_class": "120",
+    "late_cancel": true,
+    "late_cancel_charge": "40",
+    "no_show": false,
+    "no_show_charge": "0"
+  },
+  {
+    "id": 3,
+    "type_of_class": "Crossfit",
+    "time_prior_to_class": "120",
+    "late_cancel": false,
+    "late_cancel_charge": "0",
+    "no_show": true,
+    "no_show_charge": "17"
+  },
+  {
+    "id": 4,
+    "type_of_class": "Spin",
+    "time_prior_to_class": "120",
+    "late_cancel": true,
+    "late_cancel_charge": "10",
+    "no_show": true,
+    "no_show_charge": "13"
+  },
+  {
+    "id": 5,
+    "type_of_class": "MM Classes",
+    "time_prior_to_class": "120",
+    "late_cancel": false,
+    "late_cancel_charge": "0",
+    "no_show": false,
+    "no_show_charge": "0"
+  },
+  {
+    "id": 6,
+    "type_of_class": "Crossfit",
+    "time_prior_to_class": "120",
+    "late_cancel": false,
+    "late_cancel_charge": "0",
+    "no_show": false,
+    "no_show_charge": "0"
+  },
+  {
+    "id": 7,
+    "type_of_class": "Spin",
+    "time_prior_to_class": "120",
+    "late_cancel": false,
+    "late_cancel_charge": "0",
+    "no_show": false,
+    "no_show_charge": "0"
+  },
+  {
+    "id": 8,
+    "type_of_class": "MM Classes",
+    "time_prior_to_class": "120",
+    "late_cancel": true,
+    "late_cancel_charge": "15",
+    "no_show": false,
+    "no_show_charge": "0"
+  }
+]

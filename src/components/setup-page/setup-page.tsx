@@ -3,11 +3,11 @@ import styles from "./SetupPage.module.scss";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Button } from "@mbkit/button";
 import Card from "./Card";
-import ManageAppointments from "../ManageAppointments/ManageAppointments";
 import ManageFeeWaived from "../ManageFeeWaived/ManageFeeWaived";
-import ManageClasses from "../ManageClasses/ManageClasses";
 import { Toaster } from "@mbkit/toaster";
 import ManageGeneral from "../ManageGeneral";
+import MOCK_DATA_MANAGECLASS from "../../data/manageClasses/MOCK_DATA.json";
+import MOCK_DATA_MANAGEAPPOINTMENT from "../../data/manageAppointments/MOCK_DATA.json";
 export const SetupPage = () => {
   const [manageState, setManageState] = useState({
     manageClasses: false,
@@ -79,13 +79,17 @@ export const SetupPage = () => {
           onExpand={onClassExpandHandler}
           title={"Manage Classes"}
         ></Card>
-        {manageState.manageClasses && <ManageGeneral />}
+        {manageState.manageClasses && (
+          <ManageGeneral MOCK_DATA={MOCK_DATA_MANAGECLASS} />
+        )}
         <Card
           isExpanded={manageState.manageAppointment}
           onExpand={onAppointmentExpandHandler}
           title={"Manage Appointments"}
         ></Card>
-        {manageState.manageAppointment && <ManageGeneral />}
+        {manageState.manageAppointment && (
+          <ManageGeneral MOCK_DATA={MOCK_DATA_MANAGEAPPOINTMENT} />
+        )}
         <Card
           isExpanded={manageState.manageFee}
           onExpand={onFeeExpandHandler}

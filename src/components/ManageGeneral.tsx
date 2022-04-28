@@ -4,10 +4,10 @@ import { Tipsy } from "@mbkit/tipsy";
 import InfoIcon from "@mui/icons-material/Info";
 import React, { useMemo, useState } from "react";
 import { useTable } from "react-table";
-import MOCK_DATA from "../data/manageClasses/MOCK_DATA.json";
-import styles from "ManageGeneral.module.scss";
+// import MOCK_DATA from "../data/manageClasses/MOCK_DATA.json";
+import styles from "./ManageGeneral.module.scss";
 
-const ManageGeneral = () => {
+const ManageGeneral: React.FC<{ MOCK_DATA: any }> = (props) => {
   const COLUMNS = React.useMemo(
     () => [
       {
@@ -29,7 +29,7 @@ const ManageGeneral = () => {
               }
             >
               <span>
-                <InfoIcon />
+                <InfoIcon id={styles.infoicon} />
               </span>
             </Tipsy>
           </>
@@ -46,12 +46,13 @@ const ManageGeneral = () => {
             });
           };
           return (
-            <div>
+            <div className={styles.divstyle}>
               <Input
+                id={styles.inputstyle}
                 value={data[cellIndex - 1].time_prior_to_class.toString()}
                 onChange={changeHandler}
               />
-              <span>Minutes (Prior to class)</span>
+              <span id={styles.spanstyle}>Minutes (Prior to class)</span>
             </div>
           );
         },
@@ -65,7 +66,7 @@ const ManageGeneral = () => {
               label="Don't put anything critical to getting the task at hand complete in here"
             >
               <span>
-                <InfoIcon />
+                <InfoIcon id={styles.infoicon} />
               </span>
             </Tipsy>
           </>
@@ -85,12 +86,12 @@ const ManageGeneral = () => {
             });
           };
           return (
-            <div>
+            <div id={styles.rowstyle}>
               <Checkbox
                 onChange={changeHandler}
                 checked={props.value}
               ></Checkbox>
-              <span>Enable</span>
+              <span id={styles.spanenablestyle}>Enable</span>
             </div>
           );
         },
@@ -108,6 +109,7 @@ const ManageGeneral = () => {
           return (
             <div>
               <Input
+                id={styles.inputstyle}
                 value={
                   data[cellIndex - 1].late_cancel_charge.toString() === "0"
                     ? ""
@@ -144,7 +146,7 @@ const ManageGeneral = () => {
               }
             >
               <span>
-                <InfoIcon />
+                <InfoIcon id={styles.infoicon} />
               </span>
             </Tipsy>
           </>
@@ -169,7 +171,7 @@ const ManageGeneral = () => {
                 onChange={changeHandler}
                 checked={props.value}
               ></Checkbox>
-              <span>Enable</span>
+              <span id={styles.spanenablestyle}>Enable</span>
             </div>
           );
         },
@@ -186,6 +188,7 @@ const ManageGeneral = () => {
           return (
             <div>
               <Input
+                id={styles.inputstyle}
                 value={
                   data[cellIndex - 1].no_show_charge.toString() === "0"
                     ? ""
@@ -210,7 +213,7 @@ const ManageGeneral = () => {
     []
   );
 
-  const [data, setData] = useState(MOCK_DATA);
+  const [data, setData] = useState(props.MOCK_DATA);
   const columns = useMemo(() => processColumns(COLUMNS, data), [COLUMNS, data]);
   const tableInstance = useTable({
     columns,
@@ -220,7 +223,7 @@ const ManageGeneral = () => {
     tableInstance;
 
   return (
-    <div>
+    <div id={styles.outerdiv}>
       <table {...getTableProps()}>
         <thead>
           {headerGroups.map((headerGroup) => (
@@ -238,7 +241,9 @@ const ManageGeneral = () => {
               <tr {...row.getRowProps()}>
                 {row.cells.map((cell) => {
                   return (
-                    <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
+                    <td id={styles.rowstyle} {...cell.getCellProps()}>
+                      {cell.render("Cell")}
+                    </td>
                   );
                 })}
               </tr>
