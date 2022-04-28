@@ -1,4 +1,3 @@
-import { Rowing } from "@material-ui/icons";
 import { Checkbox } from "@mbkit/checkbox";
 import { Input } from "@mbkit/input";
 import React, { useState } from "react";

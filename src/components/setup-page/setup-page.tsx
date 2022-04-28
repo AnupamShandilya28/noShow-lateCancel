@@ -7,6 +7,7 @@ import ManageAppointments from "../ManageAppointments/ManageAppointments";
 import ManageFeeWaived from "../ManageFeeWaived/ManageFeeWaived";
 import ManageClasses from "../ManageClasses/ManageClasses";
 import { Toaster } from "@mbkit/toaster";
+import ManageGeneral from "../ManageGeneral";
 export const SetupPage = () => {
   const [manageState, setManageState] = useState({
     manageClasses: false,
@@ -78,13 +79,13 @@ export const SetupPage = () => {
           onExpand={onClassExpandHandler}
           title={"Manage Classes"}
         ></Card>
-        {manageState.manageClasses && <ManageClasses />}
+        {manageState.manageClasses && <ManageGeneral />}
         <Card
           isExpanded={manageState.manageAppointment}
           onExpand={onAppointmentExpandHandler}
           title={"Manage Appointments"}
         ></Card>
-        {manageState.manageAppointment && <ManageAppointments />}
+        {manageState.manageAppointment && <ManageGeneral />}
         <Card
           isExpanded={manageState.manageFee}
           onExpand={onFeeExpandHandler}
