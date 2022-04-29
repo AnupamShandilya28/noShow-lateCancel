@@ -4,22 +4,19 @@ import { Input } from "@mbkit/input";
 import { Label } from "@mbkit/label";
 import { Calendar } from "@mbkit/calendar";
 import dateFormat from "dateformat";
-import { makeStyles } from "@material-ui/core/styles";
 import { ClickAwayListener } from "@material-ui/core";
 
-const useStyles = makeStyles((theme) => ({
-  backdrop: {
-    color: "#fff",
-    zIndex: theme.zIndex.drawer + 1,
-  },
-}));
-const Dates = () => {
+const Dates = (props:any) => {
+
+  const {start} = props;
+  const {end}=props;
+
   let today = new Date();
   const [startDate, setStartDate] = useState(today);
   const [endDate, setEndDate] = useState(today);
   const [showStartDateCalendar, setShowStartDateCalendar] = useState(false);
   const [showEndDateCalendar, setShowEndDateCalendar] = useState(false);
-  const classes = useStyles();
+  
 
   const openStartDateCalendarHandler = () => {
     setShowStartDateCalendar(true);
@@ -40,12 +37,14 @@ const Dates = () => {
   const startDateHandler = (e:Date) => {
     //console.log(e);
     setStartDate(e);
+    props.start(e);
     setShowStartDateCalendar(false);
   };
 
   const endDateHandler = (e:Date) => {
     //console.log(e);
     setEndDate(e);
+    props.end(e);
     setShowEndDateCalendar(false);
   };
 
