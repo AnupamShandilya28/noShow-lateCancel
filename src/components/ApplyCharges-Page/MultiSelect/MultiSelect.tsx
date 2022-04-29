@@ -213,7 +213,10 @@ export const MultiSelect: FC<MultiSelectProps> = (props: MultiSelectProps) => {
         })
         .join(' ');
 
-    const isSelectAll = checkedOptions.filter(o => o.id === "0").length > 0;
+    const isSelectAll = (checkedOptions.filter(o => o.id === "0").length > 0) || (checkedOptions.length === options.length-1);
+/*     const exceptSelectAll = checkedOptions.length === checkedOptions.length-1;
+ *//*     const is3 = checkedOptions.filter(o => o.id === "3").length > 0;
+ */
 
     const placeholderClassNames = classnames({
         [styles.selectPlaceholderLabel]: true,
