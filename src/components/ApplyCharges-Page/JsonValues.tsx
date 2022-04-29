@@ -4,10 +4,7 @@ const JsonValues = (props: any) => {
   const { useServiceData } = props;
   const { usePricingData } = props;
   const { useCancellationData } = props;
-  /*  const DataHandler = (data:any) =>{
-        const saveData ={...data};
-        console.log(saveData);
-    } */
+  
   return (
     <div className={styles.main2} onClick={props.onCancel}>
       {JSON.stringify(useServiceData)}
