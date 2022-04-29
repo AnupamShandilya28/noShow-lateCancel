@@ -1,14 +1,126 @@
 @font-face {
   font-family: "Averta";
-  src: url("C:\Users\Meghana.Maringanty\Desktop\Table\table\src\AvertaDemo-Regular.otf");
+  src: url("../../../AvertaDemo-Regular.otf");
 }
 
-.main_div{
+.member_details_page {
+  /* Frame 785 */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+
+  position: absolute;
+  width: 1375px;
+  // height: 746px;
+  left: 32px;
+  top: 690px;
+
+  /* Neutral/White */
+
+  background: #ffffff;
+}
+
+.main_table {
+  /* Frame 770 */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  //justify-content: center;
+  align-items: center;
+  padding: 0px;
+
+  position: static;
+  width: 1330px;
+  // height: 594px;
+  left: 24px;
+  top: 10px;
+
+  /* Neutral/White */
+
+  background: #ffffff;
+  /* Level 2 (elevated cards) */
+
+  // box-shadow: 0px 1px 3px rgba(45, 45, 45, 0.2);
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 2;
+  flex-grow: 0;
+  // margin: 20px 0px;
+}
+
+.toaster {
+  /* Toaster */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 16px 4px 16px 16px;
+
+  position: absolute;
+  width: 430px;
+  height: 56px;
+  left: 45px;
+  top: 165px;
+
+  box-shadow: 0px 1px 16px rgba(35, 35, 41, 0.2);
+  border-radius: 3px;
+}
+
+.t-text {
+  /* Frame 2 */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+
+  position: static;
+  width: 390px;
+  height: 24px;
+  left: 16px;
+  top: 16px;
+
+  /* Text */
+
+  position: static;
+  width: 360px;
+  height: 24px;
+  left: 32px;
+  top: 0px;
+
+  /* Text/Body */
+
+  font-family: "Averta";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+
+  /* Neutral/White */
+
+  color: #ffffff;
+}
+
+.main_div {
   display: flex;
   justify-content: space-between;
 }
 
-.flyout_div{
+.flyout_div {
   align-items: flex-end;
   margin: 0px 5px;
   flex: auto;
@@ -100,7 +212,7 @@ thead th label {
   margin: 0px 8px;
 }
 
-.NAME{
+.NAME {
   position: static;
   width: 180px;
   height: 34px;
@@ -119,6 +231,7 @@ thead th label {
   height: 34px;
   left: calc(50% - 200px / 2 - 383.5px);
   top: calc(50% - 34px / 2);
+  white-space: nowrap;
   // padding: 0px 8px 0px 0px;
 
   /* Neutral/Lighter */
@@ -133,6 +246,7 @@ thead th label {
   height: 34px;
   left: calc(50% - 170px / 2 - 198.5px);
   top: calc(50% - 34px / 2);
+  white-space: nowrap;
 
   /* Neutral/Lighter */
 
@@ -146,6 +260,7 @@ thead th label {
   height: 34px;
   left: calc(50% - 215px / 2 - 6px);
   top: calc(50% - 34px / 2);
+  white-space: nowrap;
 
   /* Neutral/Lighter */
 
@@ -167,6 +282,7 @@ thead th label {
   height: 34px;
   left: calc(50% - 110px / 2 + 156.5px);
   top: calc(50% - 34px / 2);
+  white-space: nowrap;
 
   /* Neutral/Lighter */
 
@@ -276,23 +392,23 @@ thead span {
   transform: scale(2.2);
 }
 
-.pagination{
+.pagination {
   display: flex;
-flex-direction: row;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   padding: 10px;
   font-family: "Averta";
 }
-.pagination_button{
+.pagination_button {
   width: 80px;
   font-family: "Averta";
 }
-.page_index{
+.page_index {
   padding: 8px;
   font-family: "Averta";
 }
-.select_page{
+.select_page {
   padding: 5px;
   margin-right: 10px;
   font-family: "Averta";

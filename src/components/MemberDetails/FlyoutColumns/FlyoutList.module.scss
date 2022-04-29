@@ -30,7 +30,8 @@ margin: 0px 0px;
 
 .line{
     /* Line 5 */
-
+    border: 0px;
+    border-top: 1px solid #EFF1F3;
 
 position: static;
 width: 203px;
@@ -40,7 +41,7 @@ top: 40px;
 
 /* Neutral/Lighter */
 
-border: 1px solid #EFF1F3;
+// border: 1px solid #EFF1F3;
 
 /* Inside auto layout */
 

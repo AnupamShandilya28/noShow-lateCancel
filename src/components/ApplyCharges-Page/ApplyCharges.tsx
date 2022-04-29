@@ -3,7 +3,7 @@ import styles from "./ApplyCharges.module.scss";
 import { Label } from "@mbkit/label";
 import Main from "./MainModal/Main";
 import Spinner from "./Spinner";
-import MemberDetails from "../MemberDetails/MemberDetails";
+import { PaginationTable } from "../MemberDetails/MemberTable/PaginationTable";
 const ApplyCharges = () => {
   const [showChargesPage, setShowChargesPage] = useState(false);
   const [showLoader, setShowLoader] = useState(false);
@@ -28,7 +28,7 @@ const ApplyCharges = () => {
           <Main onSearchClick={searchButtonHandler}></Main>
         </div>
         {showLoader && <Spinner />}
-        {showChargesPage && <MemberDetails />}
+        {showChargesPage && <PaginationTable />}
       </div>
     </>
   );

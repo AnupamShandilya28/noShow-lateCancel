@@ -1,7 +1,6 @@
 import { Checkbox } from "@mbkit/checkbox";
 import React from "react";
 import { Column } from "react-table";
-// import styles from './BasicTable.module.scss';
 import styles from "./EntryCell.module.scss";
 import { useState, useEffect, useContext } from "react";
 import CheckEnableContext from "../../store/check-enable-context";
@@ -115,7 +114,7 @@ export const COLUMNS: Column<TableColumns>[] = [
     Header: "FEE TYPE",
     accessor: "Type",
     Cell:(props)=>{
-      console.log("propsss", props);
+      // console.log("propsss", props);
       const [isCheck, setIsCheck] = useState(props.cell.row.original.Apply);
   const isCheckHandler = () => {
     // console.log(cell.row.index);

@@ -12,7 +12,7 @@ width: 203px;
 height: 24px;
 left: calc(50% - 203px/2);
 top: calc(50% - 24px/2);
-
+white-space: nowrap;
 
 /* Inside auto layout */
 
@@ -37,6 +37,7 @@ margin: 8px 0px;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+    max-width: 70%;
     /* identical to box height, or 150% */
     
     
@@ -51,4 +52,27 @@ margin: 8px 0px;
     order: 1;
     flex-grow: 1;
     margin: 0px 16px;
+}
+
+.line{
+    /* Line 5 */
+
+
+position: static;
+width: 203px;
+height: 0px;
+left: 16px;
+top: 40px;
+
+/* Neutral/Lighter */
+
+border: 1px solid #EFF1F3;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+margin: 8px 0px;
 }

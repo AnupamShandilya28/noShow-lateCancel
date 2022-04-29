@@ -7,7 +7,7 @@ const FlyoutList = (props) => {
     <ul className={styles.list}>
       {props.columns.map((column) => {
         return (
-          <div>
+          <div key={column.id}>
             <FlyoutItem item={column} />
             <hr className={styles.line}></hr>
           </div>

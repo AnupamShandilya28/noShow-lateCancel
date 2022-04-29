@@ -9,14 +9,21 @@ const FlyoutItem = (props) => {
     // props.onCheck(props.item.id, props.item.value);
     // props.updateRow();
   };
+  var isDisable = false;
+  if(props.item.Header === 'NAME' || props.item.Header === 'CHARGES' || props.item.Header === 'FEE TYPE'){
+    isDisable = true;
+  }
+  var headerString = props.item.Header;
+
   return (
-    <li key={props.item.id} className={styles.item_div}>
+    <li className={styles.item_div}>
       <Checkbox
         {...props.item.getToggleHiddenProps()}
         id={props.item.id}
         onClick={isCheckHandler}
+        disabled={isDisable}
       />
-      <label className={styles.item_label}>{props.item.Header}</label>
+      <label className={styles.item_label}>{headerString.charAt(0) + headerString.slice(1).toLowerCase()}</label>
     </li>
   );
 };

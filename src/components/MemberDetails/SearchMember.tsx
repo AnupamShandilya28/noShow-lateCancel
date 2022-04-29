@@ -1,11 +1,13 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { Input } from "@mbkit/input";
 
 import styles from "./SearchMember.module.scss";
+import FilterTableContext from "../store/filter-table-context";
 
 //Don't forget to add useCallback to reference method called by props.onSearchMember
 
-const SearchMember = () => {
+const SearchMember: React.FC<{onApplyFilter:() => void}> = (props) => {
+  const filterCtx = useContext(FilterTableContext);
   const [enteredSearch, setEnteredSearch] = useState("");
   const searchInputRef = useRef<HTMLInputElement>(null);
 
@@ -14,6 +16,8 @@ const SearchMember = () => {
       if(enteredSearch === searchInputRef.current?.value) {
         console.log(enteredSearch);
         console.log("Sending http request...");
+        filterCtx.filterValue = enteredSearch;
+        props.onApplyFilter();
         //send http get request with query
         //call method from MembersList => props.onSearchMembers(response data array)
       }
