@@ -13,8 +13,8 @@ const Header: React.FC<{onApply: () => void }> = (props) => {
       <div className={classes.member_label}>
         <text className={classes.member_details}>Member Details</text>
       </div>
-      <div className={classes.action_div}>
-        <Select
+      
+        {/* <Select
           className={classes.filter}
           value="Apple"
           onChange={() => console.log(1)}
@@ -25,11 +25,11 @@ const Header: React.FC<{onApply: () => void }> = (props) => {
           <option className={classes.filter_display} value="">
             Filters
           </option>
-        </Select>
+        </Select> */}
         <Button variant="secondary" className={classes.button_apply} onClick={applyButtonHandler}>
           <label className={classes.button_label}>Apply Charges</label>
         </Button>
-      </div>
+      
     </div>
   );
 };

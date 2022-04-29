@@ -16,6 +16,7 @@ import SortIcon from "@mui/icons-material/Sort";
 import { Button } from "@mbkit/button";
 import FlyoutColumns from "../FlyoutColumns/FlyoutColumns";
 import { TableColumns } from "./column";
+import classes from "./EntryCell.module.scss";
 //import classes from "./MemberTable.module.scss";
 
 export const PaginationTable = () => {
@@ -156,44 +157,95 @@ export const PaginationTable = () => {
                 className={styles.header_row}
                 {...headerGroup.getHeaderGroupProps()}
               >
-                {headerGroup.headers.map((column) => (
-                  <th {...column.getHeaderProps()}>
-                    <span>
-                      <label {...column.getSortByToggleProps()}>
-                        {column.render("Header")}
-                      </label>
-                      {column.render("Header") === "STATUS" && (
-                        <img
-                          className={styles.info_icon}
-                          src="https://img.icons8.com/ios-glyphs/30/000000/info--v1.png"
-                        />
-                      )}
-                      {column.render("Header") !== "NO-SHOW/LATE" &&
-                        column.render("Header") !== "" && (
-                          <SortIcon
-                            id={styles.sort_icon}
-                            style={{ color: "#BDBDBD" }}
+                {headerGroup.headers.map((column) => {
+                  const tempClass = column.render("Header");
+                  var tempClassName;
+                  if (tempClass === "NAME") {
+                    tempClassName = styles.NAME;
+                  } else if (tempClass === "CLASSES / APPOINTMENTS") {
+                    tempClassName = styles.CLASSES;
+                  } else if (tempClass === "DATE & TIME") {
+                    tempClassName = styles.DATE;
+                  } else if (tempClass === "PRICING OPTION") {
+                    tempClassName = styles.PRICING;
+                  } else if (tempClass === "NO-SHOW/LATE") {
+                    tempClassName = styles.CANCEL;
+                  } else if (tempClass === "FEE WAIVED") {
+                    tempClassName = styles.WAIVED;
+                  } else if (tempClass === "CHARGES") {
+                    tempClassName = styles.CHARGES;
+                  } else if (tempClass === "FEE TYPE") {
+                    tempClassName = styles.STATUS;
+                  }
+                  return (
+                    <th className={tempClassName} {...column.getHeaderProps()}>
+                      <span>
+                        <label {...column.getSortByToggleProps()}>
+                          {column.render("Header")}
+                        </label>
+                        {column.render("Header") === "FEE TYPE" && (
+                          <img
+                            className={styles.info_icon}
+                            src="https://img.icons8.com/ios-glyphs/30/000000/info--v1.png"
                           />
                         )}
-                      {column.render("Header") === "STATUS" && (
-                        <div className={styles.settings_div}>
-                          <SettingsIcon
-                            onClick={flyoutClickHandler}
-                            id={styles.settings_icon}
-                            style={{ color: "#696C74" }}
-                          />
-                        </div>
-                      )}
-                    </span>
-                  </th>
-                ))}
+                        {column.render("Header") !== "NO-SHOW/LATE" &&
+                          column.render("Header") !== "" && (
+                            <SortIcon
+                              id={styles.sort_icon}
+                              style={{ color: "#BDBDBD" }}
+                            />
+                          )}
+                        {column.render("Header") === "FEE TYPE" && (
+                          <div className={styles.settings_div}>
+                            <SettingsIcon
+                              onClick={flyoutClickHandler}
+                              id={styles.settings_icon}
+                              style={{ color: "#696C74" }}
+                            />
+                          </div>
+                        )}
+                      </span>
+                    </th>
+                  );
+                })}
               </tr>
             ))}
           </thead>
           <tbody {...getTableBodyProps()}>
             {page.map((row) => {
               prepareRow(row);
-              return <EntryRow row={row} onRowUpdate={rowUpdateHandler} />;
+              return (
+                <tr {...row.getRowProps()}>
+                  {row.cells.map((cell) => {
+                    // {console.log("ROWWWW CELL", cell.column.Header)}
+                  const tempClass = cell.column.Header;
+                  var tempClassName;
+                  if (tempClass === "NAME") {
+                    tempClassName = classes.entry_name;
+                  } else if (tempClass === "CLASSES / APPOINTMENTS") {
+                    tempClassName = classes.entry_class;
+                  } else if (tempClass === "DATE & TIME") {
+                    tempClassName = classes.entry_date;
+                  } else if (tempClass === "PRICING OPTION") {
+                    tempClassName = classes.entry_pricing;
+                  } else if (tempClass === "NO-SHOW/LATE") {
+                    tempClassName = classes.entry_cancel;
+                  } else if (tempClass === "FEE WAIVED") {
+                    tempClassName = classes.entry_waive;
+                  } else if (tempClass === "CHARGES") {
+                    tempClassName = classes.entry_charges;
+                  } else if (tempClass === "FEE TYPE") {
+                    tempClassName = classes.entry_type;
+                  }
+                    return (
+                      <td className={tempClassName} {...cell.getCellProps()}>
+                        {cell.render("Cell")}
+                      </td>
+                    );
+                  })}
+                </tr>
+              );
             })}
           </tbody>
         </table>
