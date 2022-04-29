@@ -10,15 +10,18 @@ const Pro = (props: any) => {
   const { onSelectServiceBox } = props;
   const { onSelectPricingBox } = props;
   const { onSelectCancellationBox } = props;
-
+  const { onCreditCheckbox } = props;
+  const { startDate } = props;
+  const { endDate } = props;
   return (
     <div className={styles.wrapper}>
-      <Dates />
+      <Dates start={startDate} end={endDate} />
       <div className={styles.separator}></div>
       <Filters
         onSelectService={onSelectServiceBox}
         onSelectPricing={onSelectPricingBox}
         onSelectCancellation={onSelectCancellationBox}
+        onCredit={onCreditCheckbox}
       />
       <div className={styles.separator}></div>
       <Actions onSearchButtonClick={onSearchClick} />

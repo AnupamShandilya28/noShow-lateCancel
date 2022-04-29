@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styles from "./ApplyCharges.module.scss";
-import { Label } from "@mbkit/label";
 import Main from "./MainModal/Main";
 import Spinner from "./Spinner";
 import MemberDetails from "../MemberDetails/MemberDetails";
@@ -14,31 +13,38 @@ const ApplyCharges = (props: any) => {
   const [pricingData, setPricingData] = useState([]);
   const [cancellationData, setCancellationData] = useState([]);
 
+  const [startDate, setStartDate] = useState();
+  const [endDate, setEndDate] = useState();
+
   const ServiceHandler = (o: any) => {
-    const activeoption = o.filter((opt: any) => {
+    const activeServiceOption = o.filter((opt: any) => {
       if (opt.checked == true) {
         return opt;
       }
     });
-    setServiceData(activeoption);
+    setServiceData(activeServiceOption);
   };
 
   const PricingHandler = (o: any) => {
-    const activeoption = o.filter((opt: any) => {
+    const activePricingOption = o.filter((opt: any) => {
       if (opt.checked == true) {
         return opt;
       }
     });
-    setPricingData(activeoption);
+    setPricingData(activePricingOption);
   };
 
   const CancellationHandler = (o: any) => {
-    const activeoption = o.filter((opt: any) => {
+    const activeCancellationOption = o.filter((opt: any) => {
       if (opt.checked == true) {
         return opt;
       }
     });
-    setCancellationData(activeoption);
+    setCancellationData(activeCancellationOption);
+  };
+  const [creditState, setCreditState] = useState(Boolean);
+  const CreditCheckboxHandler = (o: boolean) => {
+    setCreditState(o);
   };
 
   const searchButtonHandler = () => {
@@ -47,9 +53,15 @@ const ApplyCharges = (props: any) => {
       setShowJsonValuesDiv(true);
       setShowChargesPage(true);
       setShowLoader(false);
-    }, 1000);
+    }, 700);
   };
 
+  const startDateHandler = (o: any) => {
+    setStartDate(o);
+  };
+  const endDateHandler = (o: any) => {
+    setEndDate(o);
+  };
   return (
     <>
       <div className={styles.main}>
@@ -64,6 +76,9 @@ const ApplyCharges = (props: any) => {
             onSelectServiceBox={ServiceHandler}
             onSelectPricingBox={PricingHandler}
             onSelectCancellationBox={CancellationHandler}
+            onCreditCheckbox={CreditCheckboxHandler}
+            startDate={startDateHandler}
+            endDate={endDateHandler}
           ></Main>
         </div>
         {showJsonValuesDiv && (
@@ -71,6 +86,9 @@ const ApplyCharges = (props: any) => {
             useServiceData={serviceData}
             usePricingData={pricingData}
             useCancellationData={cancellationData}
+            useCreditState={creditState}
+            useStartDate={startDate}
+            useEndDate={endDate}
           />
         )}
         {showLoader && <Spinner />}

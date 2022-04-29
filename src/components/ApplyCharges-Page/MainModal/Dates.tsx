@@ -6,7 +6,11 @@ import { Calendar } from "@mbkit/calendar";
 import dateFormat from "dateformat";
 import { ClickAwayListener } from "@material-ui/core";
 
-const Dates = () => {
+const Dates = (props:any) => {
+
+  const {start} = props;
+  const {end}=props;
+
   let today = new Date();
   const [startDate, setStartDate] = useState(today);
   const [endDate, setEndDate] = useState(today);
@@ -33,12 +37,14 @@ const Dates = () => {
   const startDateHandler = (e:Date) => {
     //console.log(e);
     setStartDate(e);
+    props.start(e);
     setShowStartDateCalendar(false);
   };
 
   const endDateHandler = (e:Date) => {
     //console.log(e);
     setEndDate(e);
+    props.end(e);
     setShowEndDateCalendar(false);
   };
 

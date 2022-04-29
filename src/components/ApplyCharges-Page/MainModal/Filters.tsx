@@ -4,6 +4,7 @@ import { Checkbox } from "@mbkit/checkbox";
 import { MultiSelect, MultiSelectOption } from "../MultiSelect/MultiSelect";
 
 const Filters = (props: any) => {
+
   const ServiceOptions: MultiSelectOption[] = [
     { label: "Select All", checked: false, id: "0" },
     { label: "Appointments", checked: false, id: "1" },
@@ -12,23 +13,12 @@ const Filters = (props: any) => {
   const [serviceState, setServiceState] = useState(ServiceOptions);
 
   const { onSelectService } = props;
-  const { onSelectPricing } = props;
-  const { onSelectCancellation } = props;
-
   const ServiceHandler = (o: any) => {
     setServiceState(o);
     props.onSelectService(o);
   };
 
-  const PriceHandler = (o: any) => {
-    setPricingState(o);
-    props.onSelectPricing(o);
-  };
-  const CancellationHandler = (o: any) => {
-    setCancellationState(o);
-    props.onSelectCancellation(o);
-  };
-
+  const { onSelectPricing } = props;
   const PricingOptions: MultiSelectOption[] = [
     { label: "Select All", checked: false, id: "0" },
     { label: "Memberships Type 1", checked: false, id: "1" },
@@ -38,6 +28,11 @@ const Filters = (props: any) => {
   ];
   const [pricingState, setPricingState] = useState(PricingOptions);
 
+  const PriceHandler = (o: any) => {
+    setPricingState(o);
+    props.onSelectPricing(o);
+  };
+
   const CancellationOptions: MultiSelectOption[] = [
     { label: "Select All", checked: false, id: "0" },
     { label: "Late Cancellation (Charged)", checked: false, id: "1" },
@@ -46,10 +41,18 @@ const Filters = (props: any) => {
   const [cancellationState, setCancellationState] =
     useState(CancellationOptions);
 
+  const { onSelectCancellation } = props;
+  const CancellationHandler = (o: any) => {
+    setCancellationState(o);
+    props.onSelectCancellation(o);
+  };
+
   const [creditState, setCreditState] = useState(false);
 
+  const { onCredit } = props;
   const CreditCheckBoxHandler = () => {
     setCreditState(!creditState);
+    props.onCredit(!creditState);
   };
 
   return (
