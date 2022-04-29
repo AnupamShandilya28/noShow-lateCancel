@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Averta";
-  src: url(../assets/AvertaStd-Regular.ttf);
+  src: url(../../../assets/AvertaStd-Regular.ttf);
 }
 
 #sorticon {
@@ -33,6 +33,7 @@ table {
   top: 411px;
   left: 40px;
   background: #ffffff;
+  border-collapse: collapse;
 }
 thead {
   position: static;
@@ -144,10 +145,15 @@ thead th:nth-child(6) {
 
 #inputstyle {
   position: static;
+  border: 1px solid #a0a5ab;
   width: 56px;
   height: 28px;
   left: 10px;
   top: 10px;
+}
+#inputstyle:disabled {
+  border: 1px solid #d5d9de;
+  background: #ffffff;
 }
 
 #spanstyle {

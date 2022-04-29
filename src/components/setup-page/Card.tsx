@@ -1,5 +1,5 @@
 import React, { Dispatch, SetStateAction } from "react";
-import styles from "./Card.module.scss";
+import styles from "./styles/Card.module.scss";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 const Card: React.FC<{
   isExpanded: boolean;

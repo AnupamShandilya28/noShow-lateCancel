@@ -4,8 +4,7 @@ import { Tipsy } from "@mbkit/tipsy";
 import InfoIcon from "@mui/icons-material/Info";
 import React, { useMemo, useState } from "react";
 import { useTable } from "react-table";
-// import MOCK_DATA from "../data/manageClasses/MOCK_DATA.json";
-import styles from "./ManageGeneral.module.scss";
+import styles from "./styles/ManageGeneral.module.scss";
 
 const ManageGeneral: React.FC<{ MOCK_DATA: any }> = (props) => {
   const COLUMNS = React.useMemo(

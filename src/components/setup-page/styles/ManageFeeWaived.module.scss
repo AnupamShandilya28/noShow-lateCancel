@@ -17,7 +17,7 @@ table {
     "sans-serif"
   );
 }
-.table{
+.table {
   padding-left: 16px;
 }
 table thead {
@@ -133,7 +133,7 @@ input {
   left: 10px;
   top: 10px;
   background: #ffffff;
-  border: 1px solid #d5d9de;
+  border: 1px solid #a0a5ab;
   box-sizing: border-box;
   border-radius: 3px;
   font-style: normal;
@@ -151,8 +151,10 @@ input {
   color: #000000;
   text-align: center;
 }
-input[disabled] {
+input:disabled {
   cursor: no-drop;
+  border: 1px solid #d5d9de;
+  background: #ffffff;
 }
 
 .tableCellSpan {

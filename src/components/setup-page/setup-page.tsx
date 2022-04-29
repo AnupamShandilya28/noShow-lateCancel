@@ -1,11 +1,11 @@
 import React, { Component, useState } from "react";
-import styles from "./SetupPage.module.scss";
+import styles from "./styles/SetupPage.module.scss";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Button } from "@mbkit/button";
 import Card from "./Card";
-import ManageFeeWaived from "../ManageFeeWaived/ManageFeeWaived";
+import ManageFeeWaived from "./ManageFeeWaived";
 import { Toaster } from "@mbkit/toaster";
-import ManageGeneral from "../ManageGeneral";
+import ManageGeneral from "./ManageGeneral";
 import MOCK_DATA_MANAGECLASS from "../../data/manageClasses/MOCK_DATA.json";
 import MOCK_DATA_MANAGEAPPOINTMENT from "../../data/manageAppointments/MOCK_DATA.json";
 export const SetupPage = () => {
