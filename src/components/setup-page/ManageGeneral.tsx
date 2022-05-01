@@ -6,7 +6,7 @@ import React, { useMemo, useState } from "react";
 import { useTable } from "react-table";
 import styles from "./styles/ManageGeneral.module.scss";
 
-const ManageGeneral: React.FC<{ MOCK_DATA: any }> = (props) => {
+const ManageGeneral: React.FC<{ MOCK_DATA: any,onSaveData:(data:any)=>void }> = (props) => {
   const COLUMNS = React.useMemo(
     () => [
       {
@@ -213,6 +213,7 @@ const ManageGeneral: React.FC<{ MOCK_DATA: any }> = (props) => {
   );
 
   const [data, setData] = useState(props.MOCK_DATA);
+  props.onSaveData(data);
   const columns = useMemo(() => processColumns(COLUMNS, data), [COLUMNS, data]);
   const tableInstance = useTable({
     columns,

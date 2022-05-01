@@ -14,6 +14,7 @@ export const SetupPage = () => {
     manageFee: false,
     manageAppointment: false,
   });
+  let dataToBeSent: any;
   const [updatebutton, setupdatebutton] = useState(false);
 
   const hidetoaster = () => {
@@ -21,6 +22,7 @@ export const SetupPage = () => {
   };
   const onclickhandler = () => {
     setupdatebutton(true);
+    console.log(dataToBeSent);
     setTimeout(hidetoaster, 5000);
   };
   const onClassExpandHandler = (isExpanded: boolean) => {
@@ -50,7 +52,9 @@ export const SetupPage = () => {
       };
     });
   };
-
+  const onSaveData = (data:any) =>{
+    dataToBeSent=data;
+  }
   return (
     <div className={styles.firstpage}>
       <Toaster show={updatebutton}>Changes updated successfully!</Toaster>
@@ -80,7 +84,7 @@ export const SetupPage = () => {
           title={"Manage Classes"}
         ></Card>
         {manageState.manageClasses && (
-          <ManageGeneral MOCK_DATA={MOCK_DATA_MANAGECLASS} />
+          <ManageGeneral MOCK_DATA={MOCK_DATA_MANAGECLASS} onSaveData={onSaveData}/>
         )}
         <Card
           isExpanded={manageState.manageAppointment}
@@ -88,7 +92,7 @@ export const SetupPage = () => {
           title={"Manage Appointments"}
         ></Card>
         {manageState.manageAppointment && (
-          <ManageGeneral MOCK_DATA={MOCK_DATA_MANAGEAPPOINTMENT} />
+          <ManageGeneral MOCK_DATA={MOCK_DATA_MANAGEAPPOINTMENT} onSaveData={onSaveData}/>
         )}
         <Card
           isExpanded={manageState.manageFee}
