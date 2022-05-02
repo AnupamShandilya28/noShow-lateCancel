@@ -1,4 +1,6 @@
-[
+
+
+const newMockdata=[
   {
     "id": 1,
     "type_of_class": "Meditation Appointment",
@@ -13,7 +15,7 @@
     "type_of_class": "Crossfit-Appointment",
     "time_prior_to_class": "120",
     "late_cancel": false,
-    "late_cancel_charge": "40",
+    "late_cancel_charge": "0",
     "no_show": false,
     "no_show_charge": "0"
   },
@@ -24,16 +26,16 @@
     "late_cancel": false,
     "late_cancel_charge": "0",
     "no_show": false,
-    "no_show_charge": "17"
+    "no_show_charge": "0"
   },
   {
     "id": 4,
     "type_of_class": "SD Appointment",
     "time_prior_to_class": "120",
     "late_cancel": false,
-    "late_cancel_charge": "10",
+    "late_cancel_charge": "0",
     "no_show": false,
-    "no_show_charge": "13"
+    "no_show_charge": "0"
   },
   {
     "id": 5,
@@ -67,8 +69,9 @@
     "type_of_class": "MM Classes",
     "time_prior_to_class": "120",
     "late_cancel": false,
-    "late_cancel_charge": "15",
+    "late_cancel_charge": "0",
     "no_show": false,
     "no_show_charge": "0"
   }
 ]
+export default newMockdata;

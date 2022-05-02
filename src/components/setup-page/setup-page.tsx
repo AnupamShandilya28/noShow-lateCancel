@@ -7,10 +7,10 @@ import Card from "./Card";
 import ManageFeeWaived from "./ManageFeeWaived";
 import { Toaster } from "@mbkit/toaster";
 import ManageGeneral from "./ManageGeneral";
-import MOCK_DATA_MANAGECLASS1 from "../../data/manageClasses/MOCK_DATA";
-import MOCK_DATA_MANAGEAPPOINTMENT1 from "../../data/manageAppointments/MOCK_DATA.json";
+import MOCK_DATA_MANAGECLASSref from "../../data/manageClasses/newMockdata";
+import MOCK_DATA_MANAGEAPPOINTMENTref from "../../data/manageAppointments/newMockdata";
 import MOCK_DATA_MANAGECLASS from "../../data/manageClasses/MOCK_DATA";
-import MOCK_DATA_MANAGEAPPOINTMENT from "../../data/manageAppointments/MOCK_DATA.json";
+import MOCK_DATA_MANAGEAPPOINTMENT from "../../data/manageAppointments/MOCK_DATA";
 export const SetupPage = () => {
   const [manageState, setManageState] = useState({
     manageClasses: false,
@@ -92,7 +92,8 @@ export const SetupPage = () => {
         ></Card>
         {manageState.manageClasses && (
           <ManageGeneral
-            MOCK_DATA={MOCK_DATA_MANAGECLASS}                       
+            MOCK_DATA={MOCK_DATA_MANAGECLASS} 
+            MOCK_DATA1={MOCK_DATA_MANAGECLASSref}   
             setenableupdate={setenableupdate}            
           />
         )}
@@ -103,7 +104,8 @@ export const SetupPage = () => {
         ></Card>
         {manageState.manageAppointment && (
           <ManageGeneral
-            MOCK_DATA={MOCK_DATA_MANAGEAPPOINTMENT}                      
+            MOCK_DATA={MOCK_DATA_MANAGEAPPOINTMENT}
+            MOCK_DATA1={MOCK_DATA_MANAGEAPPOINTMENTref}                        
             setenableupdate={setenableupdate}            
           />
         )}

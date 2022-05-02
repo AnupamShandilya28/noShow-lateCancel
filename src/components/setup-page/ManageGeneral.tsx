@@ -5,14 +5,13 @@ import InfoIcon from "@mui/icons-material/Info";
 import React, { useEffect, useMemo, useState } from "react";
 import { useTable } from "react-table";
 import styles from "./styles/ManageGeneral.module.scss";
-import MOCK_DATA1 from "../../data/manageClasses/newMockdata";
-let initialvalue=true;
+
 const ManageGeneral: React.FC<{
   MOCK_DATA: any;    
-  setenableupdate: React.Dispatch<React.SetStateAction<boolean>>;
-  
-}> = (props) => {
-  const [enableupdate, setenableupdate] = useState(false);
+  MOCK_DATA1:any;
+  setenableupdate: React.Dispatch<React.SetStateAction<boolean>>;  
+}> = (props) => {  
+
   const COLUMNS = React.useMemo(
     () => [
       {
@@ -224,35 +223,25 @@ const ManageGeneral: React.FC<{
     []
   );
 
-  const [data, setData] = useState(props.MOCK_DATA);
-  // const [tmpdata,settmpdata]=useMemo(()=>data,[data]);
+  const [data, setData] = useState(props.MOCK_DATA); 
   
-  const prevData = MOCK_DATA1;
+  const prevData = props.MOCK_DATA1;
 
-  console.log(prevData);
-  console.log(data);
   const isEqual = (...objects: any[]) =>
     objects.every((obj) => JSON.stringify(obj) === JSON.stringify(objects[0]));
-    if(!isEqual(data, prevData))
-    // if(data!=prevData)
-   {
-     console.log("diff");
-        props.setenableupdate(true);
-  }
-  else
-  {
-    console.log("same");
-    props.setenableupdate(false);
-  }
+    
 
-  // useEffect(() => {
-  //   const prevData = props.MOCK_DATA;
-  
-
-  // if (prevData !== data) {
-  //     props.setenableupdate(true);
-  // }
-  // }, [data]);
+  useEffect(() => {
+    if(!isEqual(data, prevData))  
+    {     
+      props.setenableupdate(true);
+    }
+    else
+    {      
+      props.setenableupdate(false);
+    }
+  }
+  , [data]);
 
   const columns = useMemo(() => processColumns(COLUMNS, data), [COLUMNS, data]);
   const tableInstance = useTable({
