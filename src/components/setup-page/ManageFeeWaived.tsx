@@ -1,12 +1,11 @@
 import { useTable } from "react-table";
-import MOCK_DATA from "../../data/manageFeeWaived/MOCK_DATA.json";
 import styles from "./styles/ManageFeeWaived.module.scss";
 import React, { useMemo, useState, useCallback, useEffect } from "react";
 import InfoIcon from "@mui/icons-material/Info";
 import { Tipsy, TipsyExamples } from "@mbkit/tipsy";
 import { Checkbox } from "@mbkit/checkbox";
 
-const ManageFeeWaived = () => {
+const ManageFeeWaived:React.FC<{ MOCK_DATA: any }> = (props) => {
   const COLUMNS = React.useMemo(
     () => [
       {
@@ -159,7 +158,7 @@ const ManageFeeWaived = () => {
     []
   );
 
-  const [data, setData] = useState(MOCK_DATA);
+  const [data, setData] = useState(props.MOCK_DATA);
   const columns = useMemo(() => processColumns(COLUMNS, data), [COLUMNS, data]);
   const tableInstance = useTable({
     columns,

@@ -1,4 +1,4 @@
-[
+const MOCK_DATA=[
   {
     "id": 1,
     "type_of_class": "Yoga Classes",
@@ -72,3 +72,4 @@
     "no_show_charge": "0"
   }
 ]
+export default MOCK_DATA;

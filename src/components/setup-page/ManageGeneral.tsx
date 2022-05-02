@@ -2,11 +2,17 @@ import { Checkbox } from "@mbkit/checkbox";
 import { Input } from "@mbkit/input";
 import { Tipsy } from "@mbkit/tipsy";
 import InfoIcon from "@mui/icons-material/Info";
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { useTable } from "react-table";
 import styles from "./styles/ManageGeneral.module.scss";
-
-const ManageGeneral: React.FC<{ MOCK_DATA: any,onSaveData:(data:any)=>void }> = (props) => {
+import MOCK_DATA1 from "../../data/manageClasses/newMockdata";
+let initialvalue=true;
+const ManageGeneral: React.FC<{
+  MOCK_DATA: any;    
+  setenableupdate: React.Dispatch<React.SetStateAction<boolean>>;
+  
+}> = (props) => {
+  const [enableupdate, setenableupdate] = useState(false);
   const COLUMNS = React.useMemo(
     () => [
       {
@@ -36,8 +42,10 @@ const ManageGeneral: React.FC<{ MOCK_DATA: any,onSaveData:(data:any)=>void }> = 
         accessor: "time_prior_to_class",
         Cell: (props: any) => {
           const cellIndex: number = props.row.original.id;
+          // setenableupdate(false);
           const changeHandler = (event: any) => {
             if (!checkValidity(event.target.value)) return;
+            // setenableupdate(true);
             setData(() => {
               const newArray = [...data];
               newArray[cellIndex - 1].time_prior_to_class = event.target.value;
@@ -105,6 +113,7 @@ const ManageGeneral: React.FC<{ MOCK_DATA: any,onSaveData:(data:any)=>void }> = 
         accessor: "late_cancel_charge",
         Cell: (props: any) => {
           const cellIndex: number = props.row.original.id;
+          // setenableupdate(false);
           return (
             <div>
               <Input
@@ -117,6 +126,7 @@ const ManageGeneral: React.FC<{ MOCK_DATA: any,onSaveData:(data:any)=>void }> = 
                 // value={props.value}
                 onChange={(event) => {
                   if (!checkValidity(event.target.value)) return;
+                  // setenableupdate(true);
                   setData(() => {
                     const newArray = [...data];
                     newArray[cellIndex - 1].late_cancel_charge =
@@ -184,6 +194,7 @@ const ManageGeneral: React.FC<{ MOCK_DATA: any,onSaveData:(data:any)=>void }> = 
         accessor: "no_show_charge",
         Cell: (props: any) => {
           const cellIndex: number = props.row.original.id;
+          // setenableupdate(false);
           return (
             <div>
               <Input
@@ -194,6 +205,7 @@ const ManageGeneral: React.FC<{ MOCK_DATA: any,onSaveData:(data:any)=>void }> = 
                     : data[cellIndex - 1].no_show_charge.toString()
                 }
                 onChange={(event) => {
+                  // setenableupdate(true);
                   if (!checkValidity(event.target.value)) return;
                   setData(() => {
                     const newArray = [...data];
@@ -213,7 +225,35 @@ const ManageGeneral: React.FC<{ MOCK_DATA: any,onSaveData:(data:any)=>void }> = 
   );
 
   const [data, setData] = useState(props.MOCK_DATA);
-  props.onSaveData(data);
+  // const [tmpdata,settmpdata]=useMemo(()=>data,[data]);
+  
+  const prevData = MOCK_DATA1;
+
+  console.log(prevData);
+  console.log(data);
+  const isEqual = (...objects: any[]) =>
+    objects.every((obj) => JSON.stringify(obj) === JSON.stringify(objects[0]));
+    if(!isEqual(data, prevData))
+    // if(data!=prevData)
+   {
+     console.log("diff");
+        props.setenableupdate(true);
+  }
+  else
+  {
+    console.log("same");
+    props.setenableupdate(false);
+  }
+
+  // useEffect(() => {
+  //   const prevData = props.MOCK_DATA;
+  
+
+  // if (prevData !== data) {
+  //     props.setenableupdate(true);
+  // }
+  // }, [data]);
+
   const columns = useMemo(() => processColumns(COLUMNS, data), [COLUMNS, data]);
   const tableInstance = useTable({
     columns,
