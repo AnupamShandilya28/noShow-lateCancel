@@ -7,11 +7,10 @@ import { useTable } from "react-table";
 import styles from "./styles/ManageGeneral.module.scss";
 
 const ManageGeneral: React.FC<{
-  MOCK_DATA: any;    
-  MOCK_DATA1:any;
-  setenableupdate: React.Dispatch<React.SetStateAction<boolean>>;  
-}> = (props) => {  
-
+  MOCK_DATA: any;
+  MOCK_DATA1: any;
+  setenableupdate: React.Dispatch<React.SetStateAction<boolean>>;
+}> = (props) => {
   const COLUMNS = React.useMemo(
     () => [
       {
@@ -41,10 +40,8 @@ const ManageGeneral: React.FC<{
         accessor: "time_prior_to_class",
         Cell: (props: any) => {
           const cellIndex: number = props.row.original.id;
-          // setenableupdate(false);
           const changeHandler = (event: any) => {
             if (!checkValidity(event.target.value)) return;
-            // setenableupdate(true);
             setData(() => {
               const newArray = [...data];
               newArray[cellIndex - 1].time_prior_to_class = event.target.value;
@@ -103,7 +100,6 @@ const ManageGeneral: React.FC<{
         },
       },
       {
-        // Header: "CHARGES",
         Header: (
           <>
             <span>CHARGES</span>
@@ -112,20 +108,18 @@ const ManageGeneral: React.FC<{
         accessor: "late_cancel_charge",
         Cell: (props: any) => {
           const cellIndex: number = props.row.original.id;
-          // setenableupdate(false);
           return (
             <div>
               <Input
                 id={styles.inputstyle}
                 value={
-                  data[cellIndex - 1].late_cancel_charge.toString() === "0"
+                  // data[cellIndex - 1].late_cancel_charge.toString() === "0"
+                  data[cellIndex - 1].late_cancel === false
                     ? ""
                     : data[cellIndex - 1].late_cancel_charge.toString()
                 }
-                // value={props.value}
                 onChange={(event) => {
                   if (!checkValidity(event.target.value)) return;
-                  // setenableupdate(true);
                   setData(() => {
                     const newArray = [...data];
                     newArray[cellIndex - 1].late_cancel_charge =
@@ -193,18 +187,17 @@ const ManageGeneral: React.FC<{
         accessor: "no_show_charge",
         Cell: (props: any) => {
           const cellIndex: number = props.row.original.id;
-          // setenableupdate(false);
           return (
             <div>
               <Input
                 id={styles.inputstyle}
                 value={
-                  data[cellIndex - 1].no_show_charge.toString() === "0"
+                  // data[cellIndex - 1].no_show_charge.toString() === "0"
+                  data[cellIndex - 1].no_show === false
                     ? ""
                     : data[cellIndex - 1].no_show_charge.toString()
                 }
                 onChange={(event) => {
-                  // setenableupdate(true);
                   if (!checkValidity(event.target.value)) return;
                   setData(() => {
                     const newArray = [...data];
@@ -223,25 +216,20 @@ const ManageGeneral: React.FC<{
     []
   );
 
-  const [data, setData] = useState(props.MOCK_DATA); 
-  
+  const [data, setData] = useState(props.MOCK_DATA);
+
   const prevData = props.MOCK_DATA1;
 
   const isEqual = (...objects: any[]) =>
     objects.every((obj) => JSON.stringify(obj) === JSON.stringify(objects[0]));
-    
 
   useEffect(() => {
-    if(!isEqual(data, prevData))  
-    {     
+    if (!isEqual(data, prevData)) {
       props.setenableupdate(true);
-    }
-    else
-    {      
+    } else {
       props.setenableupdate(false);
     }
-  }
-  , [data]);
+  }, [data]);
 
   const columns = useMemo(() => processColumns(COLUMNS, data), [COLUMNS, data]);
   const tableInstance = useTable({
