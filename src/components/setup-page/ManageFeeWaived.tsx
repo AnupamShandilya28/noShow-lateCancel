@@ -5,7 +5,11 @@ import InfoIcon from "@mui/icons-material/Info";
 import { Tipsy, TipsyExamples } from "@mbkit/tipsy";
 import { Checkbox } from "@mbkit/checkbox";
 
-const ManageFeeWaived:React.FC<{ MOCK_DATA: any }> = (props) => {
+const ManageFeeWaived: React.FC<{
+  MOCK_DATA: any;
+  MOCK_DATA1: any;
+  setenableupdate: React.Dispatch<React.SetStateAction<boolean>>;
+}> = (props) => {
   const COLUMNS = React.useMemo(
     () => [
       {
@@ -32,7 +36,8 @@ const ManageFeeWaived:React.FC<{ MOCK_DATA: any }> = (props) => {
           const changeHandler = () => {
             setData(() => {
               const newArray = [...data];
-              if(newArray[cellIndex - 1].no_show_checked) newArray[cellIndex - 1].no_show_input="";
+              if (newArray[cellIndex - 1].no_show_checked)
+                newArray[cellIndex - 1].no_show_input = "";
               newArray[cellIndex - 1].no_show_checked =
                 !newArray[cellIndex - 1].no_show_checked;
               return newArray;
@@ -103,7 +108,8 @@ const ManageFeeWaived:React.FC<{ MOCK_DATA: any }> = (props) => {
           const changeHandler = () => {
             setData(() => {
               const newArray = [...data];
-              if(newArray[cellIndex - 1].late_cancel_checked) newArray[cellIndex - 1].late_cancel_input="";
+              if (newArray[cellIndex - 1].late_cancel_checked)
+                newArray[cellIndex - 1].late_cancel_input = "";
               newArray[cellIndex - 1].late_cancel_checked =
                 !newArray[cellIndex - 1].late_cancel_checked;
               return newArray;
@@ -159,6 +165,18 @@ const ManageFeeWaived:React.FC<{ MOCK_DATA: any }> = (props) => {
   );
 
   const [data, setData] = useState(props.MOCK_DATA);
+  const prevData = props.MOCK_DATA1;
+
+  const isEqual = (...objects: any[]) =>
+    objects.every((obj) => JSON.stringify(obj) === JSON.stringify(objects[0]));
+
+  useEffect(() => {
+    if (!isEqual(data, prevData)) {
+      props.setenableupdate(true);
+    } else {
+      props.setenableupdate(false);
+    }
+  }, [data]);
   const columns = useMemo(() => processColumns(COLUMNS, data), [COLUMNS, data]);
   const tableInstance = useTable({
     columns,

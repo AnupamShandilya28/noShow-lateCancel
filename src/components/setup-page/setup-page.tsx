@@ -1,5 +1,5 @@
 import React, { Component, useState } from "react";
-import MOCK_DATA_MANAGEFEEWAIVED from "../../data/manageFeeWaived/MOCK_DATA.json";
+import MOCK_DATA_MANAGEFEEWAIVED from "../../data/manageFeeWaived/MOCK_DATA";
 import styles from "./styles/SetupPage.module.scss";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Button } from "@mbkit/button";
@@ -9,6 +9,7 @@ import { Toaster } from "@mbkit/toaster";
 import ManageGeneral from "./ManageGeneral";
 import MOCK_DATA_MANAGECLASSref from "../../data/manageClasses/newMockdata";
 import MOCK_DATA_MANAGEAPPOINTMENTref from "../../data/manageAppointments/newMockdata";
+import MOCK_DATA_MANAGEFEEWAIVEDref from "../../data/manageFeeWaived/newMockdata";
 import MOCK_DATA_MANAGECLASS from "../../data/manageClasses/MOCK_DATA";
 import MOCK_DATA_MANAGEAPPOINTMENT from "../../data/manageAppointments/MOCK_DATA";
 export const SetupPage = () => {
@@ -17,7 +18,7 @@ export const SetupPage = () => {
     manageFee: false,
     manageAppointment: false,
   });
-  const [enableupdate, setenableupdate] = useState(false);    
+  const [enableupdate, setenableupdate] = useState(false);
   const [updatebutton, setupdatebutton] = useState(false);
 
   const hidetoaster = () => {
@@ -58,9 +59,9 @@ export const SetupPage = () => {
       };
     });
   };
-  const onSaveData = (data:any) =>{
-    // dataToBeSent=data;    
-  }    
+  const onSaveData = (data: any) => {
+    // dataToBeSent=data;
+  };
   return (
     <div className={styles.firstpage}>
       <Toaster show={updatebutton}>Changes updated successfully!</Toaster>
@@ -92,9 +93,9 @@ export const SetupPage = () => {
         ></Card>
         {manageState.manageClasses && (
           <ManageGeneral
-            MOCK_DATA={MOCK_DATA_MANAGECLASS} 
-            MOCK_DATA1={MOCK_DATA_MANAGECLASSref}   
-            setenableupdate={setenableupdate}            
+            MOCK_DATA={MOCK_DATA_MANAGECLASS}
+            MOCK_DATA1={MOCK_DATA_MANAGECLASSref}
+            setenableupdate={setenableupdate}
           />
         )}
         <Card
@@ -105,8 +106,8 @@ export const SetupPage = () => {
         {manageState.manageAppointment && (
           <ManageGeneral
             MOCK_DATA={MOCK_DATA_MANAGEAPPOINTMENT}
-            MOCK_DATA1={MOCK_DATA_MANAGEAPPOINTMENTref}                        
-            setenableupdate={setenableupdate}            
+            MOCK_DATA1={MOCK_DATA_MANAGEAPPOINTMENTref}
+            setenableupdate={setenableupdate}
           />
         )}
         <Card
@@ -115,7 +116,11 @@ export const SetupPage = () => {
           title={"Manage Fee Waived"}
         ></Card>
         {manageState.manageFee && (
-          <ManageFeeWaived MOCK_DATA={MOCK_DATA_MANAGEFEEWAIVED} />
+          <ManageFeeWaived
+            MOCK_DATA={MOCK_DATA_MANAGEFEEWAIVED}
+            MOCK_DATA1={MOCK_DATA_MANAGEFEEWAIVEDref}
+            setenableupdate={setenableupdate}
+          />
         )}
       </div>
     </div>

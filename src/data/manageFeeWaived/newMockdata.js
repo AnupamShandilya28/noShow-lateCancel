@@ -1,0 +1,68 @@
+const newMockdata = [
+  {
+    id: 1,
+    membership: "Platinum Membership",
+    no_show_checked: false,
+    no_show_input: "",
+    late_cancel_checked: false,
+    late_cancel_input: "",
+  },
+  {
+    id: 2,
+    membership: "Gold Membership",
+    no_show_checked: false,
+    no_show_input: "",
+    late_cancel_checked: false,
+    late_cancel_input: "",
+  },
+  {
+    id: 3,
+    membership: "Silver Membership",
+    no_show_checked: false,
+    no_show_input: "",
+    late_cancel_checked: false,
+    late_cancel_input: "",
+  },
+  {
+    id: 4,
+    membership: "Unlimited Membership",
+    no_show_checked: false,
+    no_show_input: "",
+    late_cancel_checked: false,
+    late_cancel_input: "",
+  },
+  {
+    id: 5,
+    membership: "Classic Membership",
+    no_show_checked: false,
+    no_show_input: "",
+    late_cancel_checked: false,
+    late_cancel_input: "",
+  },
+  {
+    id: 6,
+    membership: "Affiliate Membership",
+    no_show_checked: false,
+    no_show_input: "",
+    late_cancel_checked: false,
+    late_cancel_input: "",
+  },
+  {
+    id: 7,
+    membership: "Gold Membership",
+    no_show_checked: false,
+    no_show_input: "",
+    late_cancel_checked: false,
+    late_cancel_input: "",
+  },
+  {
+    id: 8,
+    membership: "Platinum Membership",
+    no_show_checked: false,
+    no_show_input: "",
+    late_cancel_checked: false,
+    late_cancel_input: "",
+  },
+];
+
+export default newMockdata;
