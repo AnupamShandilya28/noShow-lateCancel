@@ -1,8 +1,17 @@
 import React from "react";
 import { Checkbox } from "@mbkit/checkbox";
+import { ColumnInstance } from "react-table";
 import styles from "./FlyoutItem.module.scss";
 
-const FlyoutItem = (props) => {
+const FlyoutItem = (props: {item: ColumnInstance<{Name: string;
+  Class: string;
+  Date: string;
+  Pricing: string;
+  Cancel: number;
+  Waive: number;
+  Charges: number;
+  Apply: boolean;
+  Type: string;}>;}) => {
   const isCheckHandler = () => {
     console.log("Checked");
     console.log("item ", props.item);
@@ -13,7 +22,7 @@ const FlyoutItem = (props) => {
   if(props.item.Header === 'NAME' || props.item.Header === 'CHARGES' || props.item.Header === 'FEE TYPE'){
     isDisable = true;
   }
-  var headerString = props.item.Header;
+  var headerString:any = props.item.Header || "";
 
   return (
     <li className={styles.item_div}>

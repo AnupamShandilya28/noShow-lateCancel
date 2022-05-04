@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, useContext, useRef } from "react";
 import {
   useTable,
   usePagination,
@@ -55,11 +55,14 @@ export const PaginationTable = () => {
   const [data, setData] = useState(MOCK_DATA);
   const columns = useMemo(() => COLUMNS, []);
 
+  const skipPageReset = useRef(true);
+
   const filterCtx = useContext(FilterTableContext);
 
   const rowUpdateHandler = (id: number) => {
     console.log("Index:", id);
     var index = id;
+    skipPageReset.current = true;
     setData((prevState) => {
       // console.log("Index2:", index);
       let newRow = prevState[index];
@@ -96,6 +99,8 @@ export const PaginationTable = () => {
     {
       columns,
       data,
+      autoResetPage: !skipPageReset.current,
+      autoResetFilters: false,
       rowUpdateHandler,
     },
     useFilters,
@@ -115,6 +120,8 @@ export const PaginationTable = () => {
 
   const filterHandler = () => {
     const filterString = filterCtx.filterValue;
+    console.log("Filter: ", filterString);
+    skipPageReset.current = false;
     setFilter("Name", filterString);
   }
 
@@ -266,6 +273,7 @@ export const PaginationTable = () => {
           </div>
         </div>
       </div>
+      <div className={styles.data_display}>{isConfirmed && data.map((entry)=>{return (<p key={entry.Name}>{JSON.stringify(entry)}</p>);})}</div>
     </div>
   );
 };
